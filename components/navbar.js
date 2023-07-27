@@ -5,6 +5,7 @@ import {
   Container,
   Flex,
   Heading,
+  Stack,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Logo from './logo';
@@ -54,6 +55,13 @@ const Navbar = props => {
             <Logo />
           </Heading>
         </Flex>
+
+        <Stack
+          display={{ base: 'none', md: 'flex' }}
+          direction="row"
+          flexGrow={1}
+          justify="end"
+        ></Stack>
       </Container>
     </Box>
   );
