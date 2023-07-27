@@ -8,3 +8,17 @@ const LogoBox = styled.span`
   display: flex;
   align-items: center;
 `;
+
+const Logo = () => {
+  return (
+    <Link href="/">
+      <LogoBox>
+        <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}>
+          Nicolas Puegher
+        </Text>
+      </LogoBox>
+    </Link>
+  );
+};
+
+export default Logo;
