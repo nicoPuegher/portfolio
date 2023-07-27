@@ -6,10 +6,16 @@ import {
   Flex,
   Heading,
   Stack,
+  Menu,
+  MenuButton,
+  IconButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Logo from './logo';
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -95,6 +101,42 @@ const Navbar = props => {
             GitHub
           </LinkItem>
         </Stack>
+
+        <Box flex={{ base: 1, md: 0 }} ml={2} align="right">
+          <Box display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy>
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+                ml={2}
+              />
+              <MenuList>
+                <MenuItem as={LinkItem} href="/about">
+                  About
+                </MenuItem>
+                <MenuItem as={LinkItem} href="/works">
+                  Works
+                </MenuItem>
+                <MenuItem
+                  as={LinkItem}
+                  href="https://www.linkedin.com/in/nicolas-puegher/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </MenuItem>
+                <MenuItem
+                  as={LinkItem}
+                  href="https://github.com/nicoPuegher"
+                  target="_blank"
+                >
+                  GitHub
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
