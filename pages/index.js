@@ -8,7 +8,7 @@ const Page = () => {
         mb={4}
         align="center"
         borderRadius="lg"
-        bg={useColorModeValue('whiteAlpha.900', 'blackAlpha.900')}
+        bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
       >
         Hey there, nice to meet you!
       </Box>
