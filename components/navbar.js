@@ -1,4 +1,4 @@
-import { useColorModeValue, Link, Box } from '@chakra-ui/react';
+import { useColorModeValue, Link, Box, Container } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
@@ -32,7 +32,16 @@ const Navbar = props => {
       bg={useColorModeValue('blackAlpha.50', 'blackAlpha.800')}
       zIndex={2}
       {...props}
-    ></Box>
+    >
+      <Container
+        maxW="container.md"
+        display="flex"
+        wrap="wrap"
+        p={2}
+        align="center"
+        justify="space-between"
+      ></Container>
+    </Box>
   );
 };
 
