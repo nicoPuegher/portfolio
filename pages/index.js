@@ -1,8 +1,35 @@
-import { Container, Box, Heading, useColorModeValue } from '@chakra-ui/react';
+import {
+  Container,
+  Box,
+  Image,
+  Heading,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 const Page = () => {
   return (
     <Container>
+      <Box mb={4} textAlign="center">
+        <Box
+          w="125px"
+          h="125px"
+          display="inline-block"
+          borderStyle="solid"
+          borderWidth={2}
+          borderRadius="full"
+          borderColor={useColorModeValue('blackAlpha.400', 'whiteAlpha.800')}
+          overflow="hidden"
+        >
+          <Image
+            src="/images/nicolas.jpg"
+            alt="Profile image"
+            width="125"
+            height="125"
+            borderRadius="full"
+          />
+        </Box>
+      </Box>
+
       <Box
         p={3}
         mb={4}
