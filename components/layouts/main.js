@@ -9,7 +9,9 @@ const Main = ({ children, router }) => {
         <title>Nicolas Puegher - Portfolio</title>
       </Head>
 
-      <Container maxW="container.md">{children}</Container>
+      <Container maxW="container.md" pt={24}>
+        {children}
+      </Container>
     </Box>
   );
 };
