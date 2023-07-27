@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Logo from './logo';
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -61,7 +62,39 @@ const Navbar = props => {
           direction="row"
           flexGrow={1}
           justify="end"
-        ></Stack>
+        >
+          <LinkItem href="/about" path={path}>
+            About
+          </LinkItem>
+          <LinkItem href="/works" path={path}>
+            Works
+          </LinkItem>
+          <LinkItem href="/resume" path={path}>
+            Resume
+          </LinkItem>
+          <LinkItem
+            href="https://www.linkedin.com/in/nicolas-puegher/"
+            target="_blank"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+          >
+            <FaLinkedin />
+            LinkedIn
+          </LinkItem>
+          <LinkItem
+            href="https://github.com/nicoPuegher"
+            target="_blank"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+          >
+            <FaGithubSquare />
+            GitHub
+          </LinkItem>
+        </Stack>
       </Container>
     </Box>
   );
