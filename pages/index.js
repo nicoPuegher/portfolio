@@ -1,10 +1,13 @@
 import {
   Container,
   Box,
+  useColorModeValue,
   Image,
   Heading,
-  useColorModeValue,
+  Button,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 
 const Page = () => {
   return (
@@ -44,6 +47,16 @@ const Page = () => {
         <Box flexGrow={1} align="center">
           <Heading as="h2">Nicolas Puegher</Heading>
           <p>Frontend Developer</p>
+        </Box>
+        <Box align="center" my={4}>
+          <Button
+            as={NextLink}
+            href="/works"
+            rightIcon={<ChevronRightIcon />}
+            colorScheme={useColorModeValue('purple', 'green')}
+          >
+            Portfolio
+          </Button>
         </Box>
       </Box>
     </Container>
