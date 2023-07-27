@@ -1,0 +1,8 @@
+# Dependencies
+node_modules
+
+# Production
+.next
+
+# Misc
+.DS_Store
