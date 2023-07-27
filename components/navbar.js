@@ -1,5 +1,13 @@
-import { useColorModeValue, Link, Box, Container } from '@chakra-ui/react';
+import {
+  useColorModeValue,
+  Link,
+  Box,
+  Container,
+  Flex,
+  Heading,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
+import Logo from './logo';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -40,7 +48,13 @@ const Navbar = props => {
         p={2}
         align="center"
         justify="space-between"
-      ></Container>
+      >
+        <Flex mr={5}>
+          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+            <Logo />
+          </Heading>
+        </Flex>
+      </Container>
     </Box>
   );
 };
