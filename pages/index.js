@@ -9,7 +9,7 @@ import {
 import NextLink from 'next/link';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
-const Page = () => {
+const Home = () => {
   return (
     <Container>
       <Box mb={4} textAlign="center">
@@ -63,4 +63,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Home;
