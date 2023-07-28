@@ -12,7 +12,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 const Home = () => {
   return (
     <Container>
-      <Box mb={4} textAlign="center">
+      <Box mb={6} textAlign="center">
         <Box
           w="125px"
           h="125px"
@@ -35,7 +35,7 @@ const Home = () => {
 
       <Box
         p={3}
-        mb={4}
+        mb={6}
         align="center"
         borderRadius="lg"
         bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
@@ -48,7 +48,7 @@ const Home = () => {
           <Heading as="h2">Nicolas Puegher</Heading>
           <p>Frontend Developer</p>
         </Box>
-        <Box align="center" my={4}>
+        <Box align="center" mt={6}>
           <Button
             as={NextLink}
             href="/works"
