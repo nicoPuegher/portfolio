@@ -20,6 +20,8 @@ import ThemeToggle from './theme-toggle';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
+  const activeColor = useColorModeValue('white', 'gray.800');
+  const activeBg = useColorModeValue('teal.500', 'blue.200');
   const inactiveColor = useColorModeValue('blackAlpha.800', 'whiteAlpha.900');
 
   return (
@@ -27,9 +29,11 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       as={NextLink}
       href={href}
       target={target}
+      fontWeight={active ? 'semibold' : ''}
       p={2}
-      color={active ? 'purple.50' : inactiveColor}
-      bg={active ? 'purple.400' : undefined}
+      borderRadius="md"
+      color={active ? activeColor : inactiveColor}
+      bg={active ? activeBg : undefined}
       {...props}
     >
       {children}
@@ -103,7 +107,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Box flex={{ base: 1, md: 0 }} ml={2} align="right">
+        <Box flex={{ base: 1, md: 0 }} ml={4} align="right">
           <ThemeToggle />
           <Box display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy>
@@ -112,7 +116,7 @@ const Navbar = props => {
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
-                ml={2}
+                ml={3}
               />
               <MenuList>
                 <MenuItem as={LinkItem} href="/about">
