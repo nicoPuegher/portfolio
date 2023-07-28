@@ -1,10 +1,10 @@
 import Section from '../components/section';
-import { Heading } from '@chakra-ui/react';
+import { Container, Heading } from '@chakra-ui/react';
 import Paragraph from '../components/paragraph';
 
 const About = () => {
   return (
-    <>
+    <Container>
       <Section delay={0.1} mb={6}>
         <Heading as="h3" variant="section-title">
           About myself
@@ -43,7 +43,7 @@ const About = () => {
           authentication and unit tests.
         </Paragraph>
       </Section>
-    </>
+    </Container>
   );
 };
 
