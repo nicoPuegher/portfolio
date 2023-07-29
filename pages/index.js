@@ -51,6 +51,19 @@ const Info = () => (
   </Box>
 );
 
+const PortfolioButton = () => (
+  <Box align="center" mt={6}>
+    <Button
+      as={NextLink}
+      href="/works"
+      rightIcon={<ChevronRightIcon />}
+      colorScheme={useColorModeValue('purple', 'green')}
+    >
+      Portfolio
+    </Button>
+  </Box>
+);
+
 const Home = () => {
   return (
     <Container>
@@ -59,16 +72,7 @@ const Home = () => {
 
       <Box>
         <Info />
-        <Box align="center" mt={6}>
-          <Button
-            as={NextLink}
-            href="/works"
-            rightIcon={<ChevronRightIcon />}
-            colorScheme={useColorModeValue('purple', 'green')}
-          >
-            Portfolio
-          </Button>
-        </Box>
+        <PortfolioButton />
       </Box>
     </Container>
   );
