@@ -26,15 +26,18 @@ const SectionTitle = () => (
   </WorkTitle>
 );
 
+const Description = () => (
+  <Paragraph fontWeight="600" mb="12px">
+    Fully responsive expense tracker frontend web application.
+  </Paragraph>
+);
+
 const Tracky = () => {
   return (
     <Container>
       <Section delay={0.1}>
         <SectionTitle />
-
-        <Paragraph fontWeight="600" mb="12px">
-          Fully responsive expense tracker frontend web application.
-        </Paragraph>
+        <Description />
 
         <Paragraph fontStyle="italic" mb="12px" opacity="0.9">
           My projects were not aging well so I wanted to build something new to
