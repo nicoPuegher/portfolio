@@ -1,3 +1,4 @@
+import Section from '../components/section';
 import {
   Container,
   Box,
@@ -65,14 +66,16 @@ const PortfolioButton = () => (
 );
 
 const Home = () => (
-  <Container>
-    <Profile />
-    <Message />
-    <Box>
-      <Info />
-      <PortfolioButton />
-    </Box>
-  </Container>
+  <Section delay={0.1}>
+    <Container>
+      <Profile />
+      <Message />
+      <Box>
+        <Info />
+        <PortfolioButton />
+      </Box>
+    </Container>
+  </Section>
 );
 
 export default Home;
