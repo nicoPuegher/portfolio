@@ -3,13 +3,17 @@ import Section from '../components/section';
 import GridItem from '../components/grid-item';
 import trackyThumb from '../public/images/works/tracky.png';
 
+const SectionTitle = () => (
+  <Heading as="h3" variant="section-title">
+    Works
+  </Heading>
+);
+
 const Works = () => {
   return (
     <Container>
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Works
-        </Heading>
+        <SectionTitle />
         <SimpleGrid>
           <GridItem
             id="tracky"
