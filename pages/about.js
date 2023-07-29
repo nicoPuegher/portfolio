@@ -42,13 +42,11 @@ const Experience = () => (
   </Section>
 );
 
-const About = () => {
-  return (
-    <Container>
-      <Myself />
-      <Experience />
-    </Container>
-  );
-};
+const About = () => (
+  <Container>
+    <Myself />
+    <Experience />
+  </Container>
+);
 
 export default About;
