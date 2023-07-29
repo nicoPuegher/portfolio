@@ -14,15 +14,13 @@ const GridInfo = ({ title, description }) => (
   </Box>
 );
 
-const GridItem = ({ id, title, thumbnail: { src }, description }) => {
-  return (
-    <Box>
-      <LinkBox as={NextLink} href={`/works/${id}`}>
-        <GridImage src={src} alt={title} />
-        <GridInfo title={title} description={description} />
-      </LinkBox>
-    </Box>
-  );
-};
+const GridItem = ({ id, title, thumbnail: { src }, description }) => (
+  <Box>
+    <LinkBox as={NextLink} href={`/works/${id}`}>
+      <GridImage src={src} alt={title} />
+      <GridInfo title={title} description={description} />
+    </LinkBox>
+  </Box>
+);
 
 export default GridItem;
