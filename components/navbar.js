@@ -41,6 +41,14 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
+const NavLogo = () => (
+  <Flex mr={5}>
+    <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+      <Logo />
+    </Heading>
+  </Flex>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -62,11 +70,7 @@ const Navbar = props => {
         align="center"
         justify="space-between"
       >
-        <Flex mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
-          </Heading>
-        </Flex>
+        <NavLogo />
 
         <Stack
           display={{ base: 'none', md: 'flex' }}
