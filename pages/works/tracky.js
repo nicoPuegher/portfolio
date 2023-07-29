@@ -32,24 +32,28 @@ const Description = () => (
   </Paragraph>
 );
 
+const PersonalTake = () => (
+  <>
+    <Paragraph fontStyle="italic" mb="12px" opacity="0.9">
+      My projects were not aging well so I wanted to build something new to
+      demonstrate my actual skills while solving a personal problem of mine and
+      at the same time learn new technologies to expand my knowledge.
+    </Paragraph>
+    <Paragraph fontStyle="italic" opacity="0.9">
+      Trying these libraries/frameworks helps me decide by myself what to use
+      based on personal preferences or project requirements. In this case, I
+      wanted to learn Tailwind CSS, Material UI, and build my project with Vite.
+    </Paragraph>
+  </>
+);
+
 const Tracky = () => {
   return (
     <Container>
       <Section delay={0.1}>
         <SectionTitle />
         <Description />
-
-        <Paragraph fontStyle="italic" mb="12px" opacity="0.9">
-          My projects were not aging well so I wanted to build something new to
-          demonstrate my actual skills while solving a personal problem of mine
-          and at the same time learn new technologies to expand my knowledge.
-        </Paragraph>
-        <Paragraph fontStyle="italic" opacity="0.9">
-          Trying these libraries/frameworks helps me decide by myself what to
-          use based on personal preferences or project requirements. In this
-          case, I wanted to learn Tailwind CSS, Material UI, and build my
-          project with Vite.
-        </Paragraph>
+        <PersonalTake />
 
         <List mt={3} mb={6}>
           <ListItem mb={0.5}>
