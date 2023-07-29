@@ -108,6 +108,13 @@ const DesktopImage = () => (
   />
 );
 
+const MobileImage = () => (
+  <WorkImage
+    image={trackyMobile1}
+    alt="Tracky web application mobile screenshot"
+  />
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -119,10 +126,7 @@ const Tracky = () => {
         <DesktopImage />
 
         <SimpleGrid columns={2} mt={3} gap={3}>
-          <WorkImage
-            image={trackyMobile1}
-            alt="Tracky web application mobile screenshot"
-          />
+          <MobileImage />
           <WorkImage
             image={trackyMobile2}
             alt="Tracky web application mobile screenshot"
