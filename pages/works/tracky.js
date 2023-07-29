@@ -47,6 +47,19 @@ const PersonalTake = () => (
   </>
 );
 
+const DemoItem = () => (
+  <ListItem mb={0.5}>
+    <WorkBadge>Demo</WorkBadge>
+    <Link
+      href="https://nicopuegher.github.io/expenses-tracker/"
+      target="_blank"
+    >
+      Live demo application
+      <ExternalLinkIcon ml={1} />
+    </Link>
+  </ListItem>
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -56,16 +69,7 @@ const Tracky = () => {
         <PersonalTake />
 
         <List mt={3} mb={6}>
-          <ListItem mb={0.5}>
-            <WorkBadge>Demo</WorkBadge>
-            <Link
-              href="https://nicopuegher.github.io/expenses-tracker/"
-              target="_blank"
-            >
-              Live demo application
-              <ExternalLinkIcon ml={1} />
-            </Link>
-          </ListItem>
+          <DemoItem />
 
           <ListItem mb={0.5}>
             <WorkBadge>Source</WorkBadge>
