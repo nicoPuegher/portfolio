@@ -73,6 +73,26 @@ const GitItem = () => (
   </ListItem>
 );
 
+const StackItem = () => (
+  <ListItem display="inline-flex">
+    <Wrap spacing={1}>
+      <WorkBadge>Stack</WorkBadge>
+      <StackBadge>JavaScript</StackBadge>
+      <StackBadge>ReactJS</StackBadge>
+      <StackBadge>Tailwind CSS</StackBadge>
+      <StackBadge>Hero Icons</StackBadge>
+      <StackBadge>Headless UI</StackBadge>
+      <StackBadge>Material UI</StackBadge>
+      <StackBadge>DayJS</StackBadge>
+      <StackBadge>Lodash</StackBadge>
+      <StackBadge>Prop Types</StackBadge>
+      <StackBadge>ESLint</StackBadge>
+      <StackBadge>Prettier</StackBadge>
+      <StackBadge>Vite</StackBadge>
+    </Wrap>
+  </ListItem>
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -84,24 +104,7 @@ const Tracky = () => {
         <List mt={3} mb={6}>
           <DemoItem />
           <GitItem />
-
-          <ListItem display="inline-flex">
-            <Wrap spacing={1}>
-              <WorkBadge>Stack</WorkBadge>
-              <StackBadge>JavaScript</StackBadge>
-              <StackBadge>ReactJS</StackBadge>
-              <StackBadge>Tailwind CSS</StackBadge>
-              <StackBadge>Hero Icons</StackBadge>
-              <StackBadge>Headless UI</StackBadge>
-              <StackBadge>Material UI</StackBadge>
-              <StackBadge>DayJS</StackBadge>
-              <StackBadge>Lodash</StackBadge>
-              <StackBadge>Prop Types</StackBadge>
-              <StackBadge>ESLint</StackBadge>
-              <StackBadge>Prettier</StackBadge>
-              <StackBadge>Vite</StackBadge>
-            </Wrap>
-          </ListItem>
+          <StackItem />
         </List>
 
         <WorkImage
