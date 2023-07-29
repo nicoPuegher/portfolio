@@ -44,6 +44,13 @@ const Message = () => (
   </Box>
 );
 
+const Info = () => (
+  <Box flexGrow={1} align="center">
+    <Heading as="h2">Nicolas Puegher</Heading>
+    <p>Frontend Developer</p>
+  </Box>
+);
+
 const Home = () => {
   return (
     <Container>
@@ -51,10 +58,7 @@ const Home = () => {
       <Message />
 
       <Box>
-        <Box flexGrow={1} align="center">
-          <Heading as="h2">Nicolas Puegher</Heading>
-          <p>Frontend Developer</p>
-        </Box>
+        <Info />
         <Box align="center" mt={6}>
           <Button
             as={NextLink}
