@@ -1,5 +1,5 @@
-import Section from '../components/section';
 import { Container, Heading } from '@chakra-ui/react';
+import Section from '../components/section';
 import Paragraph from '../components/paragraph';
 
 const Myself = () => (
