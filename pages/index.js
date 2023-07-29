@@ -32,20 +32,23 @@ const Profile = () => (
   </Box>
 );
 
+const Message = () => (
+  <Box
+    p={3}
+    mb={6}
+    align="center"
+    borderRadius="lg"
+    bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
+  >
+    Hey there, nice to meet you!
+  </Box>
+);
+
 const Home = () => {
   return (
     <Container>
       <Profile />
-
-      <Box
-        p={3}
-        mb={6}
-        align="center"
-        borderRadius="lg"
-        bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
-      >
-        Hey there, nice to meet you!
-      </Box>
+      <Message />
 
       <Box>
         <Box flexGrow={1} align="center">
