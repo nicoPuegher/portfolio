@@ -1,5 +1,5 @@
-import { Box, LinkBox, Image, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { Box, Text, LinkBox, Image } from '@chakra-ui/react';
 
 const GridItem = ({ id, title, thumbnail, description }) => {
   return (
