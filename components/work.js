@@ -1,4 +1,4 @@
-import { Box, Link, Heading } from '@chakra-ui/react';
+import { Box, Link, Heading, Badge, useColorModeValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
@@ -16,4 +16,12 @@ const WorkTitle = ({ children }) => {
   );
 };
 
-export { WorkTitle };
+const WorkBadge = ({ children }) => {
+  return (
+    <Badge mr={2} colorScheme={useColorModeValue('teal', 'blue')}>
+      {children}
+    </Badge>
+  );
+};
+
+export { WorkTitle, WorkBadge };
