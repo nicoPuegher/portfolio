@@ -1,21 +1,21 @@
+import NextLink from 'next/link';
 import {
-  useColorModeValue,
-  Link,
-  Box,
   Container,
-  Flex,
+  Box,
   Heading,
+  Flex,
+  Link,
   Stack,
   Menu,
-  MenuButton,
-  IconButton,
   MenuList,
   MenuItem,
+  MenuButton,
+  IconButton,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import Logo from './logo';
-import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
+import Logo from './logo';
 import ThemeToggle from './theme-toggle';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
