@@ -64,18 +64,15 @@ const PortfolioButton = () => (
   </Box>
 );
 
-const Home = () => {
-  return (
-    <Container>
-      <Profile />
-      <Message />
-
-      <Box>
-        <Info />
-        <PortfolioButton />
-      </Box>
-    </Container>
-  );
-};
+const Home = () => (
+  <Container>
+    <Profile />
+    <Message />
+    <Box>
+      <Info />
+      <PortfolioButton />
+    </Box>
+  </Container>
+);
 
 export default Home;
