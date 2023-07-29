@@ -93,6 +93,14 @@ const StackItem = () => (
   </ListItem>
 );
 
+const CustomList = () => (
+  <List mt={3} mb={6}>
+    <DemoItem />
+    <GitItem />
+    <StackItem />
+  </List>
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -100,12 +108,7 @@ const Tracky = () => {
         <SectionTitle />
         <Description />
         <PersonalTake />
-
-        <List mt={3} mb={6}>
-          <DemoItem />
-          <GitItem />
-          <StackItem />
-        </List>
+        <CustomList />
 
         <WorkImage
           image={trackyThumb}
