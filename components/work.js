@@ -1,4 +1,11 @@
-import { Box, Link, Heading, Badge, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Link,
+  Heading,
+  Badge,
+  useColorModeValue,
+  Image,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
@@ -28,4 +35,8 @@ const StackBadge = ({ children }) => {
   return <Badge>{children}</Badge>;
 };
 
-export { WorkTitle, WorkBadge, StackBadge };
+const WorkImage = ({ image, alt }) => {
+  return <Image src={image.src} alt={alt} borderRadius="md" />;
+};
+
+export { WorkTitle, WorkBadge, StackBadge, WorkImage };
