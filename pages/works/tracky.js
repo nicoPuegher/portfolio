@@ -122,6 +122,13 @@ const MobileModalImage = () => (
   />
 );
 
+const MobileImages = () => (
+  <SimpleGrid columns={2} mt={3} gap={3}>
+    <MobileImage />
+    <MobileModalImage />
+  </SimpleGrid>
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -131,11 +138,7 @@ const Tracky = () => {
         <PersonalTake />
         <CustomList />
         <DesktopImage />
-
-        <SimpleGrid columns={2} mt={3} gap={3}>
-          <MobileImage />
-          <MobileModalImage />
-        </SimpleGrid>
+        <MobileImages />
       </Section>
     </Container>
   );
