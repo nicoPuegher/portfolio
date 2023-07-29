@@ -9,29 +9,33 @@ import {
 import NextLink from 'next/link';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
+const Profile = () => (
+  <Box mb={6} textAlign="center">
+    <Box
+      w="125px"
+      h="125px"
+      display="inline-block"
+      borderStyle="solid"
+      borderWidth={2}
+      borderRadius="full"
+      borderColor={useColorModeValue('blackAlpha.400', 'whiteAlpha.800')}
+      overflow="hidden"
+    >
+      <Image
+        src="/images/nicolas.jpg"
+        alt="Profile image"
+        width="125"
+        height="125"
+        borderRadius="full"
+      />
+    </Box>
+  </Box>
+);
+
 const Home = () => {
   return (
     <Container>
-      <Box mb={6} textAlign="center">
-        <Box
-          w="125px"
-          h="125px"
-          display="inline-block"
-          borderStyle="solid"
-          borderWidth={2}
-          borderRadius="full"
-          borderColor={useColorModeValue('blackAlpha.400', 'whiteAlpha.800')}
-          overflow="hidden"
-        >
-          <Image
-            src="/images/nicolas.jpg"
-            alt="Profile image"
-            width="125"
-            height="125"
-            borderRadius="full"
-          />
-        </Box>
-      </Box>
+      <Profile />
 
       <Box
         p={3}
