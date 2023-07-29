@@ -50,7 +50,7 @@ const Navbar = props => {
       w="100%"
       position="fixed"
       style={{ backdropFilter: 'blur(10px' }}
-      bg={useColorModeValue('blackAlpha.50', 'blackAlpha.800')}
+      bg={useColorModeValue('blackAlpha.50', 'blackAlpha.400')}
       zIndex={2}
       {...props}
     >
@@ -79,9 +79,6 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem href="/works" path={path}>
             Works
-          </LinkItem>
-          <LinkItem href="/resume" path={path}>
-            Resume
           </LinkItem>
           <LinkItem
             href="https://www.linkedin.com/in/nicolas-puegher/"
