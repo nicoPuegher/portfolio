@@ -1,14 +1,14 @@
-import Section from '../components/section';
+import NextLink from 'next/link';
 import {
   Container,
   Box,
-  useColorModeValue,
-  Image,
   Heading,
+  Image,
   Button,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import Section from '../components/section';
 
 const Profile = () => (
   <Box mb={6} textAlign="center">
