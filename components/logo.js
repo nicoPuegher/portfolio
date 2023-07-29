@@ -9,13 +9,17 @@ const LogoBox = styled.span`
   align-items: center;
 `;
 
+const CustomText = () => (
+  <Text color={useColorModeValue('blackAlpha.800', 'whiteAlpha.900')}>
+    Nicolas Puegher
+  </Text>
+);
+
 const Logo = () => {
   return (
     <Link href="/">
       <LogoBox>
-        <Text color={useColorModeValue('blackAlpha.800', 'whiteAlpha.900')}>
-          Nicolas Puegher
-        </Text>
+        <CustomText />
       </LogoBox>
     </Link>
   );
