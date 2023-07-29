@@ -10,7 +10,6 @@ const Works = () => {
         <Heading as="h3" variant="section-title">
           Works
         </Heading>
-
         <SimpleGrid>
           <GridItem
             id="tracky"
