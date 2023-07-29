@@ -129,19 +129,17 @@ const MobileImages = () => (
   </SimpleGrid>
 );
 
-const Tracky = () => {
-  return (
-    <Container>
-      <Section delay={0.1}>
-        <SectionTitle />
-        <Description />
-        <PersonalTake />
-        <CustomList />
-        <DesktopImage />
-        <MobileImages />
-      </Section>
-    </Container>
-  );
-};
+const Tracky = () => (
+  <Container>
+    <Section delay={0.1}>
+      <SectionTitle />
+      <Description />
+      <PersonalTake />
+      <CustomList />
+      <DesktopImage />
+      <MobileImages />
+    </Section>
+  </Container>
+);
 
 export default Tracky;
