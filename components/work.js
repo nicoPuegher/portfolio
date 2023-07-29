@@ -24,4 +24,8 @@ const WorkBadge = ({ children }) => {
   );
 };
 
-export { WorkTitle, WorkBadge };
+const StackBadge = ({ children }) => {
+  return <Badge>{children}</Badge>;
+};
+
+export { WorkTitle, WorkBadge, StackBadge };
