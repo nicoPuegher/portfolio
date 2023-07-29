@@ -1,8 +1,24 @@
-import { Container, Badge, List, ListItem, Link, Wrap } from '@chakra-ui/react';
+import {
+  Container,
+  Badge,
+  List,
+  ListItem,
+  Link,
+  Wrap,
+  SimpleGrid,
+} from '@chakra-ui/react';
 import Section from '../../components/section';
-import { WorkTitle, WorkBadge, StackBadge } from '../../components/work';
+import {
+  WorkTitle,
+  WorkBadge,
+  StackBadge,
+  WorkImage,
+} from '../../components/work';
 import Paragraph from '../../components/paragraph';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import trackyThumb from '../../public/images/works/tracky.png';
+import trackyMobile1 from '../../public/images/works/tracky-mobile1.png';
+import trackyMobile2 from '../../public/images/works/tracky-mobile2.png';
 
 const Tracky = () => {
   return (
@@ -69,6 +85,21 @@ const Tracky = () => {
             </Wrap>
           </ListItem>
         </List>
+
+        <WorkImage
+          image={trackyThumb}
+          alt="Tracky web application desktop screenshot"
+        />
+        <SimpleGrid columns={2} mt={3} gap={3}>
+          <WorkImage
+            image={trackyMobile1}
+            alt="Tracky web application mobile screenshot"
+          />
+          <WorkImage
+            image={trackyMobile2}
+            alt="Tracky web application mobile screenshot"
+          />
+        </SimpleGrid>
       </Section>
     </Container>
   );
