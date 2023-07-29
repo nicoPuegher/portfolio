@@ -1,21 +1,21 @@
 import {
   Container,
   Badge,
+  Link,
   List,
   ListItem,
-  Link,
   Wrap,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Section from '../../components/section';
+import Paragraph from '../../components/paragraph';
 import {
   WorkTitle,
   WorkBadge,
   StackBadge,
   WorkImage,
 } from '../../components/work';
-import Paragraph from '../../components/paragraph';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
 import trackyThumb from '../../public/images/works/tracky.png';
 import trackyMobile1 from '../../public/images/works/tracky-mobile1.png';
 import trackyMobile2 from '../../public/images/works/tracky-mobile2.png';
