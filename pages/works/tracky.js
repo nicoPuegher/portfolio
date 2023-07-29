@@ -20,13 +20,17 @@ import trackyThumb from '../../public/images/works/tracky.png';
 import trackyMobile1 from '../../public/images/works/tracky-mobile1.png';
 import trackyMobile2 from '../../public/images/works/tracky-mobile2.png';
 
+const SectionTitle = () => (
+  <WorkTitle>
+    Tracky <Badge fontSize={13}>2023-</Badge>
+  </WorkTitle>
+);
+
 const Tracky = () => {
   return (
     <Container>
       <Section delay={0.1}>
-        <WorkTitle>
-          Tracky <Badge fontSize={13}>2023-</Badge>
-        </WorkTitle>
+        <SectionTitle />
 
         <Paragraph fontWeight="600" mb="12px">
           Fully responsive expense tracker frontend web application.
