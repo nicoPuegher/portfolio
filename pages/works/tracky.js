@@ -60,6 +60,19 @@ const DemoItem = () => (
   </ListItem>
 );
 
+const GitItem = () => (
+  <ListItem mb={0.5}>
+    <WorkBadge>Source</WorkBadge>
+    <Link
+      href="https://github.com/nicoPuegher/expenses-tracker"
+      target="_blank"
+    >
+      GitHub repository
+      <ExternalLinkIcon ml={1} />
+    </Link>
+  </ListItem>
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -70,17 +83,7 @@ const Tracky = () => {
 
         <List mt={3} mb={6}>
           <DemoItem />
-
-          <ListItem mb={0.5}>
-            <WorkBadge>Source</WorkBadge>
-            <Link
-              href="https://github.com/nicoPuegher/expenses-tracker"
-              target="_blank"
-            >
-              GitHub repository
-              <ExternalLinkIcon ml={1} />
-            </Link>
-          </ListItem>
+          <GitItem />
 
           <ListItem display="inline-flex">
             <Wrap spacing={1}>
