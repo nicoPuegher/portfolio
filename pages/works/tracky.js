@@ -101,6 +101,13 @@ const CustomList = () => (
   </List>
 );
 
+const DesktopImage = () => (
+  <WorkImage
+    image={trackyThumb}
+    alt="Tracky web application desktop screenshot"
+  />
+);
+
 const Tracky = () => {
   return (
     <Container>
@@ -109,11 +116,8 @@ const Tracky = () => {
         <Description />
         <PersonalTake />
         <CustomList />
+        <DesktopImage />
 
-        <WorkImage
-          image={trackyThumb}
-          alt="Tracky web application desktop screenshot"
-        />
         <SimpleGrid columns={2} mt={3} gap={3}>
           <WorkImage
             image={trackyMobile1}
