@@ -18,17 +18,15 @@ const Tracky = () => (
   />
 );
 
-const Works = () => {
-  return (
-    <Container>
-      <Section delay={0.1}>
-        <SectionTitle />
-        <SimpleGrid>
-          <Tracky />
-        </SimpleGrid>
-      </Section>
-    </Container>
-  );
-};
+const Works = () => (
+  <Container>
+    <Section delay={0.1}>
+      <SectionTitle />
+      <SimpleGrid>
+        <Tracky />
+      </SimpleGrid>
+    </Section>
+  </Container>
+);
 
 export default Works;
