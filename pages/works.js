@@ -9,18 +9,22 @@ const SectionTitle = () => (
   </Heading>
 );
 
+const Tracky = () => (
+  <GridItem
+    id="tracky"
+    title="Tracky"
+    thumbnail={trackyThumb}
+    description="Fully responsive expense tracker frontend web application"
+  />
+);
+
 const Works = () => {
   return (
     <Container>
       <Section delay={0.1}>
         <SectionTitle />
         <SimpleGrid>
-          <GridItem
-            id="tracky"
-            title="Tracky"
-            thumbnail={trackyThumb}
-            description="Fully responsive expense tracker frontend web application"
-          />
+          <Tracky />
         </SimpleGrid>
       </Section>
     </Container>
