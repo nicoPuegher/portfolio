@@ -15,14 +15,12 @@ const CustomText = () => (
   </Text>
 );
 
-const Logo = () => {
-  return (
-    <Link href="/">
-      <LogoBox>
-        <CustomText />
-      </LogoBox>
-    </Link>
-  );
-};
+const Logo = () => (
+  <Link href="/">
+    <LogoBox>
+      <CustomText />
+    </LogoBox>
+  </Link>
+);
 
 export default Logo;
