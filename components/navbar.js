@@ -49,6 +49,34 @@ const NavLogo = () => (
   </Flex>
 );
 
+const LinkedinLink = ({ path }) => (
+  <LinkItem
+    href="https://www.linkedin.com/in/nicolas-puegher/"
+    target="_blank"
+    path={path}
+    display="inline-flex"
+    alignItems="center"
+    style={{ gap: 4 }}
+  >
+    <FaLinkedin />
+    LinkedIn
+  </LinkItem>
+);
+
+const GithubLink = ({ path }) => (
+  <LinkItem
+    href="https://github.com/nicoPuegher"
+    target="_blank"
+    path={path}
+    display="inline-flex"
+    alignItems="center"
+    style={{ gap: 4 }}
+  >
+    <FaGithubSquare />
+    GitHub
+  </LinkItem>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -84,28 +112,8 @@ const Navbar = props => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-          <LinkItem
-            href="https://www.linkedin.com/in/nicolas-puegher/"
-            target="_blank"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-          >
-            <FaLinkedin />
-            LinkedIn
-          </LinkItem>
-          <LinkItem
-            href="https://github.com/nicoPuegher"
-            target="_blank"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-          >
-            <FaGithubSquare />
-            GitHub
-          </LinkItem>
+          <LinkedinLink />
+          <GithubLink />
         </Stack>
 
         <Box flex={{ base: 1, md: 0 }} ml={4} align="right">
