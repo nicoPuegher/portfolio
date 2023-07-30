@@ -155,25 +155,31 @@ const CustomContainer = ({ children }) => (
   </Container>
 );
 
+const CustomBox = props => (
+  <Box
+    as="nav"
+    w="100%"
+    position="fixed"
+    style={{ backdropFilter: 'blur(10px' }}
+    bg={useColorModeValue('blackAlpha.50', 'blackAlpha.400')}
+    zIndex={2}
+    {...props}
+  >
+    {props.children}
+  </Box>
+);
+
 const Navbar = props => {
   const { path } = props;
 
   return (
-    <Box
-      as="nav"
-      w="100%"
-      position="fixed"
-      style={{ backdropFilter: 'blur(10px' }}
-      bg={useColorModeValue('blackAlpha.50', 'blackAlpha.400')}
-      zIndex={2}
-      {...props}
-    >
+    <CustomBox>
       <CustomContainer>
         <NavLogo />
         <NavStack path={path} />
         <NavbarMobile />
       </CustomContainer>
-    </Box>
+    </CustomBox>
   );
 };
 
