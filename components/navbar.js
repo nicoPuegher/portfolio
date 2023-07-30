@@ -1,4 +1,5 @@
 import NextLink from 'next/link';
+import { forwardRef } from 'react';
 import {
   Container,
   Box,
@@ -42,6 +43,10 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     </Link>
   );
 };
+
+const MenuLink = forwardRef(function MenuLink(props, ref) {
+  return <Link ref={ref} as={NextLink} {...props} />;
+});
 
 const NavLogo = () => (
   <Flex mr={5}>
@@ -97,9 +102,9 @@ const NavStack = ({ path }) => (
   </Stack>
 );
 
-const LinkedinMobile = ({ bg }) => (
+const LinkedinMobile = ({ as, bg }) => (
   <MenuItem
-    as={LinkItem}
+    as={as}
     href="https://www.linkedin.com/in/nicolas-puegher/"
     target="_blank"
     bg={bg}
@@ -108,9 +113,9 @@ const LinkedinMobile = ({ bg }) => (
   </MenuItem>
 );
 
-const GithubMobile = ({ bg }) => (
+const GithubMobile = ({ as, bg }) => (
   <MenuItem
-    as={LinkItem}
+    as={as}
     href="https://github.com/nicoPuegher"
     target="_blank"
     bg={bg}
@@ -121,14 +126,14 @@ const GithubMobile = ({ bg }) => (
 
 const MenuListMobile = () => (
   <MenuList bg={useColorModeValue('white', 'black')}>
-    <MenuItem as={LinkItem} href="/about" bg="inherit">
+    <MenuItem as={MenuLink} href="/about" bg="inherit">
       About
     </MenuItem>
-    <MenuItem as={LinkItem} href="/works" bg="inherit">
+    <MenuItem as={MenuLink} href="/works" bg="inherit">
       Works
     </MenuItem>
-    <LinkedinMobile bg="inherit" />
-    <GithubMobile bg="inherit" />
+    <LinkedinMobile as={MenuLink} bg="inherit" />
+    <GithubMobile as={MenuLink} bg="inherit" />
   </MenuList>
 );
 
