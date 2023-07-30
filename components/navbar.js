@@ -142,6 +142,19 @@ const NavbarMobile = () => (
   </Box>
 );
 
+const CustomContainer = ({ children }) => (
+  <Container
+    maxW="container.md"
+    display="flex"
+    wrap="wrap"
+    p={2}
+    align="center"
+    justify="space-between"
+  >
+    {children}
+  </Container>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -155,18 +168,11 @@ const Navbar = props => {
       zIndex={2}
       {...props}
     >
-      <Container
-        maxW="container.md"
-        display="flex"
-        wrap="wrap"
-        p={2}
-        align="center"
-        justify="space-between"
-      >
+      <CustomContainer>
         <NavLogo />
         <NavStack path={path} />
         <NavbarMobile />
-      </Container>
+      </CustomContainer>
     </Box>
   );
 };
