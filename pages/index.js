@@ -17,9 +17,9 @@ const Profile = () => (
       h="125px"
       display="inline-block"
       borderStyle="solid"
-      borderWidth={2}
+      borderWidth={3}
       borderRadius="full"
-      borderColor={useColorModeValue('blackAlpha.400', 'whiteAlpha.800')}
+      borderColor={useColorModeValue('blackAlpha.200', 'whiteAlpha.800')}
       overflow="hidden"
     >
       <Image
@@ -39,7 +39,7 @@ const Message = () => (
     mb={6}
     align="center"
     borderRadius="lg"
-    bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
+    bg={useColorModeValue('blackAlpha.50', 'whiteAlpha.300')}
   >
     Hey there, nice to meet you!
   </Box>
