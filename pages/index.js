@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Section from '../components/section';
+import profilePicture from '../public/images/nicolas.jpg';
 
 const Profile = () => (
   <Box mb={6} textAlign="center">
@@ -23,7 +24,7 @@ const Profile = () => (
       overflow="hidden"
     >
       <Image
-        src="/images/nicolas.jpg"
+        src={profilePicture.src}
         alt="Profile image"
         width="125"
         height="125"
