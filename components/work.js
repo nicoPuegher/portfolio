@@ -12,7 +12,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 const WorkTitle = ({ children }) => {
   return (
     <Box>
-      <Link as={NextLink} href="/works">
+      <Link as={NextLink} href="/works" variant="external-link">
         Works
       </Link>
       <ChevronRightIcon mx={1} />
@@ -36,7 +36,14 @@ const StackBadge = ({ children }) => {
 };
 
 const WorkImage = ({ image, alt }) => {
-  return <Image src={image.src} alt={alt} borderRadius="md" />;
+  return (
+    <Image
+      src={image.src}
+      alt={alt}
+      borderRadius="md"
+      shadow={useColorModeValue('xs', '')}
+    />
+  );
 };
 
 export { WorkTitle, WorkBadge, StackBadge, WorkImage };
