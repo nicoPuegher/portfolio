@@ -1,12 +1,12 @@
+import NextLink from 'next/link';
 import {
   Box,
-  Link,
   Heading,
+  Link,
   Badge,
-  useColorModeValue,
   Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 const WorkTitle = ({ children }) => {
