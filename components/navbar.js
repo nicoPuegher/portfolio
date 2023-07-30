@@ -22,6 +22,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
   const activeColor = useColorModeValue('white', 'gray.800');
   const activeBg = useColorModeValue('teal.500', 'blue.200');
+  const activeHover = useColorModeValue('teal.600', 'blue.300');
   const inactiveColor = useColorModeValue('blackAlpha.800', 'whiteAlpha.900');
 
   return (
@@ -34,6 +35,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       borderRadius="md"
       color={active ? activeColor : inactiveColor}
       bg={active ? activeBg : undefined}
+      _hover={active ? { backgroundColor: activeHover } : undefined}
       {...props}
     >
       {children}
@@ -95,32 +97,38 @@ const NavStack = ({ path }) => (
   </Stack>
 );
 
-const LinkedinMobile = () => (
+const LinkedinMobile = ({ bg }) => (
   <MenuItem
     as={LinkItem}
     href="https://www.linkedin.com/in/nicolas-puegher/"
     target="_blank"
+    bg={bg}
   >
     LinkedIn
   </MenuItem>
 );
 
-const GithubMobile = () => (
-  <MenuItem as={LinkItem} href="https://github.com/nicoPuegher" target="_blank">
+const GithubMobile = ({ bg }) => (
+  <MenuItem
+    as={LinkItem}
+    href="https://github.com/nicoPuegher"
+    target="_blank"
+    bg={bg}
+  >
     GitHub
   </MenuItem>
 );
 
 const MenuListMobile = () => (
-  <MenuList>
-    <MenuItem as={LinkItem} href="/about">
+  <MenuList bg={useColorModeValue('white', 'black')}>
+    <MenuItem as={LinkItem} href="/about" bg="inherit">
       About
     </MenuItem>
-    <MenuItem as={LinkItem} href="/works">
+    <MenuItem as={LinkItem} href="/works" bg="inherit">
       Works
     </MenuItem>
-    <LinkedinMobile />
-    <GithubMobile />
+    <LinkedinMobile bg="inherit" />
+    <GithubMobile bg="inherit" />
   </MenuList>
 );
 
@@ -135,6 +143,13 @@ const NavbarMobile = () => (
           variant="outline"
           aria-label="Options"
           ml={3}
+          color={useColorModeValue('blackAlpha.800', 'whiteAlpha.900')}
+          _hover={{
+            backgroundColor: useColorModeValue(
+              'blackAlpha.100',
+              'whiteAlpha.300',
+            ),
+          }}
         />
         <MenuListMobile />
       </Menu>
@@ -161,7 +176,7 @@ const CustomBox = props => (
     w="100%"
     position="fixed"
     style={{ backdropFilter: 'blur(10px' }}
-    bg={useColorModeValue('blackAlpha.50', 'blackAlpha.400')}
+    bg={useColorModeValue('blackAlpha.50', 'blackAlpha.50')}
     zIndex={2}
     {...props}
   >
