@@ -124,6 +124,24 @@ const MenuListMobile = () => (
   </MenuList>
 );
 
+const NavbarMobile = () => (
+  <Box flex={{ base: 1, md: 0 }} ml={4} align="right">
+    <ThemeToggle />
+    <Box display={{ base: 'inline-block', md: 'none' }}>
+      <Menu isLazy>
+        <MenuButton
+          as={IconButton}
+          icon={<HamburgerIcon />}
+          variant="outline"
+          aria-label="Options"
+          ml={3}
+        />
+        <MenuListMobile />
+      </Menu>
+    </Box>
+  </Box>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -147,22 +165,7 @@ const Navbar = props => {
       >
         <NavLogo />
         <NavStack path={path} />
-
-        <Box flex={{ base: 1, md: 0 }} ml={4} align="right">
-          <ThemeToggle />
-          <Box display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy>
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-                ml={3}
-              />
-              <MenuListMobile />
-            </Menu>
-          </Box>
-        </Box>
+        <NavbarMobile />
       </Container>
     </Box>
   );
