@@ -77,6 +77,24 @@ const GithubLink = ({ path }) => (
   </LinkItem>
 );
 
+const NavStack = ({ path }) => (
+  <Stack
+    display={{ base: 'none', md: 'flex' }}
+    direction="row"
+    flexGrow={1}
+    justify="end"
+  >
+    <LinkItem href="/about" path={path}>
+      About
+    </LinkItem>
+    <LinkItem href="/works" path={path}>
+      Works
+    </LinkItem>
+    <LinkedinLink path={path} />
+    <GithubLink path={path} />
+  </Stack>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -99,22 +117,7 @@ const Navbar = props => {
         justify="space-between"
       >
         <NavLogo />
-
-        <Stack
-          display={{ base: 'none', md: 'flex' }}
-          direction="row"
-          flexGrow={1}
-          justify="end"
-        >
-          <LinkItem href="/about" path={path}>
-            About
-          </LinkItem>
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
-          <LinkedinLink />
-          <GithubLink />
-        </Stack>
+        <NavStack path={path} />
 
         <Box flex={{ base: 1, md: 0 }} ml={4} align="right">
           <ThemeToggle />
