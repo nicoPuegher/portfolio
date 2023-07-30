@@ -1,8 +1,13 @@
 import NextLink from 'next/link';
-import { Box, Text, LinkBox, Image } from '@chakra-ui/react';
+import { Box, Text, LinkBox, Image, useColorModeValue } from '@chakra-ui/react';
 
 const GridImage = ({ src, alt }) => (
-  <Image src={src} alt={alt} borderRadius="md" />
+  <Image
+    src={src}
+    alt={alt}
+    borderRadius="md"
+    shadow={useColorModeValue('xs', '')}
+  />
 );
 
 const GridInfo = ({ title, description }) => (
@@ -10,7 +15,14 @@ const GridInfo = ({ title, description }) => (
     <Text fontSize="lg" fontWeight="bold">
       {title}
     </Text>
-    <Text>{description}</Text>
+    <Text
+      color={useColorModeValue(
+        'RGBA(0, 0, 0, 0.64)',
+        'RGBA(255, 255, 255, 0.80)',
+      )}
+    >
+      {description}
+    </Text>
   </Box>
 );
 
