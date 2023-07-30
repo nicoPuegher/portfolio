@@ -6,6 +6,7 @@ const Paragraph = styled.p`
   margin-bottom: ${props => props.mb};
   text-align: justify;
   hyphens: auto;
+  color: ${props => props.color};
   opacity: ${props => props.opacity};
 `;
 
