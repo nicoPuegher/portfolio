@@ -6,6 +6,7 @@ import {
   ListItem,
   Wrap,
   SimpleGrid,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Section from '../../components/section';
@@ -34,12 +35,25 @@ const Description = () => (
 
 const PersonalTake = () => (
   <>
-    <Paragraph fontStyle="italic" mb="12px" opacity="0.9">
+    <Paragraph
+      fontStyle="italic"
+      mb="12px"
+      color={useColorModeValue(
+        'RGBA(0, 0, 0, 0.64)',
+        'RGBA(255, 255, 255, 0.80)',
+      )}
+    >
       My projects were not aging well so I wanted to build something new to
       demonstrate my actual skills while solving a personal problem of mine and
       at the same time learn new technologies to expand my knowledge.
     </Paragraph>
-    <Paragraph fontStyle="italic" opacity="0.9">
+    <Paragraph
+      fontStyle="italic"
+      color={useColorModeValue(
+        'RGBA(0, 0, 0, 0.64)',
+        'RGBA(255, 255, 255, 0.80)',
+      )}
+    >
       Trying these libraries/frameworks helps me decide by myself what to use
       based on personal preferences or project requirements. In this case, I
       wanted to learn Tailwind CSS, Material UI, and build my project with Vite.
@@ -53,6 +67,7 @@ const DemoItem = () => (
     <Link
       href="https://nicopuegher.github.io/expenses-tracker/"
       target="_blank"
+      variant="external-link"
     >
       Live demo application
       <ExternalLinkIcon ml={1} />
@@ -66,6 +81,7 @@ const GitItem = () => (
     <Link
       href="https://github.com/nicoPuegher/expenses-tracker"
       target="_blank"
+      variant="external-link"
     >
       GitHub repository
       <ExternalLinkIcon ml={1} />
