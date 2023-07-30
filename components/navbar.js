@@ -95,6 +95,22 @@ const NavStack = ({ path }) => (
   </Stack>
 );
 
+const LinkedinMobile = () => (
+  <MenuItem
+    as={LinkItem}
+    href="https://www.linkedin.com/in/nicolas-puegher/"
+    target="_blank"
+  >
+    LinkedIn
+  </MenuItem>
+);
+
+const GithubMobile = () => (
+  <MenuItem as={LinkItem} href="https://github.com/nicoPuegher" target="_blank">
+    GitHub
+  </MenuItem>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -137,20 +153,8 @@ const Navbar = props => {
                 <MenuItem as={LinkItem} href="/works">
                   Works
                 </MenuItem>
-                <MenuItem
-                  as={LinkItem}
-                  href="https://www.linkedin.com/in/nicolas-puegher/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </MenuItem>
-                <MenuItem
-                  as={LinkItem}
-                  href="https://github.com/nicoPuegher"
-                  target="_blank"
-                >
-                  GitHub
-                </MenuItem>
+                <LinkedinMobile />
+                <GithubMobile />
               </MenuList>
             </Menu>
           </Box>
