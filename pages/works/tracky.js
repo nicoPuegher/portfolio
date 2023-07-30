@@ -1,5 +1,6 @@
 import {
   Container,
+  Text,
   Badge,
   Link,
   List,
@@ -54,9 +55,10 @@ const PersonalTake = () => (
         'RGBA(255, 255, 255, 0.80)',
       )}
     >
-      Trying these libraries/frameworks helps me decide by myself what to use
-      based on personal preferences or project requirements. In this case, I
-      wanted to learn Tailwind CSS, Material UI, and build my project with Vite.
+      Trying libraries and frameworks help me decide by myself what to use based
+      on personal preferences or project requirements. In this case, I wanted to
+      learn <Text as="b">Tailwind CSS</Text>, <Text as="b">Material UI</Text>,
+      and build my project with <Text as="b">Vite</Text>.
     </Paragraph>
   </>
 );
@@ -94,14 +96,14 @@ const StackItem = () => (
     <Wrap spacing={1}>
       <WorkBadge>Stack</WorkBadge>
       <StackBadge>JavaScript</StackBadge>
-      <StackBadge>ReactJS</StackBadge>
+      <StackBadge>React.js</StackBadge>
       <StackBadge>Tailwind CSS</StackBadge>
-      <StackBadge>Hero Icons</StackBadge>
+      <StackBadge>Heroicons</StackBadge>
       <StackBadge>Headless UI</StackBadge>
       <StackBadge>Material UI</StackBadge>
-      <StackBadge>DayJS</StackBadge>
+      <StackBadge>Day.js</StackBadge>
       <StackBadge>Lodash</StackBadge>
-      <StackBadge>Prop Types</StackBadge>
+      <StackBadge>PropTypes</StackBadge>
       <StackBadge>ESLint</StackBadge>
       <StackBadge>Prettier</StackBadge>
       <StackBadge>Vite</StackBadge>
