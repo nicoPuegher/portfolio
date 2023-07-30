@@ -111,6 +111,19 @@ const GithubMobile = () => (
   </MenuItem>
 );
 
+const MenuListMobile = () => (
+  <MenuList>
+    <MenuItem as={LinkItem} href="/about">
+      About
+    </MenuItem>
+    <MenuItem as={LinkItem} href="/works">
+      Works
+    </MenuItem>
+    <LinkedinMobile />
+    <GithubMobile />
+  </MenuList>
+);
+
 const Navbar = props => {
   const { path } = props;
 
@@ -146,16 +159,7 @@ const Navbar = props => {
                 aria-label="Options"
                 ml={3}
               />
-              <MenuList>
-                <MenuItem as={LinkItem} href="/about">
-                  About
-                </MenuItem>
-                <MenuItem as={LinkItem} href="/works">
-                  Works
-                </MenuItem>
-                <LinkedinMobile />
-                <GithubMobile />
-              </MenuList>
+              <MenuListMobile />
             </Menu>
           </Box>
         </Box>
