@@ -1,4 +1,4 @@
-import { Container, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Container, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Section from '../components/section';
 import Paragraph from '../components/paragraph';
 
@@ -34,22 +34,50 @@ const Experience = () => (
     <Heading as="h3" variant="section-title">
       My experience
     </Heading>
+
     <CustomParagraph mb="12px">
-      I have been learning software engineering for almost four years now, and
-      all I can say is that I love it. My experience comes from two different
-      positions where I faced many challenges, learned many things, and met
-      amazing people.
+      My name is Nicolas, and I am a Software Developer with 1+ year of
+      experience working for a small Danish startup and a fairly big American
+      company, where my role was to build and test web applications. I had to
+      tackle problems in the frontend and backend simultaneously which provided
+      a great learning experience, primarily with the same stack:{' '}
+      <Text as="b">MongoDB</Text>,<Text as="b">Express.js</Text>,{' '}
+      <Text as="b">React.js</Text>, and <Text as="b">Node.js</Text>.
     </CustomParagraph>
     <CustomParagraph mb="12px">
-      Half of that was as a full-stack developer working on-site in Copenhagen,
-      Denmark. I spent most of my time working on the application&apos;s UI and
-      the backend, primarily with the database and payment processor.
+      My hunger for learning led me to look for a curated list of open source
+      computer science equivalent courses to step up my game.
+    </CustomParagraph>
+    <CustomParagraph mb="12px">
+      On platforms such as Udemy or LinkedIn, I am a veteran with hundreds of
+      hours and around 70+ certifications. Active Leetcode user, I solve at
+      least 2 problems a day to improve my algorithm, coding and problem-solving
+      skills.
+    </CustomParagraph>
+
+    <CustomParagraph mb="12px">
+      In my previous roles, I developed a strong understanding of the latest
+      trends and technologies in the industry. I have significant experience in
+      the use of <Text as="b">HTML5</Text>, <Text as="b">CSS3</Text>,{' '}
+      <Text as="b">Sass</Text>, <Text as="b">Tailwind</Text>,{' '}
+      <Text as="b">JavaScript</Text>, <Text as="b">React.js</Text>,{' '}
+      <Text as="b">Redux</Text>, <Text as="b">Node.js</Text>,{' '}
+      <Text as="b">MongoDB</Text>, <Text as="b">Express.js</Text>,{' '}
+      <Text as="b">Jest</Text>, and <Text as="b">Git</Text>.
+    </CustomParagraph>
+    <CustomParagraph mb="12px">
+      Aside from that, I am also used to work with <Text as="b">Chakra UI</Text>
+      , <Text as="b">Material UI</Text>,<Text as="b">Tailwind UI</Text>,{' '}
+      <Text as="b">ESLint</Text>, <Text as="b">NPM</Text>,{' '}
+      <Text as="b">Dev Tools</Text> (<Text as="b">Browser</Text>,{' '}
+      <Text as="b">React</Text>, <Text as="b">Redux</Text>),{' '}
+      <Text as="b">Jira</Text>, and <Text as="b">Unix Terminal</Text>. My next
+      goal is to become proficient with <Text as="b">Next.js</Text> and{' '}
+      <Text as="b">TypeScript</Text>.
     </CustomParagraph>
     <CustomParagraph>
-      The other half was as a software engineer for a US-based company, remotely
-      from Buenos Aires, Argentina. Aside from building the UI from Figma files,
-      I had to work simultaneously on the application&apos;s authentication and
-      unit tests.
+      If you believe I can become a valuable asset for your team, please do not
+      hesitate to contact me. I look forward to talking with you.
     </CustomParagraph>
   </Section>
 );
