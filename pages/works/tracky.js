@@ -44,9 +44,21 @@ const PersonalTake = () => (
         'RGBA(255, 255, 255, 0.80)',
       )}
     >
-      My projects were not aging well so I wanted to build something new to
-      demonstrate my actual skills while solving a personal problem of mine and
-      at the same time learn new technologies to expand my knowledge.
+      This application allows you to keep track of your expenses, and it has a
+      variety of categories to choose for each. Adding more or removing existing
+      ones is quick and easy.
+    </Paragraph>
+    <Paragraph
+      fontStyle="italic"
+      mb="12px"
+      color={useColorModeValue(
+        'RGBA(0, 0, 0, 0.64)',
+        'RGBA(255, 255, 255, 0.80)',
+      )}
+    >
+      The graph displays monthly expenditures for a quick visual scan. Expenses
+      are filtered by year or by month, in descending order. Each item can
+      easily be changed or removed.
     </Paragraph>
     <Paragraph
       fontStyle="italic"
@@ -55,10 +67,9 @@ const PersonalTake = () => (
         'RGBA(255, 255, 255, 0.80)',
       )}
     >
-      Trying libraries and frameworks help me decide by myself what to use based
-      on personal preferences or project requirements. In this case, I wanted to
-      learn <Text as="b">Tailwind CSS</Text>, <Text as="b">Material UI</Text>,
-      and build my project with <Text as="b">Vite</Text>.
+      The form has validation and will display what it expects if provided with
+      the invalid data. By default this application uses 2022 and 2023 only but
+      can be changed accordingly.
     </Paragraph>
   </>
 );

@@ -41,7 +41,7 @@ const Experience = () => (
       company, where my role was to build and test web applications. I had to
       tackle problems in the frontend and backend simultaneously which provided
       a great learning experience, primarily with the same stack:{' '}
-      <Text as="b">MongoDB</Text>,<Text as="b">Express.js</Text>,{' '}
+      <Text as="b">MongoDB</Text>, <Text as="b">Express.js</Text>,{' '}
       <Text as="b">React.js</Text>, and <Text as="b">Node.js</Text>.
     </CustomParagraph>
     <CustomParagraph mb="12px">
@@ -59,13 +59,13 @@ const Experience = () => (
       In my previous roles, I developed a strong understanding of the latest
       trends and technologies in the industry. I have significant experience in
       the use of <Text as="b">HTML5</Text>, <Text as="b">CSS3</Text>,{' '}
-      <Text as="b">Sass</Text>, <Text as="b">Tailwind</Text>,{' '}
+      <Text as="b">Sass</Text>, <Text as="b">Tailwind CSS</Text>,{' '}
       <Text as="b">JavaScript</Text>, <Text as="b">React.js</Text>,{' '}
       <Text as="b">Redux</Text>, <Text as="b">Node.js</Text>,{' '}
       <Text as="b">MongoDB</Text>, <Text as="b">Express.js</Text>,{' '}
       <Text as="b">Jest</Text>, and <Text as="b">Git</Text>.
     </CustomParagraph>
-    <CustomParagraph mb="12px">
+    <CustomParagraph>
       Aside from that, I am also used to work with <Text as="b">Chakra UI</Text>
       , <Text as="b">Material UI</Text>,<Text as="b">Tailwind UI</Text>,{' '}
       <Text as="b">ESLint</Text>, <Text as="b">NPM</Text>,{' '}
@@ -74,10 +74,6 @@ const Experience = () => (
       <Text as="b">Jira</Text>, and <Text as="b">Unix Terminal</Text>. My next
       goal is to become proficient with <Text as="b">Next.js</Text> and{' '}
       <Text as="b">TypeScript</Text>.
-    </CustomParagraph>
-    <CustomParagraph>
-      If you believe I can become a valuable asset for your team, please do not
-      hesitate to contact me. I look forward to talking with you.
     </CustomParagraph>
   </Section>
 );
