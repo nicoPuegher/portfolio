@@ -49,7 +49,7 @@ const Message = () => (
 const Info = () => (
   <Box flexGrow={1} align="center">
     <Heading as="h2">Nicolas Puegher</Heading>
-    <p>Frontend Developer</p>
+    <p>Software Developer</p>
   </Box>
 );
 
