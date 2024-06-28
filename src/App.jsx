@@ -1,3 +1,15 @@
+import useDynamicMargin from '@hooks/useDynamicMargin.js';
+
+import Navbar from '@layouts/Navbar.jsx';
+import Page from '@layouts/Page.jsx';
+
 export default function App() {
-	return <h1>Hello, world!</h1>;
+	useDynamicMargin();
+
+	return (
+		<>
+			<Navbar />
+			<Page />
+		</>
+	);
 }
