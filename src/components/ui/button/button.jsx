@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { forwardRef } from 'react';
 
 import { Slot } from '@radix-ui/react-slot';
 import { cn } from '@/lib/utils.js';
@@ -7,7 +7,7 @@ import { buttonVariants } from './buttonVariants.js';
 
 import PropTypes from 'prop-types';
 
-const Button = React.forwardRef(
+const Button = forwardRef(
 	({ className, variant, size, asChild = false, ...props }, ref) => {
 		const Comp = asChild ? Slot : 'button';
 		return (
