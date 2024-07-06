@@ -15,7 +15,13 @@ export default function Menu() {
 			>
 				About
 			</Button>
-			<Button variant="ghost">Works</Button>
+
+			<Button
+				variant="ghost"
+				onClick={() => context.handleChangePage('works')}
+			>
+				Works
+			</Button>
 			<Button variant="ghost">Linkedin</Button>
 			<Button variant="ghost">Github</Button>
 		</div>
