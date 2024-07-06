@@ -30,7 +30,15 @@ export default function Menu() {
 					Linkedin
 				</a>
 			</Button>
-			<Button variant="ghost">Github</Button>
+			<Button variant="ghost">
+				<a
+					href="https://github.com/nicoPuegher"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Github
+				</a>
+			</Button>
 		</div>
 	);
 }
