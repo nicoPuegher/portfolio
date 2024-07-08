@@ -8,7 +8,7 @@ export default function Menu() {
 	const context = useContext(Context);
 
 	return (
-		<div className="inline-flex gap-2">
+		<div className="hidden gap-2 md:inline-flex">
 			<Button
 				variant="ghost"
 				onClick={() => context.handleChangePage('about')}
