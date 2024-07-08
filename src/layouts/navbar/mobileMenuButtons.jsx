@@ -4,7 +4,7 @@ import {
 	DropdownMenuContent,
 	DropdownMenuGroup,
 	DropdownMenuItem,
-} from '@/components/ui/dropdown-menu.jsx';
+} from '@/components/ui/dropdownMenu.jsx';
 
 import Button from '@/components/ui/button/button.jsx';
 
@@ -14,7 +14,11 @@ export default function mobileMenuButtons() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="icon">
+				<Button
+					className="ml-2 md:hidden"
+					variant="outline"
+					size="icon"
+				>
 					<Menu className="h-4 w-4" />
 				</Button>
 			</DropdownMenuTrigger>
