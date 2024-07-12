@@ -30,5 +30,8 @@ module.exports = {
 			'warn',
 			{ allowConstantExport: true },
 		],
+		'no-tabs': ['error', { allowIndentationTabs: true }],
+		indent: ['error', 'tab'],
+		'react/jsx-indent': ['error', 'tab'],
 	},
 };
