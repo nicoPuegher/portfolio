@@ -33,5 +33,11 @@ module.exports = {
 		'no-tabs': ['error', { allowIndentationTabs: true }],
 		indent: ['error', 'tab'],
 		'react/jsx-indent': ['error', 'tab'],
+		'import/no-extraneous-dependencies': [
+			'error',
+			{
+				devDependencies: ['**/vite.config.js'],
+			},
+		],
 	},
 };
