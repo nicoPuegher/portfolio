@@ -24,10 +24,7 @@ module.exports = {
 	},
 	plugins: ['react-refresh'],
 	rules: {
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
-		],
+		'react-refresh/only-export-components': 'warn',
 		'no-tabs': ['error', { allowIndentationTabs: true }],
 		indent: ['error', 'tab'],
 		'react/jsx-indent': ['error', 'tab'],
