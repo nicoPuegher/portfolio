@@ -1,7 +1,11 @@
+import React from 'react';
+
+import Header from '@layouts/header';
+
 export default function App() {
 	return (
 		<>
-			<h1>Hello world</h1>
+			<Header>Navbar</Header>
 		</>
 	);
 }
