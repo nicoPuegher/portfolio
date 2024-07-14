@@ -8,7 +8,7 @@ export default function Menu() {
 	const context = useContext(Context);
 
 	return (
-		<div className="inline-flex gap-2">
+		<div className="hidden gap-2 md:inline-flex">
 			<Button
 				variant="ghost"
 				onClick={() => context.handleChangePage('about')}
@@ -21,7 +21,7 @@ export default function Menu() {
 			>
 				Works
 			</Button>
-			<Button variant="ghost">
+			<Button asChild variant="ghost">
 				<a
 					href="https://www.linkedin.com/in/nicolas-puegher/"
 					target="_blank"
@@ -30,7 +30,7 @@ export default function Menu() {
 					Linkedin
 				</a>
 			</Button>
-			<Button variant="ghost">
+			<Button asChild variant="ghost">
 				<a
 					href="https://github.com/nicoPuegher"
 					target="_blank"

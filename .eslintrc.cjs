@@ -6,16 +6,36 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
+		'plugin:import/recommended',
+		'plugin:jsx-a11y/recommended',
+		'airbnb',
+		'airbnb/hooks',
 	],
-	ignorePatterns: ['.eslintrc.cjs'],
 	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-	settings: { react: { version: '18.2' } },
+	settings: {
+		react: { version: '18.2' },
+		'import/resolver': {
+			alias: {
+				map: [
+					['@', './src'],
+					['@layouts', './src/layouts'],
+					['@lib', './src/lib'],
+				],
+				extensions: ['.js', '.jsx'],
+			},
+		},
+	},
 	plugins: ['react-refresh'],
 	rules: {
-		'react/jsx-no-target-blank': 'off',
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
+		'no-tabs': ['error', { allowIndentationTabs: true }],
+		indent: ['error', 'tab'],
+		'react/jsx-indent': ['error', 'tab'],
+		'react-refresh/only-export-components': 'warn',
+		'import/no-extraneous-dependencies': [
+			'error',
+			{
+				devDependencies: ['**/vite.config.js'],
+			},
 		],
 	},
 };
