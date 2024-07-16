@@ -40,5 +40,6 @@ module.exports = {
 				devDependencies: ['**/vite.config.js'],
 			},
 		],
+		'react/jsx-no-bind': 'off',
 	},
 };
