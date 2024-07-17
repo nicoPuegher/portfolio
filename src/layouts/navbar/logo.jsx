@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { Heading } from '@chakra-ui/react';
+import { Heading, Link } from '@chakra-ui/react';
 
 import { developer } from '@constants';
 
 export default function Logo() {
+	const handleClick = (e) => e.preventDefault();
+
 	return (
 		<Heading as="h1" size="md" letterSpacing="tighter">
-			{developer}
+			<Link href="/" onClick={handleClick}>
+				{developer}
+			</Link>
 		</Heading>
 	);
 }
