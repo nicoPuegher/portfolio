@@ -41,5 +41,6 @@ module.exports = {
 			},
 		],
 		'react/jsx-no-bind': 'off',
+		quotes: 'off',
 	},
 };
