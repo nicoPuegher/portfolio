@@ -13,7 +13,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 
 export default function MenuMobile() {
 	return (
-		<Box>
+		<Box ml="2" display={{ base: 'inline-block', md: 'none' }}>
 			<Menu>
 				<MenuButton
 					as={IconButton}
