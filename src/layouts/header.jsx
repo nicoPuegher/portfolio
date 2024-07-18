@@ -10,7 +10,10 @@ export default function Header() {
 			<Navbar.Nav>
 				<Navbar.Logo />
 				<Navbar.Menu />
-				<Navbar.ThemeToggle />
+				<Box>
+					<Navbar.ThemeToggle />
+					<Navbar.MenuMobile />
+				</Box>
 			</Navbar.Nav>
 		</Box>
 	);
