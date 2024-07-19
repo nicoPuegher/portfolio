@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 
 import reducer from '@store/reducer';
 import Context from '@store/context';
-import generateValue from '@store/generateValue';
+import generateValue from '@store/generate-value';
 
 import PropTypes from 'prop-types';
 
