@@ -1,8 +1,6 @@
 import { createContext } from 'react';
 
-export const Context = createContext({
-	theme: '',
+export default createContext({
 	page: '',
-	handleChangeTheme: () => {},
 	handleChangePage: () => {},
 });

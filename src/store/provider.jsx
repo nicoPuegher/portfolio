@@ -1,14 +1,13 @@
-import { useReducer } from 'react';
+import React, { useReducer } from 'react';
 
-import reducer from './reducer.js';
-import { Context } from './context.js';
-import generateValue from './generateValue.js';
+import reducer from '@store/reducer';
+import Context from '@store/context';
+import generateValue from '@store/generate-value';
 
 import PropTypes from 'prop-types';
 
 export default function ContextProvider({ children }) {
 	const [state, dispatch] = useReducer(reducer, {
-		theme: 'light',
 		page: 'home',
 	});
 
