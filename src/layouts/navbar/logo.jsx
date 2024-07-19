@@ -1,19 +1,17 @@
-import { useContext } from 'react';
+import React from 'react';
 
-import { Context } from '@/store/context';
+import { Heading, Link } from '@chakra-ui/react';
 
-import { Button } from '@/components/ui/button/index.js';
+import { developer } from '@constants';
 
 export default function Logo() {
-	const context = useContext(Context);
+	const handleClick = (e) => e.preventDefault();
 
 	return (
-		<Button
-			className="pl-0 text-base font-semibold"
-			variant="link"
-			onClick={() => context.handleChangePage('home')}
-		>
-			Nicolas Puegher
-		</Button>
+		<Heading as="h1" size="md" letterSpacing="tighter">
+			<Link href="/" onClick={handleClick}>
+				{developer}
+			</Link>
+		</Heading>
 	);
 }

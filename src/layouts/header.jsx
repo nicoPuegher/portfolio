@@ -2,12 +2,19 @@ import React from 'react';
 
 import { Box } from '@chakra-ui/react';
 
-import PropTypes from 'prop-types';
+import * as Navbar from '@layouts/navbar';
 
-export default function Header({ children }) {
-	return <Box as="header">{children}</Box>;
+export default function Header() {
+	return (
+		<Box as="header" pos="fixed" w="100%" backdropFilter="blur(10px)">
+			<Navbar.Nav>
+				<Navbar.Logo />
+				<Navbar.Menu />
+				<Box>
+					<Navbar.ThemeToggle />
+					<Navbar.MenuMobile />
+				</Box>
+			</Navbar.Nav>
+		</Box>
+	);
 }
-
-Header.propTypes = {
-	children: PropTypes.node.isRequired,
-};
