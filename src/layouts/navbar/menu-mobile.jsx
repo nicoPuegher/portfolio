@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import Context from '@/store/context';
 
 import {
 	Box,
@@ -12,6 +14,8 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 export default function MenuMobile() {
+	const context = useContext(Context);
+
 	return (
 		<Box ml="2" display={{ base: 'inline-block', md: 'none' }}>
 			<Menu>
@@ -22,8 +26,12 @@ export default function MenuMobile() {
 					aria-label="Options"
 				/>
 				<MenuList>
-					<MenuItem>About</MenuItem>
-					<MenuItem>Works</MenuItem>
+					<MenuItem onClick={() => context.handleChangePage('about')}>
+						About
+					</MenuItem>
+					<MenuItem onClick={() => context.handleChangePage('works')}>
+						Works
+					</MenuItem>
 					<MenuItem>Linkedin</MenuItem>
 					<MenuItem>Github</MenuItem>
 				</MenuList>
