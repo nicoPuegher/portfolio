@@ -22,6 +22,7 @@ module.exports = {
 					['@constants', './src/constants'],
 					['@layouts', './src/layouts'],
 					['@lib', './src/lib'],
+					['@pages', './src/pages'],
 					['@store', './src/store'],
 				],
 				extensions: ['.js', '.jsx'],
