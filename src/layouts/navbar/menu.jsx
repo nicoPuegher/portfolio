@@ -10,8 +10,8 @@ export default function Menu() {
 	return (
 		<ButtonGroup
 			display={{ base: 'none', md: 'flex' }}
+			spacing={3}
 			variant="ghost"
-			spacing="3"
 		>
 			<Button onClick={() => context.handleChangePage('about')}>
 				About
