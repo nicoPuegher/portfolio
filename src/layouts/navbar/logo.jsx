@@ -4,7 +4,7 @@ import Context from '@/store/context';
 
 import { Heading, Link } from '@chakra-ui/react';
 
-import { developer } from '@constants';
+import developer from '@constants';
 
 export default function Logo() {
 	const context = useContext(Context);
@@ -15,9 +15,9 @@ export default function Logo() {
 	};
 
 	return (
-		<Heading as="h1" size="md" letterSpacing="tighter">
+		<Heading as="h1" size="md" color="white">
 			<Link href="/" onClick={handleClick}>
-				{developer}
+				{developer.name}
 			</Link>
 		</Heading>
 	);
