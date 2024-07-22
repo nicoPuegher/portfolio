@@ -17,12 +17,11 @@ export default function MenuMobile() {
 	const context = useContext(Context);
 
 	return (
-		<Box ml="2" display={{ base: 'inline-block', md: 'none' }}>
+		<Box ml={2} display="inline-block">
 			<Menu>
 				<MenuButton
 					as={IconButton}
 					icon={<HamburgerIcon />}
-					variant="outline"
 					aria-label="Options"
 				/>
 				<MenuList>
