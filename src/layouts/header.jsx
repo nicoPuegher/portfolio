@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Box } from '@chakra-ui/react';
 
-import * as Navbar from '@layouts/navbar';
-
 import PropTypes from 'prop-types';
+
+import * as Navbar from '@layouts/navbar';
 
 export default function Header() {
 	return (
@@ -26,7 +26,7 @@ function CustomBox({ children }) {
 		<Box
 			as="header"
 			pos="sticky"
-			w="100%"
+			w="full"
 			top={0}
 			backgroundColor="black"
 			backdropFilter="blur(10px)"
