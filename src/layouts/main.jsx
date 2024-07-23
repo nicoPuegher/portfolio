@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 
-import Context from '@store/context';
-
 import { Box } from '@chakra-ui/react';
+
+import PropTypes from 'prop-types';
+
+import Context from '@store/context';
 
 import Home from '@pages/home';
 import About from '@pages/about';
 import Works from '@pages/works';
-
-import PropTypes from 'prop-types';
 
 export default function Main() {
 	const context = useContext(Context);
