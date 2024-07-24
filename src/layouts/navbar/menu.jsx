@@ -1,18 +1,14 @@
 import React, { useContext } from 'react';
 
-import Context from '@/store/context';
-
 import { ButtonGroup, Button } from '@chakra-ui/react';
+
+import Context from '@/store/context';
 
 export default function Menu() {
 	const context = useContext(Context);
 
 	return (
-		<ButtonGroup
-			display={{ base: 'none', md: 'flex' }}
-			spacing={3}
-			variant="ghost"
-		>
+		<ButtonGroup display="none" spacing={3} variant="ghost">
 			<Button onClick={() => context.handleChangePage('about')}>
 				About
 			</Button>
