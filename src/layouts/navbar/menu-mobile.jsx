@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 
-import Context from '@/store/context';
-
 import {
 	Box,
 	Menu,
@@ -12,6 +10,8 @@ import {
 } from '@chakra-ui/react';
 
 import { HamburgerIcon } from '@chakra-ui/icons';
+
+import Context from '@/store/context';
 
 export default function MenuMobile() {
 	const context = useContext(Context);
