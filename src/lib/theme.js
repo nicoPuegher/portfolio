@@ -16,6 +16,9 @@ const theme = extendTheme({
 			},
 		},
 	},
+	sizes: {
+		half: '50%',
+	},
 });
 
 export default theme;
