@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 
 import PropTypes from 'prop-types';
 
-import * as Navbar from '@layouts/navbar';
+import * as Navbar from '@components/navbar';
 
 export default function Header() {
 	return (
