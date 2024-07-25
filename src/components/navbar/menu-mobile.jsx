@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import {
 	Box,
 	Menu,
@@ -8,7 +7,6 @@ import {
 	MenuList,
 	MenuItem,
 } from '@chakra-ui/react';
-
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 import Context from '@/store/context';
