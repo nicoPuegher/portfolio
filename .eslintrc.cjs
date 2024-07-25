@@ -45,5 +45,31 @@ module.exports = {
 		],
 		'react/jsx-no-bind': 'off',
 		quotes: 'off',
+		'import/order': [
+			'error',
+			{
+				'newlines-between': 'always',
+				groups: [
+					'builtin',
+					'external',
+					'internal',
+					['parent', 'sibling', 'index'],
+					'object',
+					'type',
+					'unknown',
+				],
+				pathGroups: [
+					{
+						pattern: '@{components,lib,layouts,pages,store}/**',
+						group: 'internal',
+					},
+					{
+						pattern: '@{assets,constants}/**',
+						group: 'sibling',
+					},
+				],
+				pathGroupsExcludedImportTypes: ['internal'],
+			},
+		],
 	},
 };
