@@ -1,28 +1,40 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Nicolas' Portfolio",
-  "scripts": {
-    "dev": "next dev -H 0.0.0.0",
-    "build": "next build"
-  },
-  "keywords": [],
-  "author": "Nicolas Puegher",
-  "license": "ISC",
-  "dependencies": {
-    "@chakra-ui/icons": "^2.1.0",
-    "@chakra-ui/react": "^2.8.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "framer-motion": "^10.13.1",
-    "next": "^13.4.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^13.4.12",
-    "prettier": "^3.0.0"
-  }
+	"name": "portfolio",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "vite build",
+		"deploy": "gh-pages -d dist",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@chakra-ui/icons": "^2.1.1",
+		"@chakra-ui/react": "^2.8.2",
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@fontsource-variable/inter": "^5.0.19",
+		"framer-motion": "^11.3.0",
+		"prop-types": "^15.8.1",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.9",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.3.1",
+		"eslint": "^8.57.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-jsx-a11y": "^6.9.0",
+		"eslint-plugin-react": "^7.34.3",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-react-refresh": "^0.4.7",
+		"prettier": "^3.3.2",
+		"vite": "^5.3.1"
+	}
 }
