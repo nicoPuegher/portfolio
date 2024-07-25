@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Box, Heading } from '@chakra-ui/react';
-
 import PropTypes from 'prop-types';
 
 export default function Section({ title, children }) {
