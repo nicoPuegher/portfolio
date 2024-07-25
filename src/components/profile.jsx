@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Avatar } from '@chakra-ui/react';
 
 import profilePicture from '@assets/profile.png';
