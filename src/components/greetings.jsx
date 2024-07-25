@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Box } from '@chakra-ui/react';
 
+import PropTypes from 'prop-types';
+
 import Profile from '@/components/profile';
 import Myself from '@/components/myself';
 import ButtonCall from '@/components/ui/button-call';
-
-import PropTypes from 'prop-types';
 
 export default function Greetings() {
 	return (

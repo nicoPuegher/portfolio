@@ -9,18 +9,17 @@ export default function Nav({ children }) {
 		<Box
 			as="nav"
 			maxW="container.md"
-			p="2"
+			p={2}
 			mx="auto"
 			display="flex"
-			wrap="wrap"
 			justifyContent="space-between"
 			alignItems="center"
+			wrap="wrap"
 		>
 			{children}
 		</Box>
 	);
 }
-
 Nav.propTypes = {
 	children: PropTypes.node.isRequired,
 };

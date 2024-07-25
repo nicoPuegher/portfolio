@@ -2,17 +2,13 @@ import React from 'react';
 
 import { Box } from '@chakra-ui/react';
 
-import * as Navbar from '@layouts/navbar';
+import PropTypes from 'prop-types';
+
+import * as Navbar from '@components/navbar';
 
 export default function Header() {
 	return (
-		<Box
-			as="header"
-			pos="sticky"
-			w="100%"
-			top="0"
-			backdropFilter="blur(10px)"
-		>
+		<CustomBox>
 			<Navbar.Nav>
 				<Navbar.Logo />
 				<Navbar.Menu />
@@ -21,6 +17,24 @@ export default function Header() {
 					<Navbar.MenuMobile />
 				</Box>
 			</Navbar.Nav>
+		</CustomBox>
+	);
+}
+
+function CustomBox({ children }) {
+	return (
+		<Box
+			as="header"
+			pos="sticky"
+			w="full"
+			top={0}
+			backgroundColor="black"
+			backdropFilter="blur(10px)"
+		>
+			{children}
 		</Box>
 	);
 }
+CustomBox.propTypes = {
+	children: PropTypes.node.isRequired,
+};

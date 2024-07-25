@@ -17,7 +17,6 @@ export default function Message({ children }) {
 		</Box>
 	);
 }
-
 Message.propTypes = {
 	children: PropTypes.node.isRequired,
 };

@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 
-import Context from '@/store/context';
-
 import {
 	Box,
 	Menu,
@@ -13,16 +11,17 @@ import {
 
 import { HamburgerIcon } from '@chakra-ui/icons';
 
+import Context from '@/store/context';
+
 export default function MenuMobile() {
 	const context = useContext(Context);
 
 	return (
-		<Box ml="2" display={{ base: 'inline-block', md: 'none' }}>
+		<Box ml={2} display="inline-block">
 			<Menu>
 				<MenuButton
 					as={IconButton}
 					icon={<HamburgerIcon />}
-					variant="outline"
 					aria-label="Options"
 				/>
 				<MenuList>
