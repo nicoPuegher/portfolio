@@ -12,7 +12,6 @@ export default function Nav({ children }) {
 			display="flex"
 			justifyContent="space-between"
 			alignItems="center"
-			wrap="wrap"
 		>
 			{children}
 		</Box>
