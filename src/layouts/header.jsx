@@ -28,6 +28,7 @@ function CustomBox({ children }) {
 			top={0}
 			backgroundColor="black"
 			backdropFilter="blur(10px)"
+			zIndex="sticky"
 		>
 			{children}
 		</Box>
