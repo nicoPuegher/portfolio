@@ -23,14 +23,20 @@ export default function MenuMobile() {
 					aria-label="Options"
 				/>
 				<MenuList>
-					<MenuItem onClick={() => context.handleChangePage('about')}>
+					<MenuItem
+						letterSpacing="inherit"
+						onClick={() => context.handleChangePage('about')}
+					>
 						About
 					</MenuItem>
-					<MenuItem onClick={() => context.handleChangePage('works')}>
+					<MenuItem
+						letterSpacing="inherit"
+						onClick={() => context.handleChangePage('works')}
+					>
 						Works
 					</MenuItem>
-					<MenuItem>Linkedin</MenuItem>
-					<MenuItem>Github</MenuItem>
+					<MenuItem letterSpacing="inherit">Linkedin</MenuItem>
+					<MenuItem letterSpacing="inherit">Github</MenuItem>
 				</MenuList>
 			</Menu>
 		</Box>
