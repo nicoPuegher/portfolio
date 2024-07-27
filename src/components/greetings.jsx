@@ -14,7 +14,7 @@ export default function Greetings() {
 		<CustomBox>
 			<Profile />
 			<Myself />
-			<ButtonCall />
+			<ButtonCall goToPage={() => context.handleChangePage('works')} />
 		</CustomBox>
 	);
 }
