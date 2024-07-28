@@ -8,7 +8,9 @@ export default function Footer() {
 
 	return (
 		<Box as="footer" py={2} color="white" backgroundColor="black">
-			<Text textAlign="center">{copyright}</Text>
+			<Text fontSize="sm" textAlign="center">
+				{copyright}
+			</Text>
 		</Box>
 	);
 }
