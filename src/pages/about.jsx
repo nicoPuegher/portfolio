@@ -6,7 +6,7 @@ import AboutMe from '@/components/about-me';
 export default function About() {
 	return (
 		<>
-			<Section title="About me">
+			<Section mb={10} title="About me">
 				<AboutMe />
 			</Section>
 		</>
