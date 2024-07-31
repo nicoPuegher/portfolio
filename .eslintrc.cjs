@@ -44,6 +44,7 @@ module.exports = {
 			},
 		],
 		'react/jsx-no-bind': 'off',
+		'react/require-default-props': 'off',
 		quotes: 'off',
 		'import/order': [
 			'error',
