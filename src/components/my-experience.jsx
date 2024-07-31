@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, UnorderedList, ListItem } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 
 import developer from '@/constants';
 
@@ -29,3 +30,6 @@ function BulletPoints({ target }) {
 
 	return list;
 }
+BulletPoints.propTypes = {
+	target: PropTypes.string.isRequired,
+};
