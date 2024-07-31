@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import { ButtonGroup, Button } from '@chakra-ui/react';
 
 import Context from '@/store/context';
@@ -9,14 +8,20 @@ export default function Menu() {
 
 	return (
 		<ButtonGroup display="none" spacing={3} variant="ghost">
-			<Button onClick={() => context.handleChangePage('about')}>
+			<Button
+				letterSpacing="inherit"
+				onClick={() => context.handleChangePage('about')}
+			>
 				About
 			</Button>
-			<Button onClick={() => context.handleChangePage('works')}>
+			<Button
+				letterSpacing="inherit"
+				onClick={() => context.handleChangePage('works')}
+			>
 				Works
 			</Button>
-			<Button>Linkedin</Button>
-			<Button>Github</Button>
+			<Button letterSpacing="inherit">Linkedin</Button>
+			<Button letterSpacing="inherit">Github</Button>
 		</ButtonGroup>
 	);
 }

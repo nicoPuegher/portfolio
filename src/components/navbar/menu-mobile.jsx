@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import {
 	Box,
 	Menu,
@@ -8,7 +7,6 @@ import {
 	MenuList,
 	MenuItem,
 } from '@chakra-ui/react';
-
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 import Context from '@/store/context';
@@ -25,14 +23,20 @@ export default function MenuMobile() {
 					aria-label="Options"
 				/>
 				<MenuList>
-					<MenuItem onClick={() => context.handleChangePage('about')}>
+					<MenuItem
+						letterSpacing="inherit"
+						onClick={() => context.handleChangePage('about')}
+					>
 						About
 					</MenuItem>
-					<MenuItem onClick={() => context.handleChangePage('works')}>
+					<MenuItem
+						letterSpacing="inherit"
+						onClick={() => context.handleChangePage('works')}
+					>
 						Works
 					</MenuItem>
-					<MenuItem>Linkedin</MenuItem>
-					<MenuItem>Github</MenuItem>
+					<MenuItem letterSpacing="inherit">Linkedin</MenuItem>
+					<MenuItem letterSpacing="inherit">Github</MenuItem>
 				</MenuList>
 			</Menu>
 		</Box>

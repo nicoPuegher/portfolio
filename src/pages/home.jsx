@@ -1,12 +1,10 @@
 import React from 'react';
-
 import { Divider, Text } from '@chakra-ui/react';
-
-import developer from '@/constants';
 
 import Section from '@/layouts/section';
 import Message from '@/components/message';
 import Greetings from '@/components/greetings';
+import developer from '@/constants';
 
 export default function Home() {
 	return (
