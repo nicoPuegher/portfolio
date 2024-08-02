@@ -1,16 +1,23 @@
 import React from 'react';
-import { Box, Image, Center, Text } from '@chakra-ui/react';
+import { Box, AspectRatio, Image, Center, Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 export default function GridItem({ title, description, src, fallback }) {
 	return (
 		<Box>
-			<Image
+			<AspectRatio
+				maxH="405.375px"
 				borderRadius="md"
-				src={src}
-				alt={title}
-				fallback={<Center>{fallback}</Center>}
-			/>
+				ratio={128 / 69}
+				shadow="xs"
+			>
+				<Image
+					borderRadius="md"
+					src={src}
+					alt={title}
+					fallback={<Center>{fallback}</Center>}
+				/>
+			</AspectRatio>
 			<Box>
 				<Text>{title}</Text>
 				<Text>{description}</Text>
