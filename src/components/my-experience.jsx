@@ -24,7 +24,7 @@ export default function MyExperience() {
 function BulletPoints({ target }) {
 	const list = developer.experience[target].list.map((listItem) => (
 		<ListItem key={listItem} fontSize="sm">
-			{listItem}
+			<Text as="i">{listItem}</Text>
 		</ListItem>
 	));
 
