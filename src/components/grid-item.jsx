@@ -7,6 +7,7 @@ export default function GridItem({ title, description, src, fallback }) {
 		<Box>
 			<AspectRatio
 				maxH="405.375px"
+				mb={5}
 				borderRadius="md"
 				ratio={128 / 69}
 				shadow="xs"
