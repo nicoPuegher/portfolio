@@ -9,7 +9,7 @@ import trackyThumbnail from '@/assets/tracky/tracky.png';
 export default function Works() {
 	return (
 		<Section title="Works">
-			<SimpleGrid>
+			<SimpleGrid gap={10}>
 				<GridItem
 					title="Sorting Visualizer"
 					description="Frontend web application that animates the sorting process of various algorithms, offering an engaging way to explore and understand how these algorithms operate."
