@@ -1,5 +1,12 @@
 import React from 'react';
-import { Box, AspectRatio, Image, Center, Text } from '@chakra-ui/react';
+import {
+	Box,
+	AspectRatio,
+	Image,
+	Center,
+	Heading,
+	Text,
+} from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 export default function GridItem({ title, description, src, fallback }) {
@@ -20,7 +27,9 @@ export default function GridItem({ title, description, src, fallback }) {
 				/>
 			</AspectRatio>
 			<Box>
-				<Text>{title}</Text>
+				<Heading as="h3" fontSize="md">
+					{title}
+				</Heading>
 				<Text>{description}</Text>
 			</Box>
 		</Box>
