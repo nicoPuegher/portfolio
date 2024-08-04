@@ -4,7 +4,7 @@ import { Divider, Text } from '@chakra-ui/react';
 import Section from '@/layouts/section';
 import Message from '@/components/message';
 import Greetings from '@/components/greetings';
-import developer from '@/constants';
+import developer from '@/constants/developer';
 
 export default function Home() {
 	return (
