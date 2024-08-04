@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid, Divider } from '@chakra-ui/react';
 
 import Section from '@/layouts/section';
 import GridItem from '@/components/grid-item';
@@ -16,6 +16,7 @@ export default function Works() {
 					src={sortingThumbnail}
 					fallback="Loading image ..."
 				/>
+				<Divider width="half" mx="auto" />
 				<GridItem
 					title="Tracky"
 					description="Frontend web application designed to efficiently track and manage your expenses."
