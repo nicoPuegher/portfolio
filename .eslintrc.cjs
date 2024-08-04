@@ -10,6 +10,7 @@ module.exports = {
 		'plugin:jsx-a11y/recommended',
 		'airbnb',
 		'airbnb/hooks',
+		'prettier',
 	],
 	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
 	settings: {
