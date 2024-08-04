@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
 
-import developer from '@/constants';
+import developer from '@/constants/developer';
 
 export default function AboutMe() {
 	return (
