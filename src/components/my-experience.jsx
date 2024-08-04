@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, UnorderedList, ListItem } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-import developer from '@/constants';
+import developer from '@/constants/developer';
 
 export default function MyExperience() {
 	return (
