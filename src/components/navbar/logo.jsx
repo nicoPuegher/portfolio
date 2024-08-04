@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Heading, Link } from '@chakra-ui/react';
 
 import Context from '@/store/context';
-import developer from '@constants';
+import developer from '@constants/developer';
 
 export default function Logo() {
 	const context = useContext(Context);
