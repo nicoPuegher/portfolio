@@ -27,10 +27,10 @@ export default function GridItem({ title, description, src, fallback }) {
 				/>
 			</AspectRatio>
 			<Box>
-				<Heading as="h3" fontSize="md" mb={1.5}>
+				<Heading as="h3" fontSize="md">
 					{title}
 				</Heading>
-				<Text>{description}</Text>
+				<Text my={3}>{description}</Text>
 			</Box>
 		</Box>
 	);
