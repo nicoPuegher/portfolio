@@ -9,7 +9,15 @@ import {
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-export default function GridItem({ title, description, src, fallback }) {
+import ButtonCall from '@components/ui/button-call';
+
+export default function GridItem({
+	title,
+	description,
+	src,
+	fallback,
+	goToPage,
+}) {
 	return (
 		<Box>
 			<AspectRatio
@@ -32,6 +40,7 @@ export default function GridItem({ title, description, src, fallback }) {
 				</Heading>
 				<Text my={3}>{description}</Text>
 			</Box>
+			<ButtonCall text="View details" goToPage={goToPage} />
 		</Box>
 	);
 }
@@ -40,4 +49,5 @@ GridItem.propTypes = {
 	src: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
 	fallback: PropTypes.string.isRequired,
+	goToPage: PropTypes.func.isRequired,
 };
