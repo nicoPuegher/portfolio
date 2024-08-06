@@ -4,31 +4,35 @@ import { SimpleGrid, Divider } from '@chakra-ui/react';
 import Context from '@/store/context';
 import Section from '@/layouts/section';
 import GridItem from '@/components/grid-item';
-import sortingThumbnail from '@assets/sorting/sorting.png';
-import trackyThumbnail from '@/assets/tracky/tracky.png';
+import works from '@/constants/works';
 
 export default function Works() {
 	const context = useContext(Context);
 
+	const workEntries = Object.entries(works);
+
+	const projects = workEntries.map(
+		([project, { title, description, src, fallback }], index) => {
+			const isLastItem = workEntries.length - 1 === index;
+
+			return (
+				<React.Fragment key={project}>
+					<GridItem
+						title={title}
+						description={description}
+						src={Object.values(src)[0]}
+						fallback={fallback}
+						goToPage={() => context.handleChangePage(project)}
+					/>
+					{!isLastItem && <Divider width="half" mx="auto" />}
+				</React.Fragment>
+			);
+		},
+	);
+
 	return (
 		<Section title="Works">
-			<SimpleGrid gap={10}>
-				<GridItem
-					title="Sorting Visualizer"
-					description="Frontend web application that animates the sorting process of various algorithms, offering an engaging way to explore and understand how these algorithms operate."
-					src={sortingThumbnail}
-					fallback="Loading image ..."
-					goToPage={() => context.handleChangePage('sorting')}
-				/>
-				<Divider width="half" mx="auto" />
-				<GridItem
-					title="Tracky"
-					description="Frontend web application designed to efficiently track and manage your expenses."
-					src={trackyThumbnail}
-					fallback="Loading image ..."
-					goToPage={() => context.handleChangePage('tracky')}
-				/>
-			</SimpleGrid>
+			<SimpleGrid gap={10}>{projects}</SimpleGrid>
 		</Section>
 	);
 }
