@@ -3,6 +3,7 @@ import mobilePreview1 from '@assets/projects/sorting-visualizer/mobile-preview1.
 import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.png';
 
 const expensesTracker = {
+	title: 'Expenses Tracker',
 	description:
 		'Frontend web application designed to help users efficiently manage and monitor their personal expenses. It features a user-friendly interface that allows users to add, edit, and delete expenses while categorizing them for better organization.',
 	features: [
@@ -12,6 +13,7 @@ const expensesTracker = {
 		'Robust Form Validation: The app includes comprehensive form validation to ensure data accuracy, providing users with clear guidance when entering information.',
 	],
 	closer: 'This application offers a seamless experience for users looking to gain better control over their finances, providing insightful data through its intuitive design and powerful features.',
+	fallback: 'Loading image...',
 	preview,
 	mobilePreviews: [mobilePreview1, mobilePreview2],
 };
