@@ -3,6 +3,7 @@ import mobilePreview1 from '@assets/projects/sorting-visualizer/mobile-preview1.
 import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.png';
 
 const sortingVisualizer = {
+	title: 'Sorting Visualizer',
 	description:
 		'Frontend web application that animates the sorting process of various algorithms, offering an engaging way to explore and understand how these algorithms operate. This project demystifies complex computational concepts and brings them to life in an engaging format.',
 	features: [
@@ -11,6 +12,7 @@ const sortingVisualizer = {
 		'Educational Insight: The application provides an educational platform for those curious about sorting algorithms, making complex ideas accessible and understandable.',
 	],
 	closer: 'This project is ideal for students, educators, and anyone interested in computer science, offering a dynamic and interactive way to explore fundamental algorithms.',
+	fallback: 'Loading image...',
 	preview,
 	mobilePreviews: [mobilePreview1, mobilePreview2],
 };
