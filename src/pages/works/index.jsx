@@ -4,23 +4,23 @@ import { SimpleGrid, Divider } from '@chakra-ui/react';
 import Context from '@/store/context';
 import Section from '@/layouts/section';
 import GridItem from '@/components/grid-item';
-import works from '@/constants/works';
+import projects from '@/constants/projects';
 
 export default function Works() {
 	const context = useContext(Context);
 
-	const workEntries = Object.entries(works);
+	const projectEntries = Object.entries(projects);
 
-	const projects = workEntries.map(
-		([project, { title, description, src, fallback }], index) => {
-			const isLastItem = workEntries.length - 1 === index;
+	const portfolio = projectEntries.map(
+		([project, { title, description, preview, fallback }], index) => {
+			const isLastItem = projectEntries.length - 1 === index;
 
 			return (
 				<React.Fragment key={project}>
 					<GridItem
 						title={title}
 						description={description}
-						src={Object.values(src)[0]}
+						src={preview}
 						fallback={fallback}
 						goToPage={() => context.handleChangePage(project)}
 					/>
@@ -32,7 +32,7 @@ export default function Works() {
 
 	return (
 		<Section title="Works">
-			<SimpleGrid gap={10}>{projects}</SimpleGrid>
+			<SimpleGrid gap={10}>{portfolio}</SimpleGrid>
 		</Section>
 	);
 }
