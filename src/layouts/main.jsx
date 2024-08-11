@@ -6,6 +6,7 @@ import Context from '@store/context';
 import Home from '@pages/home';
 import About from '@pages/about';
 import Works from '@pages/works';
+import Sorting from '@/pages/works/sorting';
 
 export default function Main() {
 	const context = useContext(Context);
@@ -15,6 +16,7 @@ export default function Main() {
 			{context.page === 'home' && <Home />}
 			{context.page === 'about' && <About />}
 			{context.page === 'works' && <Works />}
+			{context.page === 'sorting' && <Sorting />}
 		</CustomBox>
 	);
 }
