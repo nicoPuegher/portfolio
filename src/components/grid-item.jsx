@@ -20,13 +20,7 @@ export default function GridItem({
 }) {
 	return (
 		<Box>
-			<AspectRatio
-				maxH="405.375px"
-				mb={5}
-				borderRadius="md"
-				ratio={128 / 69}
-				shadow="xs"
-			>
+			<AspectRatio mb={5} borderRadius="md" shadow="xs" ratio={16 / 10}>
 				<Image
 					borderRadius="md"
 					src={src}
