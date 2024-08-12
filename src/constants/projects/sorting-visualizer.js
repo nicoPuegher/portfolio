@@ -4,6 +4,7 @@ import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.
 
 const sortingVisualizer = {
 	title: 'Sorting Visualizer',
+	year: '2024',
 	description:
 		'Frontend web application that animates the sorting process of various algorithms, offering an engaging way to explore and understand how these algorithms operate. This project demystifies complex computational concepts and brings them to life in an engaging format.',
 	features: [
