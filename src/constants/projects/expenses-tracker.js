@@ -4,6 +4,7 @@ import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.
 
 const expensesTracker = {
 	title: 'Expenses Tracker',
+	year: '2023',
 	description:
 		'Frontend web application designed to help users efficiently manage and monitor their personal expenses. It features a user-friendly interface that allows users to add, edit, and delete expenses while categorizing them for better organization.',
 	features: [
