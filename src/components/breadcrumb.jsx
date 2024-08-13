@@ -18,7 +18,7 @@ export default function CustomBreadcrumb({ name, year }) {
 			separator={<ChevronRightIcon color="gray.500" />}
 			display="inline-block"
 			mb={5}
-			spacing={8}
+			spacing={2}
 		>
 			<BreadcrumbItem>
 				<BreadcrumbLink
