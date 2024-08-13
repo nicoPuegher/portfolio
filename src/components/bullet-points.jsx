@@ -1,4 +1,6 @@
+import React from 'react';
 import { List, ListItem, Text } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 
 export default function BulletPoints({ items }) {
 	const listItems = items.map((item) => (
@@ -13,3 +15,6 @@ export default function BulletPoints({ items }) {
 		</List>
 	);
 }
+BulletPoints.propTypes = {
+	items: PropTypes.instanceOf(Array).isRequired,
+};
