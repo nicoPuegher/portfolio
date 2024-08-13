@@ -1,5 +1,6 @@
 import React from 'react';
 import { ListItem, Badge } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 
 import ExternalLink from '@/components/external-link';
 
@@ -17,3 +18,6 @@ export default function ProjectLinks({ url }) {
 		</>
 	);
 }
+ProjectLinks.propTypes = {
+	url: PropTypes.string.isRequired,
+};
