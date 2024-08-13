@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function ExternalLink({ url, text }) {
 	return (
 		<Link href={url} isExternal>
-			{text} <ExternalLinkIcon mx={2} />
+			{text} <ExternalLinkIcon ml={2} />
 		</Link>
 	);
 }
