@@ -8,14 +8,14 @@ export default function ProjectLinks({ url }) {
 	return (
 		<>
 			<ListItem mb={0.5}>
-				<Badge>Demo</Badge>
+				<Badge mr={2}>Demo</Badge>
 				<ExternalLink
 					url={`https://nicopuegher.github.io/${url}`}
 					text="Live application"
 				/>
 			</ListItem>
 			<ListItem mb={0.5}>
-				<Badge>Source</Badge>
+				<Badge mr={2}>Source</Badge>
 				<ExternalLink
 					url={`https://github.com/nicoPuegher/${url}`}
 					text="Repository"
