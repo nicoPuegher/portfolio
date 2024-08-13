@@ -8,7 +8,7 @@ export default function ProjectDescription({ project }) {
 	return (
 		<>
 			<Text>{project.description}</Text>
-			<BulletPoints items={project.features} />
+			<BulletPoints items={project.features} features="true" />
 			<Text>{project.closer}</Text>
 		</>
 	);
