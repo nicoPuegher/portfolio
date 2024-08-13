@@ -1,18 +1,25 @@
 import React from 'react';
-import { List, ListItem, Text } from '@chakra-ui/react';
+import { UnorderedList, ListItem, Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-export default function BulletPoints({ items }) {
-	const listItems = items.map((item) => (
-		<ListItem key={item}>
-			<Text as="i">{item}</Text>
-		</ListItem>
-	));
+export default function BulletPoints({ items, features }) {
+	let listItems;
+
+	if (features) {
+		listItems = items.map((item) => (
+			<ListItem key={item.title}>
+				<Text as="i">
+					<Text as="b">{item.title}</Text>
+					{item.content}
+				</Text>
+			</ListItem>
+		));
+	}
 
 	return (
-		<List fontSize="sm" my={5} spacing={3}>
+		<UnorderedList fontSize="sm" my={5} spacing={3}>
 			{listItems}
-		</List>
+		</UnorderedList>
 	);
 }
 BulletPoints.propTypes = {
