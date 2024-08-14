@@ -11,8 +11,22 @@ export default function ProjectImages({
 		<>
 			<Image src={preview} borderRadius="md" />
 			<SimpleGrid columns={2} mt={3} gap={3}>
-				<Image src={mobilePreview1} borderRadius="md" />
-				<Image src={mobilePreview2} borderRadius="md" />
+				<AspectRatio borderRadius="md" shadow="xs" ratio={9 / 16}>
+					<Image
+						borderRadius="md"
+						src={mobilePreview1}
+						alt={alt}
+						fallback={<Center>{fallback}</Center>}
+					/>
+				</AspectRatio>
+				<AspectRatio borderRadius="md" shadow="xs" ratio={9 / 16}>
+					<Image
+						borderRadius="md"
+						src={mobilePreview2}
+						alt={alt}
+						fallback={<Center>{fallback}</Center>}
+					/>
+				</AspectRatio>
 			</SimpleGrid>
 		</>
 	);
