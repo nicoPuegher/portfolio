@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag, ListItem, Box } from '@chakra-ui/react';
+import { Tag, ListItem, Box, Badge } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 export default function ProjectTechnologies({ stack }) {
@@ -8,6 +8,9 @@ export default function ProjectTechnologies({ stack }) {
 	return (
 		<ListItem>
 			<Box display="flex" flexWrap="wrap" justifyContent="center" gap={1}>
+				<Badge mr={1} display="flex" alignItems="center">
+					stack
+				</Badge>
 				{technologies}
 			</Box>
 		</ListItem>
