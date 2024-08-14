@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, SimpleGrid } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 
 export default function ProjectImages({
 	preview,
@@ -16,3 +17,8 @@ export default function ProjectImages({
 		</>
 	);
 }
+ProjectImages.propTypes = {
+	preview: PropTypes.string.isRequired,
+	mobilePreview1: PropTypes.string.isRequired,
+	mobilePreview2: PropTypes.string.isRequired,
+};
