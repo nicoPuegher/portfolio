@@ -31,7 +31,7 @@ const sortingVisualizer = {
 		'CSS3',
 		'JavaScript',
 		'React',
-		'Proptypes',
+		'PropTypes',
 		'Prettier',
 		'ESLint',
 		'Vite',
