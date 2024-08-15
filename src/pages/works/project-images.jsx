@@ -1,11 +1,12 @@
 import React from 'react';
-import { Image, SimpleGrid } from '@chakra-ui/react';
+import { AspectRatio, Image, Center, SimpleGrid } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 export default function ProjectImages({
 	preview,
 	mobilePreview1,
 	mobilePreview2,
+	fallback,
 }) {
 	return (
 		<>
@@ -15,7 +16,6 @@ export default function ProjectImages({
 					<Image
 						borderRadius="md"
 						src={mobilePreview1}
-						alt={alt}
 						fallback={<Center>{fallback}</Center>}
 					/>
 				</AspectRatio>
@@ -23,7 +23,6 @@ export default function ProjectImages({
 					<Image
 						borderRadius="md"
 						src={mobilePreview2}
-						alt={alt}
 						fallback={<Center>{fallback}</Center>}
 					/>
 				</AspectRatio>
@@ -35,4 +34,5 @@ ProjectImages.propTypes = {
 	preview: PropTypes.string.isRequired,
 	mobilePreview1: PropTypes.string.isRequired,
 	mobilePreview2: PropTypes.string.isRequired,
+	fallback: PropTypes.string.isRequired,
 };
