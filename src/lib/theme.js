@@ -1,5 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 
+import Container from './container-theme';
+
 const theme = extendTheme({
 	fonts: {
 		heading: 'Inter variable, sans-serif',
@@ -16,6 +18,9 @@ const theme = extendTheme({
 	},
 	sizes: {
 		half: '50%',
+	},
+	components: {
+		Container,
 	},
 });
 
