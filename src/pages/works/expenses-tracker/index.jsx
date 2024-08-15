@@ -22,9 +22,11 @@ export default function ExpensesTracker() {
 				<ProjectTechnologies stack={expensesTracker.stack} />
 			</List>
 			<ProjectImages
+				title={expensesTracker.title}
 				preview={expensesTracker.preview}
 				mobilePreview1={expensesTracker.mobilePreviews[0]}
 				mobilePreview2={expensesTracker.mobilePreviews[1]}
+				fallback={expensesTracker.fallback}
 			/>
 		</Section>
 	);
