@@ -38,6 +38,7 @@ module.exports = {
 		'react/jsx-indent': ['error', 'tab'],
 		'react/jsx-indent-props': ['error', 'tab'],
 		'react/jsx-no-bind': 'off',
+		'react/jsx-props-no-spreading': 'off',
 		'react-refresh/only-export-components': 'warn',
 		'react/require-default-props': 'off',
 		'import/no-extraneous-dependencies': [
