@@ -25,6 +25,7 @@ export default function SortingVisualizer() {
 				preview={sortingVisualizer.preview}
 				mobilePreview1={sortingVisualizer.mobilePreviews[0]}
 				mobilePreview2={sortingVisualizer.mobilePreviews[1]}
+				fallback={sortingVisualizer.fallback}
 			/>
 		</Section>
 	);
