@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
+
+import LayoutContainer from '@/components/ui/layout-container';
 
 export default function Footer() {
 	const date = new Date();
@@ -7,10 +9,10 @@ export default function Footer() {
 	const copyright = `© ${currentYear} - All rights reserved.`;
 
 	return (
-		<Box as="footer" py={2} color="white" backgroundColor="black">
-			<Text fontSize="sm" textAlign="center">
+		<LayoutContainer as="footer" bg="black">
+			<Text fontSize="sm" textAlign="center" color="white">
 				{copyright}
 			</Text>
-		</Box>
+		</LayoutContainer>
 	);
 }
