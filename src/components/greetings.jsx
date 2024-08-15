@@ -14,7 +14,10 @@ export default function Greetings() {
 		<CustomBox>
 			<Profile />
 			<Myself />
-			<ButtonCall goToPage={() => context.handleChangePage('works')} />
+			<ButtonCall
+				text="Check my work"
+				goToPage={() => context.handleChangePage('works')}
+			/>
 		</CustomBox>
 	);
 }

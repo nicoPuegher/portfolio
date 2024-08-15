@@ -6,6 +6,8 @@ import Context from '@store/context';
 import Home from '@pages/home';
 import About from '@pages/about';
 import Works from '@pages/works';
+import SortingVisualizer from '@/pages/works/sorting-visualizer';
+import ExpensesTracker from '@/pages/works/expenses-tracker';
 
 export default function Main() {
 	const context = useContext(Context);
@@ -15,6 +17,8 @@ export default function Main() {
 			{context.page === 'home' && <Home />}
 			{context.page === 'about' && <About />}
 			{context.page === 'works' && <Works />}
+			{context.page === 'sortingVisualizer' && <SortingVisualizer />}
+			{context.page === 'expensesTracker' && <ExpensesTracker />}
 		</CustomBox>
 	);
 }
