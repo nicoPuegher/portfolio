@@ -1,6 +1,6 @@
 import preview from '@assets/projects/expenses-tracker/preview.png';
-import mobilePreview1 from '@assets/projects/sorting-visualizer/mobile-preview1.png';
-import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.png';
+import mobilePreview1 from '@assets/projects/expenses-tracker/mobile-preview1.png';
+import mobilePreview2 from '@assets/projects/expenses-tracker/mobile-preview2.png';
 
 const expensesTracker = {
 	title: 'Expenses Tracker',
