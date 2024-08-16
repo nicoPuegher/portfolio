@@ -5,13 +5,13 @@ import LayoutContainer from '@/components/ui/layout-container';
 
 export default function Footer() {
 	const date = new Date();
-	const currentYear = date.getFullYear();
-	const copyright = `© ${currentYear} - All rights reserved.`;
+	const currentYear = date.getFullYear().toString();
 
 	return (
 		<LayoutContainer as="footer" bg="black">
 			<Text fontSize="sm" textAlign="center" color="white">
-				{copyright}
+				© <time dateTime={currentYear}>{currentYear}</time> - All
+				rights reserved.
 			</Text>
 		</LayoutContainer>
 	);
