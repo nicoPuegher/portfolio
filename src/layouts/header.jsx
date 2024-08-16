@@ -8,7 +8,6 @@ export default function Header() {
 		<Box as="header" pos="sticky" top={0} bg="black" zIndex="sticky">
 			<Navbar.Nav>
 				<Navbar.Logo />
-				<Navbar.Menu />
 				<Box>
 					<Navbar.ThemeToggle />
 					<Navbar.MenuMobile />
