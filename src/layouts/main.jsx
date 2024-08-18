@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import Context from '@store/context';
-import LayoutContainer from '@/components/ui/layout-container';
+import LayoutWrapper from '@/components/ui/layout-wrapper';
 import Home from '@pages/home';
 import About from '@pages/about';
 import Works from '@pages/works';
@@ -12,7 +12,7 @@ export default function Main() {
 	const context = useContext(Context);
 
 	return (
-		<LayoutContainer
+		<LayoutWrapper
 			as="main"
 			variant="content"
 			display="flex"
@@ -25,6 +25,6 @@ export default function Main() {
 			{context.page === 'works' && <Works />}
 			{context.page === 'sortingVisualizer' && <SortingVisualizer />}
 			{context.page === 'expensesTracker' && <ExpensesTracker />}
-		</LayoutContainer>
+		</LayoutWrapper>
 	);
 }
