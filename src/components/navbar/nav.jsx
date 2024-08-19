@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LayoutContainer from '@/components/ui/layout-container';
+import LayoutWrapper from '@/components/ui/layout-wrapper';
 
 export default function Nav({ children }) {
 	return (
-		<LayoutContainer
+		<LayoutWrapper
 			as="nav"
 			display="flex"
 			justifyContent="space-between"
 			alignItems="center"
 		>
 			{children}
-		</LayoutContainer>
+		</LayoutWrapper>
 	);
 }
 Nav.propTypes = {
