@@ -1,14 +1,10 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-export default function InlineWrapper({ children }) {
-	return (
-		<Box display="flex" gap={2}>
-			{children}
-		</Box>
-	);
+export default function CustomFlex({ children }) {
+	return <Flex gap={2}>{children}</Flex>;
 }
-InlineWrapper.propTypes = {
+CustomFlex.propTypes = {
 	children: PropTypes.node.isRequired,
 };
