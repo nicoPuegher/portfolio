@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-export default function Section({ title, children }) {
+export default function CustomSection({ title, children }) {
 	return (
 		<Box as="section" textAlign="center">
 			<Heading as="h2" size="lg">
@@ -12,7 +12,7 @@ export default function Section({ title, children }) {
 		</Box>
 	);
 }
-Section.propTypes = {
+CustomSection.propTypes = {
 	title: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
 };
