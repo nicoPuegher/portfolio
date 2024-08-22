@@ -12,6 +12,6 @@ export default function CustomGrid({ customVariant = 'internal', children }) {
 	);
 }
 CustomGrid.propTypes = {
-	customVariant: PropTypes.string.isRequired,
+	customVariant: PropTypes.string,
 	children: PropTypes.node.isRequired,
 };
