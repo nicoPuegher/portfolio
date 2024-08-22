@@ -2,10 +2,10 @@ import React from 'react';
 import { Box, Heading } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-export default function Section({ mb = 0, title, children }) {
+export default function Section({ title, children }) {
 	return (
-		<Box as="section" mb={mb} textAlign="center">
-			<Heading as="h2" size="md" mb={3}>
+		<Box as="section" textAlign="center">
+			<Heading as="h2" size="lg">
 				{title}
 			</Heading>
 			{children}
@@ -13,7 +13,6 @@ export default function Section({ mb = 0, title, children }) {
 	);
 }
 Section.propTypes = {
-	mb: PropTypes.number,
 	title: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
 };
