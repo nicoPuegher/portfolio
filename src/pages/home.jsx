@@ -22,7 +22,7 @@ export default function Home() {
 				text="Check my work"
 				goToPage={() => context.handleChangePage('works')}
 			/>
-			<Divider width="half" mx="auto" my={10} />
+			<Divider width="half" />
 			<Section title="Quick summary ">
 				<Text>{developer.quickSummary}</Text>
 			</Section>
