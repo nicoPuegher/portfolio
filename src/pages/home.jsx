@@ -5,7 +5,6 @@ import Context from '@/store/context';
 import CustomGrid from '@/components/ui/custom-grid';
 import Message from '@/components/message';
 import Profile from '@/components/profile';
-import Myself from '@/components/myself';
 import ButtonCall from '@/components/ui/button-call';
 import Section from '@/layouts/section';
 import developer from '@/constants/developer';
@@ -17,7 +16,9 @@ export default function Home() {
 		<CustomGrid>
 			<Message>{developer.greeting}</Message>
 			<Profile />
-			<Myself />
+			<Section title={developer.name}>
+				<Text>{developer.role}</Text>
+			</Section>
 			<ButtonCall
 				text="Check my work"
 				goToPage={() => context.handleChangePage('works')}
