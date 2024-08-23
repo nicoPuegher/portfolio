@@ -18,7 +18,6 @@ export default function Main() {
 			display="flex"
 			flexDirection="column"
 			flexGrow={1}
-			justifyContent="space-between"
 		>
 			{context.page === 'home' && <Home />}
 			{context.page === 'about' && <About />}
