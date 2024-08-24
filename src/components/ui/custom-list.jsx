@@ -1,5 +1,6 @@
 import React from 'react';
 import { UnorderedList, ListItem, Text } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 
 export default function CustomList({ list }) {
 	return (
@@ -12,3 +13,6 @@ export default function CustomList({ list }) {
 		</UnorderedList>
 	);
 }
+CustomList.propTypes = {
+	list: PropTypes.instanceOf(Array).isRequired,
+};
