@@ -1,35 +1,22 @@
 import React from 'react';
-import { Text, UnorderedList, ListItem } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
+import { Text } from '@chakra-ui/react';
 
 import developer from '@/constants/developer';
 
+import CustomGrid from './ui/custom-grid';
+import CustomList from './ui/custom-list';
+
 export default function MyExperience() {
 	return (
-		<>
-			<Text mb={5}>{developer.experience['1'].description}</Text>
-			<UnorderedList spacing={3.5}>
-				<BulletPoints target="1" />
-			</UnorderedList>
-			<Text mt={10} mb={5}>
-				{developer.experience['2'].description}
-			</Text>
-			<UnorderedList spacing={3.5}>
-				<BulletPoints target="2" />
-			</UnorderedList>
-		</>
+		<CustomGrid customVariant="external">
+			<CustomGrid>
+				<Text>{developer.experience['1'].description}</Text>
+				<CustomList list={developer.experience[1].list} />
+			</CustomGrid>
+			<CustomGrid>
+				<Text>{developer.experience['2'].description}</Text>
+				<CustomList list={developer.experience[2].list} />
+			</CustomGrid>
+		</CustomGrid>
 	);
 }
-
-function BulletPoints({ target }) {
-	const list = developer.experience[target].list.map((listItem) => (
-		<ListItem key={listItem} fontSize="sm">
-			<Text as="i">{listItem}</Text>
-		</ListItem>
-	));
-
-	return list;
-}
-BulletPoints.propTypes = {
-	target: PropTypes.string.isRequired,
-};
