@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { SimpleGrid, Divider } from '@chakra-ui/react';
 
 import Context from '@/store/context';
-import Section from '@/layouts/section';
+import CustomSection from '@/components/ui/custom-section';
 import GridItem from '@/components/grid-item';
 import projects from '@/constants/projects';
 
@@ -31,8 +31,8 @@ export default function Works() {
 	);
 
 	return (
-		<Section title="Works">
+		<CustomSection title="Works">
 			<SimpleGrid gap={10}>{portfolio}</SimpleGrid>
-		</Section>
+		</CustomSection>
 	);
 }
