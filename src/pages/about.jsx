@@ -3,7 +3,7 @@ import { Text, Divider } from '@chakra-ui/react';
 
 import CustomGrid from '@/components/ui/custom-grid';
 import CustomSection from '@/components/ui/custom-section';
-import MyExperience from '@/components/my-experience';
+import CustomList from '@/components/ui/custom-list';
 import developer from '@/constants/developer';
 
 export default function About() {
@@ -17,8 +17,18 @@ export default function About() {
 				</CustomGrid>
 			</CustomSection>
 			<Divider width="half" />
-			<CustomSection title="My experience">
-				<MyExperience />
+			<CustomSection title="EPAM Anywhere">
+				<CustomGrid>
+					<Text>{developer.experience['1'].description}</Text>
+					<CustomList list={developer.experience[1].list} />
+				</CustomGrid>
+			</CustomSection>
+			<Divider width="half" />
+			<CustomSection title="Fizzit">
+				<CustomGrid>
+					<Text>{developer.experience['2'].description}</Text>
+					<CustomList list={developer.experience[2].list} />
+				</CustomGrid>
 			</CustomSection>
 		</CustomGrid>
 	);
