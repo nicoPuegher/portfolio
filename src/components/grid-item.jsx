@@ -28,12 +28,9 @@ export default function GridItem({
 					fallback={<Center>{fallback}</Center>}
 				/>
 			</AspectRatio>
-			<Box>
-				<Heading as="h3" fontSize="md">
-					{title}
-				</Heading>
-				<Text my={3}>{description}</Text>
-			</Box>
+			<CustomSection customVariant="h3" title={title}>
+				<Text>{description}</Text>
+			</CustomSection>
 			<ButtonCall text="View details" goToPage={goToPage} />
 		</Box>
 	);
