@@ -1,14 +1,9 @@
 import React from 'react';
-import {
-	ListItem,
-	Text,
-	Box,
-	Link,
-	Tag,
-	UnorderedList,
-} from '@chakra-ui/react';
+import { ListItem, Text, Link, Tag, UnorderedList } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
+
+import CustomFlex from './custom-flex';
 
 export default function CustomList({ variant = 'text', list, stack = [] }) {
 	const customList = list.map((item) => {
