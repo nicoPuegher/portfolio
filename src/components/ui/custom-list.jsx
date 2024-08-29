@@ -43,6 +43,23 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 		);
 	});
 
+	if (variant === 'projectDetails') {
+		customList.push(
+			<ListItem key="tech" fontSize="sm">
+				<Text as="i">
+					<CustomFlex wrap="wrap" justify="center" align="center">
+						<Text as="b">Stack: </Text>
+						{stack.map((tech) => (
+							<Tag key={tech} fontWeight="normal">
+								{tech}
+							</Tag>
+						))}
+					</CustomFlex>
+				</Text>
+			</ListItem>,
+		);
+	}
+
 	return (
 		<UnorderedList
 			pr={4}
