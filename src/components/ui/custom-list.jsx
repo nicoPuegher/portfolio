@@ -14,6 +14,12 @@ export default function CustomList({ variant = 'text', list }) {
 				</ListItem>
 			);
 		}
+
+		return (
+			<ListItem key={item} fontSize="sm">
+				<Text as="i">{item}</Text>
+			</ListItem>
+		);
 	});
 
 	return (
