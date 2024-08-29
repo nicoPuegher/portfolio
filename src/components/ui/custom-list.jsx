@@ -27,7 +27,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			return (
 				<ListItem key={item.key} fontSize="sm">
 					<Text as="i">
-						<Text as="b">{item.key} </Text>
+						<Text as="b">{`${item.key}: `}</Text>
 						<Link href={item.url} isExternal>
 							{item.placeHolder} <ExternalLinkIcon />
 						</Link>
