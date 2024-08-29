@@ -1,7 +1,7 @@
 import React from 'react';
 import { List } from '@chakra-ui/react';
 
-import Section from '@/layouts/section';
+import CustomSection from '@/components/ui/custom-section';
 import sortingVisualizer from '@/constants/projects/sorting-visualizer';
 import Breadcrumb from '@/pages/works/breadcrumb';
 import ProjectDescription from '@/pages/works/project-description';
@@ -11,7 +11,7 @@ import ProjectImages from '@/pages/works/project-images';
 
 export default function SortingVisualizer() {
 	return (
-		<Section title={sortingVisualizer.title}>
+		<CustomSection title={sortingVisualizer.title}>
 			<Breadcrumb
 				name={sortingVisualizer.title}
 				year={sortingVisualizer.year}
@@ -27,6 +27,6 @@ export default function SortingVisualizer() {
 				mobilePreview2={sortingVisualizer.mobilePreviews[1]}
 				fallback={sortingVisualizer.fallback}
 			/>
-		</Section>
+		</CustomSection>
 	);
 }
