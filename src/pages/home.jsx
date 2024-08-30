@@ -14,7 +14,7 @@ export default function Home() {
 
 	return (
 		<CustomGrid customVariant="external">
-			<Message>{developer.greeting}</Message>
+			<Message>{developer.welcomeMessage}</Message>
 			<CustomGrid>
 				<Profile />
 				<CustomSection title={developer.name}>
