@@ -3,32 +3,46 @@ import mobilePreview1 from '@assets/projects/sorting-visualizer/mobile-preview1.
 import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.png';
 
 const sortingVisualizer = {
-	title: 'Sorting Visualizer',
+	context: 'sortingVisualizer',
+	name: 'Sorting visualizer',
 	year: '2024',
+	type: 'Frontend web application',
 	description:
-		'Frontend web application that animates the sorting process of various algorithms, offering an engaging way to explore and understand how these algorithms operate. This project demystifies complex computational concepts and brings them to life in an engaging format.',
+		'It animates the sorting process of various algorithms, offering an engaging way to explore and understand how these algorithms work. This project demystifies complex computational concepts and brings them to life in an interactive format.',
 	features: [
 		{
-			title: 'Algorithm Visualization: ',
-			content:
-				'Experience the sorting process step-by-step with animated representations, allowing users to see how each algorithm operates.',
+			label: 'Algorithm visualization',
+			description:
+				'Experience the sorting process step by step with animated representations, allowing users to observe how each algorithm functions.',
 		},
 		{
-			title: 'Adjustable Parameters: ',
-			content:
-				'Users can modify the sorting speed and chart size, tailoring the experience to their preferences and learning pace.',
+			label: 'Adjustable parameters',
+			description:
+				'Users can modify sorting speed and chart size, tailoring the experience to their preferences and learning pace.',
 		},
 		{
-			title: 'Educational Insight: ',
-			content:
-				'The application provides an educational platform for those curious about sorting algorithms, making complex ideas accessible and understandable.',
+			label: 'Educational insight',
+			description:
+				'The application serves as an educational platform for those curious about sorting algorithms, making complex ideas accessible and understandable.',
 		},
 	],
-	closer: 'This project is ideal for students, educators, and anyone interested in computer science, offering a dynamic and interactive way to explore fundamental algorithms.',
-	link: 'sorting-visualizer',
-	stack: [
-		'HTML5',
-		'CSS3',
+	summaryNote:
+		'This project is ideal for students, educators, and anyone interested in computer science, offering a dynamic and interactive way to explore fundamental algorithms.',
+	links: [
+		{
+			label: 'Demo',
+			url: 'https://nicopuegher.github.io/sorting-visualizer/',
+			description: 'Live application',
+		},
+		{
+			label: 'Source',
+			url: 'https://github.com/nicoPuegher/sorting-visualizer/',
+			description: 'Repository',
+		},
+	],
+	techStack: [
+		'HTML',
+		'CSS',
 		'JavaScript',
 		'React',
 		'PropTypes',
@@ -36,8 +50,8 @@ const sortingVisualizer = {
 		'ESLint',
 		'Vite',
 	],
-	fallback: 'Loading image...',
-	preview,
+	imageFallback: 'Loading image...',
+	previewImage: preview,
 	mobilePreviews: [mobilePreview1, mobilePreview2],
 };
 

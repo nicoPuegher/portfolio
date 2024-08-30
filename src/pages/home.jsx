@@ -14,7 +14,7 @@ export default function Home() {
 
 	return (
 		<CustomGrid customVariant="external">
-			<Message>{developer.greeting}</Message>
+			<Message>{developer.welcomeMessage}</Message>
 			<CustomGrid>
 				<Profile />
 				<CustomSection title={developer.name}>
@@ -26,8 +26,8 @@ export default function Home() {
 				/>
 			</CustomGrid>
 			<Divider width="half" />
-			<CustomSection title="Quick summary ">
-				<Text>{developer.quickSummary}</Text>
+			<CustomSection title="Summary ">
+				<Text>{developer.summary}</Text>
 			</CustomSection>
 		</CustomGrid>
 	);

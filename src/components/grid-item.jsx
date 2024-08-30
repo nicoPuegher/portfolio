@@ -7,23 +7,24 @@ import ButtonCall from '@components/ui/button-call';
 import CustomSection from './ui/custom-section';
 
 export default function GridItem({
-	title,
+	name,
+	type,
 	description,
-	src,
-	fallback,
+	previewImage,
+	imageFallback,
 	goToPage,
 }) {
 	return (
 		<>
 			<AspectRatio w="full" borderRadius="md" shadow="xs" ratio={16 / 10}>
 				<Image
-					src={src}
-					alt={title}
-					fallback={<Center>{fallback}</Center>}
+					src={previewImage}
+					alt={name}
+					fallback={<Center>{imageFallback}</Center>}
 					borderRadius="md"
 				/>
 			</AspectRatio>
-			<CustomSection customVariant="h3" title={title}>
+			<CustomSection customVariant="h3" title={type}>
 				<Text>{description}</Text>
 			</CustomSection>
 			<ButtonCall text="View details" goToPage={goToPage} />
@@ -31,9 +32,10 @@ export default function GridItem({
 	);
 }
 GridItem.propTypes = {
-	title: PropTypes.string.isRequired,
-	src: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	type: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	fallback: PropTypes.string.isRequired,
+	previewImage: PropTypes.string.isRequired,
+	imageFallback: PropTypes.string.isRequired,
 	goToPage: PropTypes.func.isRequired,
 };

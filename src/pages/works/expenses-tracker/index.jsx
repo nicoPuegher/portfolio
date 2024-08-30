@@ -10,10 +10,10 @@ import ProjectImages from '@/pages/works/project-images';
 
 export default function ExpensesTracker() {
 	return (
-		<CustomSection title={expensesTracker.title}>
+		<CustomSection title={expensesTracker.name}>
 			<CustomGrid>
 				<Breadcrumb
-					name={expensesTracker.title}
+					name={expensesTracker.name}
 					year={expensesTracker.year}
 				/>
 				<Text>{expensesTracker.description}</Text>
@@ -21,17 +21,17 @@ export default function ExpensesTracker() {
 					variant="features"
 					list={expensesTracker.features}
 				/>
-				<Text>{expensesTracker.closer}</Text>
+				<Text>{expensesTracker.summaryNote}</Text>
 				<CustomList
 					variant="projectDetails"
-					list={expensesTracker.details}
-					stack={expensesTracker.stack}
+					list={expensesTracker.links}
+					stack={expensesTracker.techStack}
 				/>
 				<ProjectImages
-					preview={expensesTracker.preview}
+					previewImage={expensesTracker.previewImage}
 					mobilePreview1={expensesTracker.mobilePreviews[0]}
 					mobilePreview2={expensesTracker.mobilePreviews[1]}
-					fallback={expensesTracker.fallback}
+					imageFallback={expensesTracker.imageFallback}
 				/>
 			</CustomGrid>
 		</CustomSection>
