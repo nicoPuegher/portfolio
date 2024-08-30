@@ -4,8 +4,8 @@ import Container from './container-theme';
 
 const theme = extendTheme({
 	fonts: {
-		heading: 'Inter variable, sans-serif',
-		body: 'Inter variable, sans-serif',
+		heading: 'Inter, sans-serif',
+		body: 'Inter, sans-serif',
 	},
 	styles: {
 		global: {
