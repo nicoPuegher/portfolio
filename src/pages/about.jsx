@@ -11,25 +11,24 @@ export default function About() {
 		<CustomGrid customVariant="external">
 			<CustomSection title="About me">
 				<CustomGrid>
-					{Object.values(developer.summary).map((paragraph) => (
+					{developer.about.map((paragraph) => (
 						<Text key={paragraph}>{paragraph}</Text>
 					))}
 				</CustomGrid>
 			</CustomSection>
 			<Divider width="half" />
-			<CustomSection title="EPAM Anywhere">
-				<CustomGrid>
-					<Text>{developer.experience['1'].description}</Text>
-					<CustomList list={developer.experience[1].list} />
-				</CustomGrid>
-			</CustomSection>
-			<Divider width="half" />
-			<CustomSection title="Fizzit">
-				<CustomGrid>
-					<Text>{developer.experience['2'].description}</Text>
-					<CustomList list={developer.experience[2].list} />
-				</CustomGrid>
-			</CustomSection>
+			{developer.experience.map((exp) => (
+				<CustomSection
+					key={exp.company}
+					title={exp.company}
+					badge={exp.location}
+				>
+					<CustomGrid>
+						<Text>{exp.description}</Text>
+						<CustomList list={exp.responsibilities} />
+					</CustomGrid>
+				</CustomSection>
+			))}
 		</CustomGrid>
 	);
 }
