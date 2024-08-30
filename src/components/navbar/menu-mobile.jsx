@@ -30,7 +30,7 @@ export default function MenuMobile() {
 				))}
 				{menu.links.map((link) => (
 					<CustomMenuItem key={link.name}>
-						<CustomLink url={link.url}>{link.name}</CustomLink>
+						<CustomLink url={link.url} text={link.name} />
 					</CustomMenuItem>
 				))}
 			</MenuList>
