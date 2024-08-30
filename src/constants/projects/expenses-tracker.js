@@ -3,6 +3,7 @@ import mobilePreview1 from '@assets/projects/expenses-tracker/mobile-preview1.pn
 import mobilePreview2 from '@assets/projects/expenses-tracker/mobile-preview2.png';
 
 const expensesTracker = {
+	context: 'expensesTracker',
 	name: 'Expenses tracker',
 	year: '2023',
 	type: 'Frontend web application',

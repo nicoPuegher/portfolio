@@ -3,6 +3,7 @@ import mobilePreview1 from '@assets/projects/sorting-visualizer/mobile-preview1.
 import mobilePreview2 from '@assets/projects/sorting-visualizer/mobile-preview2.png';
 
 const sortingVisualizer = {
+	context: 'sortingVisualizer',
 	name: 'Sorting visualizer',
 	year: '2024',
 	type: 'Frontend web application',
