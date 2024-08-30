@@ -26,8 +26,8 @@ export default function Home() {
 				/>
 			</CustomGrid>
 			<Divider width="half" />
-			<CustomSection title="Quick summary ">
-				<Text>{developer.quickSummary}</Text>
+			<CustomSection title="Summary ">
+				<Text>{developer.summary}</Text>
 			</CustomSection>
 		</CustomGrid>
 	);

@@ -2,7 +2,7 @@ const developer = {
 	name: 'Nicolas Puegher',
 	role: 'Frontend developer',
 	welcomeMessage: 'Hey there 👋🏻, nice to meet you!',
-	quickSummary:
+	summary:
 		'I am a passionate developer dedicated to creating beautiful and functional web experiences. Explore my work and feel free to reach out if you have any questions or opportunities.',
 	summary: {
 		1: 'Dedicated frontend developer with over a year of experience in crafting high-quality web applications, solving complex problems, and delivering efficient production code.',
