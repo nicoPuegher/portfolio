@@ -10,10 +10,10 @@ import ProjectImages from '@/pages/works/project-images';
 
 export default function SortingVisualizer() {
 	return (
-		<CustomSection title={sortingVisualizer.title}>
+		<CustomSection title={sortingVisualizer.name}>
 			<CustomGrid>
 				<Breadcrumb
-					name={sortingVisualizer.title}
+					name={sortingVisualizer.name}
 					year={sortingVisualizer.year}
 				/>
 				<Text>{sortingVisualizer.description}</Text>
@@ -21,17 +21,17 @@ export default function SortingVisualizer() {
 					variant="features"
 					list={sortingVisualizer.features}
 				/>
-				<Text>{sortingVisualizer.closer}</Text>
+				<Text>{sortingVisualizer.summaryNote}</Text>
 				<CustomList
 					variant="projectDetails"
-					list={sortingVisualizer.details}
-					stack={sortingVisualizer.stack}
+					list={sortingVisualizer.links}
+					stack={sortingVisualizer.techStack}
 				/>
 				<ProjectImages
-					preview={sortingVisualizer.preview}
+					previewImage={sortingVisualizer.previewImage}
 					mobilePreview1={sortingVisualizer.mobilePreviews[0]}
 					mobilePreview2={sortingVisualizer.mobilePreviews[1]}
-					fallback={sortingVisualizer.fallback}
+					imageFallback={sortingVisualizer.imageFallback}
 				/>
 			</CustomGrid>
 		</CustomSection>
