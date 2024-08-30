@@ -23,7 +23,7 @@ export default function Home() {
 				<CustomButton
 					call="action"
 					text="Check my work"
-					goToPage={() => context.handleChangePage('works')}
+					onClick={() => context.handleChangePage('works')}
 				/>
 			</CustomGrid>
 			<Divider width="half" />
