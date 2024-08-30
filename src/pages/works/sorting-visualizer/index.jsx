@@ -19,7 +19,10 @@ export default function SortingVisualizer() {
 					year={sortingVisualizer.year}
 				/>
 				<Text>{sortingVisualizer.description}</Text>
-				<CustomList list={sortingVisualizer.features} features="true" />
+				<CustomList
+					variant="features"
+					list={sortingVisualizer.features}
+				/>
 				<Text>{sortingVisualizer.closer}</Text>
 				<List>
 					<ProjectLinks url={sortingVisualizer.link} />
