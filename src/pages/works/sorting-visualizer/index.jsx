@@ -24,10 +24,11 @@ export default function SortingVisualizer() {
 					list={sortingVisualizer.features}
 				/>
 				<Text>{sortingVisualizer.closer}</Text>
-				<List>
-					<ProjectLinks url={sortingVisualizer.link} />
-					<ProjectTechnologies stack={sortingVisualizer.stack} />
-				</List>
+				<CustomList
+					variant="projectDetails"
+					list={sortingVisualizer.details}
+					stack={sortingVisualizer.stack}
+				/>
 				<ProjectImages
 					preview={sortingVisualizer.preview}
 					mobilePreview1={sortingVisualizer.mobilePreviews[0]}
