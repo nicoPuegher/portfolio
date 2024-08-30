@@ -3,14 +3,14 @@ import { Link } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
-export default function ExternalLink({ url, text }) {
+export default function CustomLink({ url, children }) {
 	return (
 		<Link href={url} isExternal>
-			{text} <ExternalLinkIcon />
+			{children} <ExternalLinkIcon />
 		</Link>
 	);
 }
-ExternalLink.propTypes = {
+CustomLink.propTypes = {
 	url: PropTypes.string.isRequired,
-	text: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
 };
