@@ -3,51 +3,64 @@ import mobilePreview1 from '@assets/projects/expenses-tracker/mobile-preview1.pn
 import mobilePreview2 from '@assets/projects/expenses-tracker/mobile-preview2.png';
 
 const expensesTracker = {
-	title: 'Expenses Tracker',
+	name: 'Expenses tracker',
 	year: '2023',
+	type: 'Frontend web application',
 	description:
-		'Frontend web application designed to help users efficiently manage and monitor their personal expenses. It features a user-friendly interface that allows users to add, edit, and delete expenses while categorizing them for better organization.',
+		'It is designed to help users efficiently manage and monitor their personal expenses. It features a user-friendly interface that allows users to easily add, edit, and delete expenses while categorizing them for better organization.',
 	features: [
 		{
-			title: 'Dynamic Categorization: ',
-			content:
-				'Users can easily assign expenses to a variety of predefined categories.',
+			label: 'Dynamic categorization',
+			description:
+				'Users can effortlessly assign expenses to a variety of predefined categories, making it easy to organize and track spending.',
 		},
 		{
-			title: 'Interactive Visualizations: ',
-			content:
-				'The application features dynamic charts that visually represent monthly expenditures, enabling users to quickly identify spending patterns and trends.',
+			label: 'Interactive visualizations',
+			description:
+				'The application includes dynamic charts that visually represent monthly expenditures, helping users quickly identify spending patterns and trends.',
 		},
 		{
-			title: 'Flexible Filtering: ',
-			content:
-				'Expenses can be filtered by year or month and are displayed in descending order, allowing users to effortlessly navigate their financial history.',
+			label: 'Flexible filtering',
+			description:
+				'Users can filter expenses by year or month, which are then displayed in descending order for easy navigation through their financial history.',
 		},
 		{
-			title: 'Robust Form Validation: ',
-			content:
-				'The app includes comprehensive form validation to ensure data accuracy, providing users with clear guidance when entering information.',
+			label: 'Robust form validation',
+			description:
+				'The app features comprehensive form validation to ensure data accuracy, providing users with clear guidance when entering information.',
 		},
 	],
-	closer: 'This application offers a seamless experience for users looking to gain better control over their finances, providing insightful data through its intuitive design and powerful features.',
-	link: 'expenses-tracker',
-	stack: [
-		'HTML5',
+	summaryNote:
+		'This application offers a seamless experience for anyone looking to gain better control over their finances, providing insightful data through its intuitive design and powerful features.',
+	links: [
+		{
+			label: 'Demo',
+			url: 'https://nicopuegher.github.io/expenses-tracker/',
+			description: 'Live application',
+		},
+		{
+			label: 'Source',
+			url: 'https://github.com/nicoPuegher/expenses-tracker/',
+			description: 'Repository',
+		},
+	],
+	techStack: [
+		'HTML',
 		'Tailwind CSS',
 		'JavaScript',
 		'React',
-		'Heroicons',
 		'Headless UI',
 		'Material UI',
-		'Day',
+		'Heroicons',
+		'Day.js',
 		'Lodash',
 		'PropTypes',
 		'Prettier',
 		'ESLint',
 		'Vite',
 	],
-	fallback: 'Loading image...',
-	preview,
+	imageFallback: 'Loading image...',
+	previewImage: preview,
 	mobilePreviews: [mobilePreview1, mobilePreview2],
 };
 
