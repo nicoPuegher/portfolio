@@ -25,7 +25,9 @@ export default function Works() {
 							description={project.description}
 							previewImage={project.previewImage}
 							imageFallback={project.imageFallback}
-							goToPage={() => context.handleChangePage(project)}
+							goToPage={() =>
+								context.handleChangePage(project.context)
+							}
 						/>
 					</CustomGrid>
 				</CustomSection>
