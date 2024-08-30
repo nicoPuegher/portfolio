@@ -13,6 +13,7 @@ const theme = extendTheme({
 				minHeight: '100dvh',
 				display: 'flex',
 				flexDirection: 'column',
+				letterSpacing: '0.025rem',
 			},
 		},
 	},
