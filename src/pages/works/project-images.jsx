@@ -1,6 +1,8 @@
 import React from 'react';
-import { AspectRatio, Image, Center, SimpleGrid } from '@chakra-ui/react';
+import { AspectRatio, Image, Center, GridItem } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+
+import CustomGrid from '@/components/ui/custom-grid';
 
 export default function ProjectImages({
 	preview,
@@ -9,9 +11,17 @@ export default function ProjectImages({
 	fallback,
 }) {
 	return (
-		<>
-			<Image src={preview} borderRadius="md" />
-			<SimpleGrid columns={2} mt={3} gap={3}>
+		<CustomGrid
+			w="full"
+			templateRows="repeat(2, auto)"
+			templateColumns="repeat(2, 1fr)"
+		>
+			<GridItem w="full" colSpan={2}>
+				<AspectRatio borderRadius="md" shadow="xs" ratio={16 / 10}>
+					<Image src={preview} borderRadius="md" />
+				</AspectRatio>
+			</GridItem>
+			<GridItem w="full">
 				<AspectRatio borderRadius="md" shadow="xs" ratio={9 / 16}>
 					<Image
 						borderRadius="md"
@@ -19,6 +29,8 @@ export default function ProjectImages({
 						fallback={<Center>{fallback}</Center>}
 					/>
 				</AspectRatio>
+			</GridItem>
+			<GridItem w="full">
 				<AspectRatio borderRadius="md" shadow="xs" ratio={9 / 16}>
 					<Image
 						borderRadius="md"
@@ -26,8 +38,8 @@ export default function ProjectImages({
 						fallback={<Center>{fallback}</Center>}
 					/>
 				</AspectRatio>
-			</SimpleGrid>
-		</>
+			</GridItem>
+		</CustomGrid>
 	);
 }
 ProjectImages.propTypes = {

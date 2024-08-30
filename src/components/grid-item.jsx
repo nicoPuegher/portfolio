@@ -1,15 +1,10 @@
 import React from 'react';
-import {
-	Box,
-	AspectRatio,
-	Image,
-	Center,
-	Heading,
-	Text,
-} from '@chakra-ui/react';
+import { AspectRatio, Image, Center, Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 import ButtonCall from '@components/ui/button-call';
+
+import CustomSection from './ui/custom-section';
 
 export default function GridItem({
 	title,
@@ -19,23 +14,20 @@ export default function GridItem({
 	goToPage,
 }) {
 	return (
-		<Box>
-			<AspectRatio mb={5} borderRadius="md" shadow="xs" ratio={16 / 10}>
+		<>
+			<AspectRatio w="full" borderRadius="md" shadow="xs" ratio={16 / 10}>
 				<Image
-					borderRadius="md"
 					src={src}
 					alt={title}
 					fallback={<Center>{fallback}</Center>}
+					borderRadius="md"
 				/>
 			</AspectRatio>
-			<Box>
-				<Heading as="h3" fontSize="md">
-					{title}
-				</Heading>
-				<Text my={3}>{description}</Text>
-			</Box>
+			<CustomSection customVariant="h3" title={title}>
+				<Text>{description}</Text>
+			</CustomSection>
 			<ButtonCall text="View details" goToPage={goToPage} />
-		</Box>
+		</>
 	);
 }
 GridItem.propTypes = {

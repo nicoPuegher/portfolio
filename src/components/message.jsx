@@ -1,18 +1,14 @@
 import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+
+import CustomContainer from './ui/custom-container';
 
 export default function Message({ children }) {
 	return (
-		<Box
-			w="full"
-			p={2}
-			borderRadius="md"
-			color="white"
-			backgroundColor="black"
-		>
+		<CustomContainer borderRadius="md" color="white" bg="black">
 			<Text textAlign="center">{children}</Text>
-		</Box>
+		</CustomContainer>
 	);
 }
 Message.propTypes = {

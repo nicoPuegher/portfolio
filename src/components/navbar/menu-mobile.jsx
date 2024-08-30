@@ -20,7 +20,7 @@ export default function MenuMobile() {
 				icon={<HamburgerIcon />}
 				aria-label="Options"
 			/>
-			<MenuList as="nav">
+			<MenuList>
 				<MenuItem
 					letterSpacing="inherit"
 					onClick={() => context.handleChangePage('about')}
