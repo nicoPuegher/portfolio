@@ -14,10 +14,9 @@ export default function Logo() {
 				variant="link"
 				fontSize="xl"
 				color="white"
+				text={developer.name}
 				onClick={() => context.handleChangePage('home')}
-			>
-				{developer.name}
-			</CustomButton>
+			/>
 		</Heading>
 	);
 }
