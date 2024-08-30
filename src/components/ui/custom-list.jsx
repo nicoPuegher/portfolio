@@ -9,10 +9,10 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 	const customList = list.map((item) => {
 		if (variant === 'features') {
 			return (
-				<ListItem key={item.title} fontSize="sm">
+				<ListItem key={item.label} fontSize="sm">
 					<Text as="i">
-						<Text as="b">{item.title}</Text>
-						{item.content}
+						<Text as="b">{`${item.label}: `}</Text>
+						{item.description}
 					</Text>
 				</ListItem>
 			);
@@ -20,11 +20,11 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 
 		if (variant === 'projectDetails') {
 			return (
-				<ListItem key={item.key} fontSize="sm">
+				<ListItem key={item.label} fontSize="sm">
 					<Text as="i">
-						<Text as="b">{`${item.key}: `}</Text>
+						<Text as="b">{`${item.label}: `}</Text>
 						<Link href={item.url} isExternal>
-							{item.placeHolder} <ExternalLinkIcon />
+							{item.description} <ExternalLinkIcon />
 						</Link>
 					</Text>
 				</ListItem>
