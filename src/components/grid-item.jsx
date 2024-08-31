@@ -2,9 +2,8 @@ import React from 'react';
 import { AspectRatio, Image, Center, Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-import ButtonCall from '@components/ui/button-call';
-
 import CustomSection from './ui/custom-section';
+import CustomButton from './ui/custom-button';
 
 export default function GridItem({
 	name,
@@ -27,7 +26,11 @@ export default function GridItem({
 			<CustomSection customVariant="h3" title={type}>
 				<Text>{description}</Text>
 			</CustomSection>
-			<ButtonCall text="View details" goToPage={goToPage} />
+			<CustomButton
+				call="action"
+				text="View details"
+				onClick={goToPage}
+			/>
 		</>
 	);
 }
