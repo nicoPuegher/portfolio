@@ -17,18 +17,21 @@ export default function About() {
 				</CustomGrid>
 			</CustomSection>
 			<Divider width="half" />
-			{developer.experience.map((exp) => (
-				<CustomSection
-					key={exp.company}
-					title={exp.company}
-					badge={exp.location}
-				>
-					<CustomGrid>
-						<Text>{exp.description}</Text>
-						<CustomList list={exp.responsibilities} />
-					</CustomGrid>
-				</CustomSection>
-			))}
+			{developer.experience.map((exp, index) => {
+				const isLastItem = developer.experience.length - 1 === index;
+
+				return (
+					<React.Fragment key={exp.company}>
+						<CustomSection title={exp.company} badge={exp.location}>
+							<CustomGrid>
+								<Text>{exp.description}</Text>
+								<CustomList list={exp.responsibilities} />
+							</CustomGrid>
+						</CustomSection>
+						{!isLastItem && <Divider width="half" />}
+					</React.Fragment>
+				);
+			})}
 		</CustomGrid>
 	);
 }
