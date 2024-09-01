@@ -10,7 +10,7 @@ export default function CustomImage({
 	const customRatio = ratio === 'desktop' ? 16 / 10 : 9 / 16;
 
 	return (
-		<AspectRatio w="full" boderRadius="md" shadow="sx" ratio={customRatio}>
+		<AspectRatio w="full" borderRadius="md" shadow="xs" ratio={customRatio}>
 			<Image
 				src={src}
 				alt={alt}
