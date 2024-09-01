@@ -2,7 +2,13 @@ import React from 'react';
 import { Image, Center } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-export default function CustomImage({ src, alt = 'Application preview' }) {
+export default function CustomImage({
+	src,
+	alt = 'Application preview',
+	ratio = 'desktop',
+}) {
+	const customRatio = ratio === 'desktop' ? 16 / 10 : 9 / 16;
+
 	return (
 		<Image
 			src={src}
@@ -15,4 +21,5 @@ export default function CustomImage({ src, alt = 'Application preview' }) {
 CustomImage.propTypes = {
 	src: PropTypes.string.isRequired,
 	alt: PropTypes.string,
+	ratio: PropTypes.string,
 };
