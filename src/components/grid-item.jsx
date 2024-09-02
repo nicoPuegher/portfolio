@@ -6,7 +6,7 @@ import CustomImage from './ui/custom-image';
 import CustomSection from './ui/custom-section';
 import CustomButton from './ui/custom-button';
 
-export default function GridItem({
+export default function CustomGridItem({
 	name,
 	type,
 	description,
@@ -27,7 +27,7 @@ export default function GridItem({
 		</>
 	);
 }
-GridItem.propTypes = {
+CustomGridItem.propTypes = {
 	name: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
