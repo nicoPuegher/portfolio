@@ -2,9 +2,9 @@ import React from 'react';
 import { Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-import CustomImage from './ui/custom-image';
-import CustomSection from './ui/custom-section';
-import CustomButton from './ui/custom-button';
+import CustomImage from './custom-image';
+import CustomSection from './custom-section';
+import CustomButton from './custom-button';
 
 export default function CustomGridItem({
 	name,
