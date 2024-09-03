@@ -6,7 +6,7 @@ import CustomGrid from '@/components/ui/custom-grid';
 import Message from '@/components/message';
 import Profile from '@/components/profile';
 import CustomSection from '@/components/ui/custom-section';
-import ButtonCall from '@/components/ui/button-call';
+import CustomButton from '@/components/ui/custom-button';
 import developer from '@/constants/developer';
 
 export default function Home() {
@@ -20,9 +20,10 @@ export default function Home() {
 				<CustomSection title={developer.name}>
 					<Text>{developer.role}</Text>
 				</CustomSection>
-				<ButtonCall
+				<CustomButton
+					call="action"
 					text="Check my work"
-					goToPage={() => context.handleChangePage('works')}
+					onClick={() => context.handleChangePage('works')}
 				/>
 			</CustomGrid>
 			<Divider width="half" />

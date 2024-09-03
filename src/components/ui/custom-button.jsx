@@ -3,18 +3,18 @@ import { Button } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
-export default function ButtonCall({ text, goToPage }) {
+export default function CustomButton({ call = null, text, ...props }) {
 	return (
 		<Button
-			rightIcon={<ArrowForwardIcon />}
+			rightIcon={call ? <ArrowForwardIcon /> : null}
 			letterSpacing="inherit"
-			onClick={goToPage}
+			{...props}
 		>
 			{text}
 		</Button>
 	);
 }
-ButtonCall.propTypes = {
+CustomButton.propTypes = {
+	call: PropTypes.string,
 	text: PropTypes.string.isRequired,
-	goToPage: PropTypes.func.isRequired,
 };

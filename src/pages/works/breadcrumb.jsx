@@ -3,6 +3,7 @@ import {
 	Breadcrumb,
 	BreadcrumbItem,
 	BreadcrumbLink,
+	Flex,
 	Badge,
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
@@ -28,8 +29,12 @@ export default function CustomBreadcrumb({ name, year }) {
 			</BreadcrumbItem>
 
 			<BreadcrumbItem isCurrentPage>
-				<BreadcrumbLink>{name}</BreadcrumbLink>
-				<Badge ml={1}>{year}</Badge>
+				<Flex>
+					<BreadcrumbLink>{name}</BreadcrumbLink>
+					<Badge fontWeight="medium" ml={1} alignSelf="start">
+						{year}
+					</Badge>
+				</Flex>
 			</BreadcrumbItem>
 		</Breadcrumb>
 	);

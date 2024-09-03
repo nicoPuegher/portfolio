@@ -4,7 +4,7 @@ import { Divider } from '@chakra-ui/react';
 import Context from '@/store/context';
 import CustomSection from '@/components/ui/custom-section';
 import CustomGrid from '@/components/ui/custom-grid';
-import GridItem from '@/components/grid-item';
+import CustomGridItem from '@/components/ui/custom-grid-item';
 import projects from '@/constants/projects';
 
 export default function Works() {
@@ -19,12 +19,11 @@ export default function Works() {
 			<React.Fragment key={project.name}>
 				<CustomSection title={project.name}>
 					<CustomGrid>
-						<GridItem
+						<CustomGridItem
 							name={project.name}
 							type={project.type}
 							description={project.description}
 							previewImage={project.previewImage}
-							imageFallback={project.imageFallback}
 							goToPage={() =>
 								context.handleChangePage(project.context)
 							}
