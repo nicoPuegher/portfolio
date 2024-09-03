@@ -3,10 +3,10 @@ import { Text } from '@chakra-ui/react';
 
 import CustomSection from '@/components/ui/custom-section';
 import CustomGrid from '@/components/ui/custom-grid';
-import expensesTracker from '@/constants/projects/expenses-tracker';
 import Breadcrumb from '@/pages/works/breadcrumb';
 import CustomList from '@/components/ui/custom-list';
 import ProjectImages from '@/pages/works/project-images';
+import expensesTracker from '@/constants/projects/expenses-tracker';
 
 export default function ExpensesTracker() {
 	return (
