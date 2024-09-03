@@ -7,6 +7,7 @@ export default function CustomButton({ call = null, text, ...props }) {
 	return (
 		<Button
 			rightIcon={call ? <ArrowForwardIcon /> : null}
+			fontSize="sm"
 			letterSpacing="inherit"
 			{...props}
 		>
