@@ -1,4 +1,4 @@
-import changePage from '@store/handler';
+import changePage from './handler';
 
 export default function generateValue(state, dispatch) {
 	return {
