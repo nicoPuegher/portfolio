@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Badge } from '@chakra-ui/react';
+import { Box, Badge, Heading } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 export default function CustomSection({
