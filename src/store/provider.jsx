@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
-import reducer from '@store/reducer';
-import Context from '@store/context';
-import generateValue from '@store/generate-value';
+import Context from './context';
+import reducer from './reducer';
+import generateValue from './generate-value';
 
 export default function ContextProvider({ children }) {
 	const [state, dispatch] = useReducer(reducer, {
