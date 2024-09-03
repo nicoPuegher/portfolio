@@ -4,8 +4,8 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import ContextProvider from './store/provider';
 import Fonts from './components/fonts';
-import theme from './lib/theme';
 import App from './app';
+import theme from './lib/theme';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
