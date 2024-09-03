@@ -6,9 +6,6 @@ export default function Fonts() {
 		<Global
 			styles={`
 				@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-      			body {
-					letter-spacing: 0.025rem;
-      			}
     		`}
 		/>
 	);

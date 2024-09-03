@@ -1,20 +1,18 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+
+import CustomContainer from '@/components/ui/custom-container';
 
 export default function Nav({ children }) {
 	return (
-		<Box
+		<CustomContainer
 			as="nav"
-			maxW="container.md"
-			p={2}
-			mx="auto"
 			display="flex"
 			justifyContent="space-between"
 			alignItems="center"
 		>
 			{children}
-		</Box>
+		</CustomContainer>
 	);
 }
 Nav.propTypes = {

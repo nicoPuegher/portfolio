@@ -1,44 +1,39 @@
 import React, { useContext } from 'react';
-import {
-	Box,
-	Menu,
-	MenuButton,
-	IconButton,
-	MenuList,
-	MenuItem,
-} from '@chakra-ui/react';
+import { Menu, MenuButton, IconButton, MenuList } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 import Context from '@/store/context';
+import CustomMenuItem from '@/components/ui/custom-menu-item';
+import CustomLink from '@/components/ui/custom-link';
+import menu from '@/constants/menu';
 
 export default function MenuMobile() {
 	const context = useContext(Context);
 
 	return (
-		<Box ml={2} display="inline-block">
-			<Menu>
-				<MenuButton
-					as={IconButton}
-					icon={<HamburgerIcon />}
-					aria-label="Options"
-				/>
-				<MenuList>
-					<MenuItem
-						letterSpacing="inherit"
-						onClick={() => context.handleChangePage('about')}
+		<Menu>
+			<MenuButton
+				as={IconButton}
+				icon={<HamburgerIcon />}
+				aria-label="Options"
+			/>
+			<MenuList>
+				{menu.buttons.map((name) => (
+					<CustomMenuItem
+						key={name}
+						onClick={() =>
+							context.handleChangePage(name.toLowerCase())
+						}
 					>
-						About
-					</MenuItem>
-					<MenuItem
-						letterSpacing="inherit"
-						onClick={() => context.handleChangePage('works')}
-					>
-						Works
-					</MenuItem>
-					<MenuItem letterSpacing="inherit">Linkedin</MenuItem>
-					<MenuItem letterSpacing="inherit">Github</MenuItem>
-				</MenuList>
-			</Menu>
-		</Box>
+						{name}
+					</CustomMenuItem>
+				))}
+				{menu.links.map((link) => (
+					<CustomMenuItem key={link.name}>
+						<CustomLink url={link.url} text={link.name} />
+					</CustomMenuItem>
+				))}
+			</MenuList>
+		</Menu>
 	);
 }

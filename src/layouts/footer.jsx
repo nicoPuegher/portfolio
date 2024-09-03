@@ -1,16 +1,18 @@
 import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
+
+import CustomContainer from '@/components/ui/custom-container';
 
 export default function Footer() {
 	const date = new Date();
-	const currentYear = date.getFullYear();
-	const copyright = `© ${currentYear} - All rights reserved.`;
+	const currentYear = date.getFullYear().toString();
 
 	return (
-		<Box as="footer" py={2} color="white" backgroundColor="black">
-			<Text fontSize="sm" textAlign="center">
-				{copyright}
+		<CustomContainer as="footer" bg="black">
+			<Text fontSize="sm" textAlign="center" color="white">
+				© <time dateTime={currentYear}>{currentYear}</time> - All
+				rights reserved.
 			</Text>
-		</Box>
+		</CustomContainer>
 	);
 }
