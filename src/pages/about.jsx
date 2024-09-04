@@ -1,12 +1,15 @@
 import React from 'react';
 import { Text, Divider } from '@chakra-ui/react';
 
+import useScroll from '@/hooks/useScroll';
 import CustomGrid from '@/components/ui/custom-grid';
 import CustomSection from '@/components/ui/custom-section';
 import CustomList from '@/components/ui/custom-list';
 import developer from '@/constants/developer';
 
 export default function About() {
+	useScroll();
+
 	return (
 		<CustomGrid customVariant="external">
 			<CustomSection title="About me">
