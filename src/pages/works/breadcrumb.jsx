@@ -29,12 +29,14 @@ export default function CustomBreadcrumb({ name, year }) {
 			</BreadcrumbItem>
 
 			<BreadcrumbItem isCurrentPage>
-				<Flex>
-					<BreadcrumbLink>{name}</BreadcrumbLink>
-					<Badge fontWeight="medium" ml={1} alignSelf="start">
-						{year}
-					</Badge>
-				</Flex>
+				<BreadcrumbLink>
+					<Flex>
+						{name}
+						<Badge fontWeight="medium" ml={1} alignSelf="start">
+							{year}
+						</Badge>
+					</Flex>
+				</BreadcrumbLink>
 			</BreadcrumbItem>
 		</Breadcrumb>
 	);
