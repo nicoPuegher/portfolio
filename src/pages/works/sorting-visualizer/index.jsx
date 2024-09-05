@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
 
+import useScroll from '@/hooks/useScroll';
 import CustomSection from '@/components/ui/custom-section';
 import CustomGrid from '@/components/ui/custom-grid';
 import Breadcrumb from '@/pages/works/breadcrumb';
@@ -9,6 +10,8 @@ import ProjectImages from '@/pages/works/project-images';
 import sortingVisualizer from '@/constants/projects/sorting-visualizer';
 
 export default function SortingVisualizer() {
+	useScroll();
+
 	return (
 		<CustomSection title={sortingVisualizer.name}>
 			<CustomGrid>
