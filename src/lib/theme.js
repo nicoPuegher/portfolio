@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 import Container from './container-theme';
-import colors from './colors';
+import { dark } from './colors';
 
 const theme = extendTheme({
 	config: {
@@ -20,8 +20,8 @@ const theme = extendTheme({
 				display: 'flex',
 				flexDirection: 'column',
 				letterSpacing: '0.025rem',
-				color: mode(colors.black, colors.white)(props),
-				bg: mode(colors.white, colors.black)(props),
+				color: mode(dark.black, '')(props),
+				bg: mode(dark.white, '')(props),
 			},
 		}),
 	},
