@@ -1,67 +1,60 @@
 import React from 'react';
-import {
-	useColorModeValue,
-	ListItem,
-	Text,
-	Link,
-	Tag,
-	UnorderedList,
-} from '@chakra-ui/react';
+import { useColorModeValue, Text, Link, UnorderedList } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
+import { dark } from '@/lib/colors';
+
+import CustomListItem from './custom-list-item';
 import CustomText from './custom-text';
 import CustomFlex from './custom-flex';
-
-import { dark } from '@/lib/colors';
+import CustomTag from './custom-tag';
 
 export default function CustomList({ variant = 'text', list, stack = [] }) {
 	const customList = list.map((item) => {
 		if (variant === 'features') {
 			return (
-				<ListItem key={item.label} fontSize="sm">
+				<CustomListItem key={item.label}>
 					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
 						{item.description}
 					</CustomText>
-				</ListItem>
+				</CustomListItem>
 			);
 		}
 
 		if (variant === 'projectDetails') {
 			return (
-				<ListItem key={item.label} fontSize="sm">
+				<CustomListItem key={item.label}>
 					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
 						<Link href={item.url} isExternal>
 							{item.description} <ExternalLinkIcon />
 						</Link>
 					</CustomText>
-				</ListItem>
+				</CustomListItem>
 			);
 		}
 
 		return (
-			<ListItem key={item} fontSize="sm">
+			<CustomListItem key={item}>
 				<CustomText>{item}</CustomText>
-			</ListItem>
+			</CustomListItem>
 		);
 	});
 
 	if (variant === 'projectDetails') {
 		customList.push(
-			<ListItem key="tech" fontSize="sm">
-				<Text as="i">
+			<CustomListItem key="tech">
+				<CustomText>
 					<CustomFlex wrap="wrap" justify="center" align="center">
 						<Text as="b">Stack: </Text>
 						{stack.map((tech) => (
-							<Tag key={tech} fontWeight="normal">
-								{tech}
-							</Tag>
+							<CustomTag key={tech} text={tech} />
 						))}
 					</CustomFlex>
-				</Text>
-			</ListItem>,
+				</CustomText>
+			</CustomListItem>,
 		);
 	}
 
