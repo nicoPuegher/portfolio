@@ -10,8 +10,9 @@ export default function Profile() {
 			src={profilePicture}
 			name="Nicolas Puegher"
 			size="xl"
-			outline="4px solid"
-			outlineColor={useColorModeValue(dark.black, '')}
+			borderStyle="solid"
+			borderWidth={4}
+			borderColor={useColorModeValue(dark.blackBorder, '')}
 			bg={useColorModeValue(dark.black, '')}
 		/>
 	);
