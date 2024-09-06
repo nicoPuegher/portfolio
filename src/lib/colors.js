@@ -9,7 +9,8 @@ const dark = {
 	white: 'whiteAlpha.900',
 	black: 'blackAlpha.900',
 	active: 'gray',
-	border: 'gray.300',
+	blackBorder: 'blackAlpha.400',
+	grayBorder: 'gray.300',
 	focus: 'gray.300',
 };
 
