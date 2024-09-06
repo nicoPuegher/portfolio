@@ -1,19 +1,29 @@
 import React from 'react';
-import { ListItem, Text, Link, Tag, UnorderedList } from '@chakra-ui/react';
+import {
+	useColorModeValue,
+	ListItem,
+	Text,
+	Link,
+	Tag,
+	UnorderedList,
+} from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
+import CustomText from './custom-text';
 import CustomFlex from './custom-flex';
+
+import { dark } from '@/lib/colors';
 
 export default function CustomList({ variant = 'text', list, stack = [] }) {
 	const customList = list.map((item) => {
 		if (variant === 'features') {
 			return (
 				<ListItem key={item.label} fontSize="sm">
-					<Text as="i">
+					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
 						{item.description}
-					</Text>
+					</CustomText>
 				</ListItem>
 			);
 		}
@@ -21,19 +31,19 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 		if (variant === 'projectDetails') {
 			return (
 				<ListItem key={item.label} fontSize="sm">
-					<Text as="i">
+					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
 						<Link href={item.url} isExternal>
 							{item.description} <ExternalLinkIcon />
 						</Link>
-					</Text>
+					</CustomText>
 				</ListItem>
 			);
 		}
 
 		return (
 			<ListItem key={item} fontSize="sm">
-				<Text as="i">{item}</Text>
+				<CustomText>{item}</CustomText>
 			</ListItem>
 		);
 	});
@@ -61,6 +71,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			spacing={2.5}
 			listStylePos="inside"
 			listStyleType={variant === 'projectDetails' ? 'none' : 'disc'}
+			color={useColorModeValue(dark.dimmedBlack, '')}
 		>
 			{customList}
 		</UnorderedList>
