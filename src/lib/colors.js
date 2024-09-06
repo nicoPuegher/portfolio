@@ -1,8 +1,15 @@
-const colors = {
-	black: 'blackAlpha.900',
-	white: 'whiteAlpha.900',
-	lightAction: 'gray',
-	darkAction: 'blue',
+const light = {
+	white: '',
+	black: '',
+	border: '',
+	_focus: '',
 };
 
-export default colors;
+const dark = {
+	white: 'whiteAlpha.900',
+	black: 'blackAlpha.900',
+	border: 'gray.300',
+	_focus: 'gray.300',
+};
+
+export { light, dark };
