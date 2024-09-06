@@ -2,13 +2,11 @@ import { extendTheme } from '@chakra-ui/react';
 
 import Container from './container-theme';
 
-const config = {
-	initialColorMode: 'system',
-	useSystemColorMode: true,
-};
-
 const theme = extendTheme({
-	config,
+	config: {
+		initialColorMode: 'system',
+		useSystemColorMode: true,
+	},
 	fonts: {
 		heading: 'Inter, sans-serif',
 		body: 'Inter, sans-serif',
