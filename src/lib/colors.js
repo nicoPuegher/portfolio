@@ -8,6 +8,7 @@ const light = {
 const dark = {
 	white: 'whiteAlpha.900',
 	black: 'blackAlpha.900',
+	dimmedBlack: 'blackAlpha.800',
 	active: 'gray',
 	blackBorder: 'blackAlpha.400',
 	grayBorder: 'gray.300',
