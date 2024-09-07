@@ -2,7 +2,7 @@ import React from 'react';
 import { useColorModeValue, Text } from '@chakra-ui/react';
 
 import CustomContainer from '@/components/ui/custom-container';
-import { dark } from '@/lib/colors';
+import { light, dark } from '@/lib/colors';
 
 export default function Footer() {
 	const date = new Date();
@@ -11,8 +11,8 @@ export default function Footer() {
 	return (
 		<CustomContainer
 			as="footer"
-			color={useColorModeValue(dark.white, '')}
-			bg={useColorModeValue(dark.black, '')}
+			color={useColorModeValue(light.textLight, '')}
+			bg={useColorModeValue(light.bgDark, '')}
 		>
 			<Text fontSize="sm" textAlign="center">
 				© <time dateTime={currentYear}>{currentYear}</time> - All
