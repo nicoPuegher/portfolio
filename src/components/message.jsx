@@ -2,7 +2,7 @@ import React from 'react';
 import { useColorModeValue, Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-import { dark } from '@/lib/colors';
+import { light, dark } from '@/lib/colors';
 
 import CustomContainer from './ui/custom-container';
 
@@ -10,8 +10,8 @@ export default function Message({ children }) {
 	return (
 		<CustomContainer
 			borderRadius="md"
-			color={useColorModeValue(dark.white, '')}
-			bg={useColorModeValue(dark.black, '')}
+			color={useColorModeValue(light.white, '')}
+			bg={useColorModeValue(light.black, '')}
 		>
 			<Text textAlign="center">{children}</Text>
 		</CustomContainer>
