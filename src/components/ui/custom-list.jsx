@@ -3,7 +3,7 @@ import { useColorModeValue, Text, Link, UnorderedList } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
-import { dark } from '@/lib/colors';
+import { light, dark } from '@/lib/colors';
 
 import CustomListItem from './custom-list-item';
 import CustomText from './custom-text';
@@ -64,7 +64,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			spacing={2.5}
 			listStylePos="inside"
 			listStyleType={variant === 'projectDetails' ? 'none' : 'disc'}
-			color={useColorModeValue(dark.dimmedBlack, '')}
+			color={useColorModeValue(light.list, '')}
 		>
 			{customList}
 		</UnorderedList>
