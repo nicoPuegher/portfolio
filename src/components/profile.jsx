@@ -2,7 +2,7 @@ import React from 'react';
 import { useColorModeValue, Avatar } from '@chakra-ui/react';
 
 import profilePicture from '@assets/profile.png';
-import { dark } from '@/lib/colors';
+import { light, dark } from '@/lib/colors';
 
 export default function Profile() {
 	return (
@@ -12,8 +12,8 @@ export default function Profile() {
 			size="xl"
 			borderStyle="solid"
 			borderWidth={4}
-			borderColor={useColorModeValue(dark.blackBorder, '')}
-			bg={useColorModeValue(dark.black, '')}
+			borderColor={useColorModeValue(light.bgDark, '')}
+			bg={useColorModeValue(light.bgDark, '')}
 		/>
 	);
 }
