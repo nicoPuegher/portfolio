@@ -3,7 +3,7 @@ import { useColorModeValue, Button } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
-import { dark } from '@/lib/colors';
+import { light, dark } from '@/lib/colors';
 
 export default function CustomButton({ call = null, text, ...props }) {
 	return (
@@ -11,8 +11,7 @@ export default function CustomButton({ call = null, text, ...props }) {
 			rightIcon={call ? <ArrowForwardIcon /> : null}
 			fontSize="sm"
 			letterSpacing="inherit"
-			color={useColorModeValue(dark.black, '')}
-			colorScheme={useColorModeValue(dark.active, '')}
+			colorScheme={useColorModeValue(light.primary, '')}
 			{...props}
 		>
 			{text}
