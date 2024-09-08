@@ -2,6 +2,8 @@ import React from 'react';
 import { AspectRatio, Image, Center } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
+import { light, dark } from '@/lib/colors';
+
 export default function CustomImage({
 	src,
 	alt = 'Application preview',
@@ -10,12 +12,20 @@ export default function CustomImage({
 	const customRatio = ratio === 'desktop' ? 16 / 10 : 9 / 16;
 
 	return (
-		<AspectRatio w="full" borderRadius="md" shadow="xs" ratio={customRatio}>
+		<AspectRatio
+			w="full"
+			padding="1px"
+			borderRadius="md"
+			ratio={customRatio}
+			bg={light.bgImage}
+		>
 			<Image
 				src={src}
 				alt={alt}
 				fallback={<Center>Loading image...</Center>}
+				padding="1px"
 				borderRadius="md"
+				bg={light.bgImage}
 			/>
 		</AspectRatio>
 	);
