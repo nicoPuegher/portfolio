@@ -10,8 +10,8 @@ export default function Message({ children }) {
 	return (
 		<CustomContainer
 			borderRadius="md"
-			color={useColorModeValue(light.white, '')}
-			bg={useColorModeValue(light.black, '')}
+			color={useColorModeValue(light.textLight, '')}
+			bg={useColorModeValue(light.bgDark, '')}
 		>
 			<Text textAlign="center">{children}</Text>
 		</CustomContainer>
