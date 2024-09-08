@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Divider } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 import useScroll from '@/hooks/useScroll';
 import CustomGrid from '@/components/ui/custom-grid';
