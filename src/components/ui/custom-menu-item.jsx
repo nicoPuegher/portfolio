@@ -6,7 +6,14 @@ import { light, dark } from '@/lib/colors';
 
 export default function CustomMenuItem({ children, ...props }) {
 	return (
-		<MenuItem letterSpacing="inherit" {...props}>
+		<MenuItem
+			letterSpacing="inherit"
+			{...props}
+			bg={useColorModeValue(light.bgLight, '')}
+			_focus={{
+				bg: useColorModeValue(light.neutralHighlight, ''),
+			}}
+		>
 			{children}
 		</MenuItem>
 	);
