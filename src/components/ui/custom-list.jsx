@@ -1,12 +1,12 @@
 import React from 'react';
-import { useColorModeValue, Text, Link, UnorderedList } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { useColorModeValue, Text, UnorderedList } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 import { light, dark } from '@/lib/colors';
 
 import CustomListItem from './custom-list-item';
 import CustomText from './custom-text';
+import CustomLink from './custom-link';
 import CustomFlex from './custom-flex';
 import CustomTag from './custom-tag';
 
@@ -28,9 +28,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 				<CustomListItem key={item.label}>
 					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
-						<Link href={item.url} isExternal>
-							{item.description} <ExternalLinkIcon />
-						</Link>
+						<CustomLink url={item.url} text={item.description} />
 					</CustomText>
 				</CustomListItem>
 			);
@@ -64,7 +62,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			spacing={2.5}
 			listStylePos="inside"
 			listStyleType={variant === 'projectDetails' ? 'none' : 'disc'}
-			color={useColorModeValue(light.list, '')}
+			color={useColorModeValue(light.secondary, '')}
 		>
 			{customList}
 		</UnorderedList>
