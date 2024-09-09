@@ -7,8 +7,8 @@ import { light, dark } from '@/lib/colors';
 export default function ThemeToggle() {
 	const { colorMode, toggleColorMode } = useColorMode();
 
-	const moon = <MoonIcon color={useColorModeValue(light.textDark, '')} />;
-	const sun = <SunIcon color={useColorModeValue(light.textDark, '')} />;
+	const moon = <MoonIcon />;
+	const sun = <SunIcon />;
 
 	return (
 		<IconButton
