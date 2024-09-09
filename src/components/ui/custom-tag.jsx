@@ -5,7 +5,11 @@ import PropTypes from 'prop-types';
 import { light, dark } from '@/lib/colors';
 
 export default function CustomTag({ text }) {
-	return <Tag fontWeight="normal">{text}</Tag>;
+	return (
+		<Tag fontWeight="normal" color={useColorModeValue(light.list, '')}>
+			{text}
+		</Tag>
+	);
 }
 CustomTag.propTypes = {
 	text: PropTypes.string.isRequired,
