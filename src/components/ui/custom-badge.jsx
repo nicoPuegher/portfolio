@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 import { light, dark } from '@/lib/colors';
 
-export default function CustomBadge({ text }) {
+export default function CustomBadge({ text, ...props }) {
 	return (
-		<Badge colorScheme={useColorModeValue(light.primary, '')}>{text}</Badge>
+		<Badge colorScheme={useColorModeValue(light.secondary, '')} {...props}>
+			{text}
+		</Badge>
 	);
 }
 CustomBadge.propTypes = {
