@@ -1,5 +1,10 @@
 import React from 'react';
-import { AspectRatio, Image, Center } from '@chakra-ui/react';
+import {
+	useColorModeValue,
+	AspectRatio,
+	Image,
+	Center,
+} from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 import { light, dark } from '@/lib/colors';
@@ -17,7 +22,7 @@ export default function CustomImage({
 			padding="1px"
 			borderRadius="md"
 			ratio={customRatio}
-			bg={light.bgImage}
+			bg={useColorModeValue(light.bgImage, '')}
 		>
 			<Image
 				src={src}
