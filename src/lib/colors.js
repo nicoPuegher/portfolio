@@ -2,6 +2,7 @@ const light = {
 	primary: 'purple',
 	secondary: 'teal',
 	neutral: 'gray',
+	neutralHighlight: 'gray.100',
 	textLight: 'whiteAlpha.900',
 	textDark: 'blackAlpha.900',
 	list: 'blackAlpha.800',
