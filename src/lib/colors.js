@@ -1,11 +1,13 @@
 const light = {
+	primary: 'purple',
+	secondary: 'teal',
+	neutral: 'gray',
 	textLight: 'whiteAlpha.900',
 	textDark: 'blackAlpha.900',
-	primary: 'gray',
 	list: 'blackAlpha.800',
 	divider: 'blackAlpha.200',
 	bgImage: 'blackAlpha.50',
-	bgLight: 'whiteAlpha.900',
+	bgLight: '#fdfdfd',
 	bgDark: 'black',
 };
 
