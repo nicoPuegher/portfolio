@@ -23,9 +23,9 @@ export default function MenuMobile() {
 				as={IconButton}
 				icon={<HamburgerIcon />}
 				aria-label="Options"
-				colorScheme={useColorModeValue(light.primary, '')}
+				colorScheme={useColorModeValue(light.neutral, '')}
 			/>
-			<MenuList>
+			<MenuList bg={useColorModeValue(light.bgLight, '')}>
 				{menu.buttons.map((name) => (
 					<CustomMenuItem
 						key={name}
