@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from '@chakra-ui/react';
+import { useColorModeValue, Link } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
+
+import { light, dark } from '@/lib/colors';
 
 export default function CustomLink({ url, text }) {
 	return (
 		<Link href={url} isExternal>
-			{text} <ExternalLinkIcon />
+			{text}{' '}
+			<ExternalLinkIcon color={useColorModeValue(light.primary, '')} />
 		</Link>
 	);
 }
