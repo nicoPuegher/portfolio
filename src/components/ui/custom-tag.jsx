@@ -6,7 +6,10 @@ import { light, dark } from '@/lib/colors';
 
 export default function CustomTag({ text }) {
 	return (
-		<Tag fontWeight="normal" color={useColorModeValue(light.list, '')}>
+		<Tag
+			fontWeight="normal"
+			color={useColorModeValue(light.list, dark.list)}
+		>
 			{text}
 		</Tag>
 	);
