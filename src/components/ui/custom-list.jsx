@@ -62,7 +62,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			spacing={2.5}
 			listStylePos="inside"
 			listStyleType={variant === 'projectDetails' ? 'none' : 'disc'}
-			color={useColorModeValue(light.secondary, '')}
+			color={useColorModeValue(light.secondary, dark.secondary)}
 		>
 			{customList}
 		</UnorderedList>
