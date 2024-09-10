@@ -11,7 +11,7 @@ export default function CustomButton({ call = null, text, ...props }) {
 			rightIcon={call ? <ArrowForwardIcon /> : null}
 			fontSize="sm"
 			letterSpacing="inherit"
-			colorScheme={useColorModeValue(light.primary, '')}
+			colorScheme={useColorModeValue(light.primary, dark.primary)}
 			{...props}
 		>
 			{text}
