@@ -22,7 +22,7 @@ export default function CustomImage({
 			padding="1px"
 			borderRadius="md"
 			ratio={customRatio}
-			bg={useColorModeValue(light.bgImage, '')}
+			bg={useColorModeValue(light.bgImage, dark.bgImage)}
 		>
 			<Image
 				src={src}
