@@ -6,7 +6,7 @@ import { light, dark } from './colors';
 
 const theme = extendTheme({
 	config: {
-		initialColorMode: 'system',
+		initialColorMode: 'light',
 		useSystemColorMode: true,
 	},
 	fonts: {
@@ -15,13 +15,15 @@ const theme = extendTheme({
 	},
 	styles: {
 		global: (props) => ({
+			body: {
+				color: mode(light.textDark, dark.textLight)(props),
+				bg: mode(light.bgLight, dark.bgDark)(props),
+			},
 			'#root': {
 				minHeight: '100dvh',
 				display: 'flex',
 				flexDirection: 'column',
 				letterSpacing: '0.025rem',
-				color: mode(light.textDark, '')(props),
-				bg: mode(light.bgLight, '')(props),
 			},
 		}),
 	},
