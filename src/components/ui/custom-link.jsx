@@ -9,7 +9,9 @@ export default function CustomLink({ url, text }) {
 	return (
 		<Link href={url} isExternal>
 			{text}{' '}
-			<ExternalLinkIcon color={useColorModeValue(light.primary, '')} />
+			<ExternalLinkIcon
+				color={useColorModeValue(light.primary, dark.primary)}
+			/>
 		</Link>
 	);
 }
