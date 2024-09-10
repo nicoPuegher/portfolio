@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Heading, useColorModeValue } from '@chakra-ui/react';
 
 import Context from '@/store/context';
 import CustomButton from '@/components/ui/custom-button';
 import developer from '@constants/developer';
+import { light, dark } from '@/lib/colors';
 
 export default function Logo() {
 	const context = useContext(Context);
@@ -13,8 +14,8 @@ export default function Logo() {
 			<CustomButton
 				variant="link"
 				fontSize="xl"
-				color="white"
 				text={developer.name}
+				color={useColorModeValue(light.textLight, dark.textLight)}
 				onClick={() => context.handleChangePage('home')}
 			/>
 		</Heading>

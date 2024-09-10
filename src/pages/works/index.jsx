@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
-import { Divider } from '@chakra-ui/react';
 
+import useScroll from '@/hooks/useScroll';
 import Context from '@/store/context';
 import CustomSection from '@/components/ui/custom-section';
 import CustomGrid from '@/components/ui/custom-grid';
 import CustomGridItem from '@/components/ui/custom-grid-item';
+import CustomDivider from '@/components/ui/custom-divider';
 import projects from '@/constants/projects';
 
 export default function Works() {
+	useScroll();
+
 	const context = useContext(Context);
 
 	const projectValues = Object.values(projects);
@@ -30,7 +33,7 @@ export default function Works() {
 						/>
 					</CustomGrid>
 				</CustomSection>
-				{!isLastItem && <Divider width="half" />}
+				{!isLastItem && <CustomDivider />}
 			</React.Fragment>
 		);
 	});

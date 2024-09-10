@@ -1,6 +1,6 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 
 import ContextProvider from './store/provider';
 import Fonts from './components/fonts';
@@ -10,6 +10,7 @@ import theme from './lib/theme';
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
 		<ContextProvider>
+			<ColorModeScript initialColorMode={theme.config.initialColorMode} />
 			<ChakraProvider theme={theme}>
 				<Fonts />
 				<App />

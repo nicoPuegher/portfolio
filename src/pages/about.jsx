@@ -1,12 +1,16 @@
 import React from 'react';
-import { Text, Divider } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
+import useScroll from '@/hooks/useScroll';
 import CustomGrid from '@/components/ui/custom-grid';
 import CustomSection from '@/components/ui/custom-section';
+import CustomDivider from '@/components/ui/custom-divider';
 import CustomList from '@/components/ui/custom-list';
 import developer from '@/constants/developer';
 
 export default function About() {
+	useScroll();
+
 	return (
 		<CustomGrid customVariant="external">
 			<CustomSection title="About me">
@@ -16,7 +20,7 @@ export default function About() {
 					))}
 				</CustomGrid>
 			</CustomSection>
-			<Divider width="half" />
+			<CustomDivider />
 			{developer.experience.map((exp, index) => {
 				const isLastItem = developer.experience.length - 1 === index;
 
@@ -28,7 +32,7 @@ export default function About() {
 								<CustomList list={exp.responsibilities} />
 							</CustomGrid>
 						</CustomSection>
-						{!isLastItem && <Divider width="half" />}
+						{!isLastItem && <CustomDivider />}
 					</React.Fragment>
 				);
 			})}

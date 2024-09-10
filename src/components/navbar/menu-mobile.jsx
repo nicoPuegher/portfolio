@@ -1,11 +1,18 @@
 import React, { useContext } from 'react';
-import { Menu, MenuButton, IconButton, MenuList } from '@chakra-ui/react';
+import {
+	useColorModeValue,
+	Menu,
+	MenuButton,
+	IconButton,
+	MenuList,
+} from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 import Context from '@/store/context';
 import CustomMenuItem from '@/components/ui/custom-menu-item';
 import CustomLink from '@/components/ui/custom-link';
 import menu from '@/constants/menu';
+import { light, dark } from '@/lib/colors';
 
 export default function MenuMobile() {
 	const context = useContext(Context);
@@ -16,8 +23,9 @@ export default function MenuMobile() {
 				as={IconButton}
 				icon={<HamburgerIcon />}
 				aria-label="Options"
+				colorScheme={useColorModeValue(light.neutral, dark.neutral)}
 			/>
-			<MenuList>
+			<MenuList bg={useColorModeValue(light.bgLight, dark.bgLight)}>
 				{menu.buttons.map((name) => (
 					<CustomMenuItem
 						key={name}
