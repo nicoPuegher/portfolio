@@ -6,7 +6,10 @@ import { light, dark } from '@/lib/colors';
 
 export default function CustomBadge({ text, ...props }) {
 	return (
-		<Badge colorScheme={useColorModeValue(light.secondary, '')} {...props}>
+		<Badge
+			colorScheme={useColorModeValue(light.secondary, dark.secondary)}
+			{...props}
+		>
 			{text}
 		</Badge>
 	);
