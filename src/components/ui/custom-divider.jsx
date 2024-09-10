@@ -7,7 +7,7 @@ export default function CustomDivider() {
 	return (
 		<Divider
 			width="half"
-			borderColor={useColorModeValue(light.divider, '')}
+			borderColor={useColorModeValue(light.divider, dark.divider)}
 		/>
 	);
 }
