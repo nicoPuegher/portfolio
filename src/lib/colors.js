@@ -13,15 +13,17 @@ const light = {
 };
 
 const dark = {
-	white: 'whiteAlpha.900',
-	black: 'blackAlpha.900',
-	dimmedBlack: 'blackAlpha.700',
-	dimmedWhite: 'whiteAlpha.800',
-	active: 'orange',
-	whiteBorder: 'whiteAlpha.400',
-	colorBorder: 'whiteAlpha.300',
-	imageBg: 'whiteAlpha.200',
-	focus: 'purple.300',
+	primary: 'cyan',
+	secondary: 'orange',
+	neutral: 'gray',
+	neutralHighlight: 'whiteAlpha.200',
+	textLight: 'whiteAlpha.900',
+	textDark: '#121212',
+	list: 'whiteAlpha.800',
+	divider: 'whiteAlpha.200',
+	bgImage: 'whiteAlpha.50',
+	bgLight: '#1e1e1e',
+	bgDark: '#121212',
 };
 
 export { light, dark };
