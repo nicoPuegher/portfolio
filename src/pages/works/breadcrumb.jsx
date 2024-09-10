@@ -20,7 +20,7 @@ export default function CustomBreadcrumb({ name, year }) {
 		<Breadcrumb
 			separator={
 				<ChevronRightIcon
-					color={useColorModeValue(light.secondary, '')}
+					color={useColorModeValue(light.secondary, dark.secondary)}
 				/>
 			}
 			display="inline-block"
