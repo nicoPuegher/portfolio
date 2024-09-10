@@ -1,22 +1,28 @@
 import React, { useContext } from 'react';
 import {
+	useColorModeValue,
 	Breadcrumb,
 	BreadcrumbItem,
 	BreadcrumbLink,
 	Flex,
-	Badge,
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
 
 import Context from '@/store/context';
+import CustomBadge from '@/components/ui/custom-badge';
+import { light, dark } from '@/lib/colors';
 
 export default function CustomBreadcrumb({ name, year }) {
 	const context = useContext(Context);
 
 	return (
 		<Breadcrumb
-			separator={<ChevronRightIcon color="gray.500" />}
+			separator={
+				<ChevronRightIcon
+					color={useColorModeValue(light.secondary, dark.secondary)}
+				/>
+			}
 			display="inline-block"
 			spacing={2}
 		>
@@ -32,9 +38,12 @@ export default function CustomBreadcrumb({ name, year }) {
 				<BreadcrumbLink>
 					<Flex>
 						{name}
-						<Badge fontWeight="medium" ml={1} alignSelf="start">
-							{year}
-						</Badge>
+						<CustomBadge
+							fontWeight="medium"
+							ml={1}
+							alignSelf="start"
+							text={year}
+						/>
 					</Flex>
 				</BreadcrumbLink>
 			</BreadcrumbItem>

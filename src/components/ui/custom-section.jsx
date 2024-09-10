@@ -1,6 +1,8 @@
 import React from 'react';
-import { Box, Badge, Heading } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+
+import CustomBadge from './custom-badge';
 
 export default function CustomSection({
 	customVariant = 'h2',
@@ -13,7 +15,7 @@ export default function CustomSection({
 
 	return (
 		<Box as="section" textAlign="center">
-			{badge && <Badge>{badge}</Badge>}
+			{badge && <CustomBadge text={badge} />}
 			<Heading as={as} size={size} mb={1}>
 				{title}
 			</Heading>

@@ -1,10 +1,22 @@
 import React from 'react';
-import { MenuItem } from '@chakra-ui/react';
+import { useColorModeValue, MenuItem } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+
+import { light, dark } from '@/lib/colors';
 
 export default function CustomMenuItem({ children, ...props }) {
 	return (
-		<MenuItem letterSpacing="inherit" {...props}>
+		<MenuItem
+			letterSpacing="inherit"
+			{...props}
+			bg={useColorModeValue(light.bgLight, dark.bgLight)}
+			_focus={{
+				bg: useColorModeValue(
+					light.neutralHighlight,
+					dark.neutralHighlight,
+				),
+			}}
+		>
 			{children}
 		</MenuItem>
 	);

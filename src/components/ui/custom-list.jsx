@@ -1,57 +1,58 @@
 import React from 'react';
-import { ListItem, Text, Link, Tag, UnorderedList } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { useColorModeValue, Text, UnorderedList } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
+import { light, dark } from '@/lib/colors';
+
+import CustomListItem from './custom-list-item';
+import CustomText from './custom-text';
+import CustomLink from './custom-link';
 import CustomFlex from './custom-flex';
+import CustomTag from './custom-tag';
 
 export default function CustomList({ variant = 'text', list, stack = [] }) {
 	const customList = list.map((item) => {
 		if (variant === 'features') {
 			return (
-				<ListItem key={item.label} fontSize="sm">
-					<Text as="i">
+				<CustomListItem key={item.label}>
+					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
 						{item.description}
-					</Text>
-				</ListItem>
+					</CustomText>
+				</CustomListItem>
 			);
 		}
 
 		if (variant === 'projectDetails') {
 			return (
-				<ListItem key={item.label} fontSize="sm">
-					<Text as="i">
+				<CustomListItem key={item.label}>
+					<CustomText>
 						<Text as="b">{`${item.label}: `}</Text>
-						<Link href={item.url} isExternal>
-							{item.description} <ExternalLinkIcon />
-						</Link>
-					</Text>
-				</ListItem>
+						<CustomLink url={item.url} text={item.description} />
+					</CustomText>
+				</CustomListItem>
 			);
 		}
 
 		return (
-			<ListItem key={item} fontSize="sm">
-				<Text as="i">{item}</Text>
-			</ListItem>
+			<CustomListItem key={item}>
+				<CustomText>{item}</CustomText>
+			</CustomListItem>
 		);
 	});
 
 	if (variant === 'projectDetails') {
 		customList.push(
-			<ListItem key="tech" fontSize="sm">
-				<Text as="i">
+			<CustomListItem key="tech">
+				<CustomText>
 					<CustomFlex wrap="wrap" justify="center" align="center">
 						<Text as="b">Stack: </Text>
 						{stack.map((tech) => (
-							<Tag key={tech} fontWeight="normal">
-								{tech}
-							</Tag>
+							<CustomTag key={tech} text={tech} />
 						))}
 					</CustomFlex>
-				</Text>
-			</ListItem>,
+				</CustomText>
+			</CustomListItem>,
 		);
 	}
 
@@ -61,6 +62,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			spacing={2.5}
 			listStylePos="inside"
 			listStyleType={variant === 'projectDetails' ? 'none' : 'disc'}
+			color={useColorModeValue(light.secondary, dark.secondary)}
 		>
 			{customList}
 		</UnorderedList>
