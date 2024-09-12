@@ -16,7 +16,7 @@ export default function CustomSection({
 	return (
 		<Box as="section" textAlign="center">
 			{badge && <CustomBadge text={badge} />}
-			<Heading as={as} size={size} mb={1}>
+			<Heading as={as} size={size} mb={2.5}>
 				{title}
 			</Heading>
 			{children}
