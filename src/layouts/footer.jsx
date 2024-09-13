@@ -11,6 +11,7 @@ export default function Footer() {
 	return (
 		<CustomContainer
 			as="footer"
+			minW="full"
 			color={useColorModeValue(light.textLight, dark.textLight)}
 			bg={useColorModeValue(light.bgDark, dark.bgLight)}
 		>
