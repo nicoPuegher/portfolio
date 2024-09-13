@@ -58,7 +58,7 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 
 	return (
 		<UnorderedList
-			pr={4}
+			m={0}
 			spacing={2.5}
 			listStylePos="inside"
 			listStyleType={variant === 'projectDetails' ? 'none' : 'disc'}

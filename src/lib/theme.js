@@ -6,7 +6,7 @@ import { light, dark } from './colors';
 
 const theme = extendTheme({
 	config: {
-		initialColorMode: 'light',
+		initialColorMode: 'system',
 		useSystemColorMode: true,
 	},
 	fonts: {
