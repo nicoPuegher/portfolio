@@ -16,8 +16,8 @@ const theme = extendTheme({
 	styles: {
 		global: (props) => ({
 			body: {
-				color: mode(light.textDark, dark.textLight)(props),
-				bg: mode(light.bgLight, dark.bgDark)(props),
+				color: mode(light.text_dark_content, dark.textLight)(props),
+				bg: mode(light.bg_light, dark.bgDark)(props),
 			},
 			'#root': {
 				minHeight: '100dvh',
