@@ -12,8 +12,8 @@ export default function Footer() {
 		<CustomContainer
 			as="footer"
 			minW="full"
-			color={useColorModeValue(light.textLight, dark.textLight)}
-			bg={useColorModeValue(light.bgDark, dark.bgLight)}
+			color={useColorModeValue(light.text_light_content, dark.textLight)}
+			bg={useColorModeValue(light.bg_dark, dark.bgLight)}
 		>
 			<Text fontSize="sm" textAlign="center">
 				© <time dateTime={currentYear}>{currentYear}</time> - All
