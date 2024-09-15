@@ -15,7 +15,10 @@ export default function Logo() {
 				variant="link"
 				fontSize="xl"
 				text={developer.name}
-				color={useColorModeValue(light.textLight, dark.textLight)}
+				color={useColorModeValue(
+					light.text_light_heading,
+					dark.textLight,
+				)}
 				onClick={() => context.handleChangePage('home')}
 			/>
 		</Heading>
