@@ -6,7 +6,7 @@ import CustomGrid from '@/components/ui/custom-grid';
 import Message from '@/components/message';
 import Profile from '@/components/profile';
 import CustomSection from '@/components/ui/custom-section';
-import CustomButton from '@/components/ui/custom-button';
+import CustomActiveButton from '@/components/ui/custom-active-button';
 import CustomDivider from '@/components/ui/custom-divider';
 import developer from '@/constants/developer';
 
@@ -21,8 +21,7 @@ export default function Home() {
 				<CustomSection title={developer.name}>
 					<Text>{developer.role}</Text>
 				</CustomSection>
-				<CustomButton
-					call="action"
+				<CustomActiveButton
 					text="Check my work"
 					onClick={() => context.handleChangePage('works')}
 				/>
