@@ -11,12 +11,17 @@ import CustomFlex from './custom-flex';
 import CustomTag from './custom-tag';
 
 export default function CustomList({ variant = 'text', list, stack = [] }) {
+	const labelColor = useColorModeValue(light.text_dark_content, '');
+
 	const customList = list.map((item) => {
 		if (variant === 'features') {
 			return (
 				<CustomListItem key={item.label}>
 					<CustomText>
-						<Text as="b">{`${item.label}: `}</Text>
+						<Text
+							as="b"
+							color={labelColor}
+						>{`${item.label}: `}</Text>
 						{item.description}
 					</CustomText>
 				</CustomListItem>
@@ -27,7 +32,10 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			return (
 				<CustomListItem key={item.label}>
 					<CustomText>
-						<Text as="b">{`${item.label}: `}</Text>
+						<Text
+							as="b"
+							color={labelColor}
+						>{`${item.label}: `}</Text>
 						<CustomLink url={item.url} text={item.description} />
 					</CustomText>
 				</CustomListItem>
@@ -46,7 +54,9 @@ export default function CustomList({ variant = 'text', list, stack = [] }) {
 			<CustomListItem key="tech">
 				<CustomText>
 					<CustomFlex wrap="wrap" justify="center" align="center">
-						<Text as="b">Stack: </Text>
+						<Text as="b" color={labelColor}>
+							Stack:{' '}
+						</Text>
 						{stack.map((tech) => (
 							<CustomTag key={tech} text={tech} />
 						))}
