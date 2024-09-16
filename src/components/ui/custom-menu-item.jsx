@@ -9,10 +9,10 @@ export default function CustomMenuItem({ children, ...props }) {
 		<MenuItem
 			letterSpacing="inherit"
 			{...props}
-			bg={useColorModeValue(light.bgLight, dark.bgLight)}
+			bg={useColorModeValue(light.bg_light, dark.bgLight)}
 			_focus={{
 				bg: useColorModeValue(
-					light.neutralHighlight,
+					light.bg_light_content,
 					dark.neutralHighlight,
 				),
 			}}
