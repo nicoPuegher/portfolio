@@ -13,7 +13,7 @@ export default function ThemeToggle() {
 	return (
 		<IconButton
 			icon={colorMode === 'light' ? moon : sun}
-			colorScheme={useColorModeValue(light.primary, dark.primary)}
+			colorScheme={useColorModeValue(light.primary, '')}
 			onClick={toggleColorMode}
 		/>
 	);
