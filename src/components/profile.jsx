@@ -12,8 +12,11 @@ export default function Profile() {
 			size="xl"
 			borderStyle="solid"
 			borderWidth={4}
-			borderColor={useColorModeValue(light.bgDark, dark.bgLight)}
-			bg={useColorModeValue(light.bgDark, dark.bgLight)}
+			borderColor={useColorModeValue(
+				light.bg_light_content,
+				dark.bgLight,
+			)}
+			bg={useColorModeValue(light.bg_light_content, dark.bgLight)}
 		/>
 	);
 }
