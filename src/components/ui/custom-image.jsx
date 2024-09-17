@@ -22,7 +22,7 @@ export default function CustomImage({
 			padding="1px"
 			borderRadius="md"
 			ratio={customRatio}
-			bg={useColorModeValue(light.bgImage, dark.bgImage)}
+			bg={useColorModeValue(light.bg_light_content, '')}
 		>
 			<Image
 				src={src}
@@ -30,7 +30,6 @@ export default function CustomImage({
 				fallback={<Center>Loading image...</Center>}
 				padding="1px"
 				borderRadius="md"
-				bg={light.bgImage}
 			/>
 		</AspectRatio>
 	);
