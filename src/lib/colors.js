@@ -16,17 +16,21 @@ const light = {
 };
 
 const dark = {
-	primary: 'cyan',
-	secondary: 'orange',
-	neutral: 'gray',
-	neutralHighlight: 'whiteAlpha.200',
-	textLight: 'whiteAlpha.900',
-	textDark: '#121212',
-	list: 'whiteAlpha.800',
-	divider: 'whiteAlpha.200',
-	bgImage: 'whiteAlpha.50',
-	bgLight: '#1e1e1e',
-	bgDark: '#121212',
+	primary: 'purple',
+	secondary: 'yellow',
+	neutral: '#333333',
+	neutral_hover: '#3f3f3f',
+	link: '#d6bcfa',
+	divider: '#3f3f3f',
+	text_light_heading: '#ffffff',
+	text_light_content: 'whiteAlpha.800',
+	text_dark_heading: 'whiteAlpha.900',
+	text_dark_content: 'whiteAlpha.800',
+	text_dark_button: 'blackAlpha.800',
+	text_dark_list: 'whiteAlpha.700',
+	bg_light: '#262626',
+	bg_light_content: '#262626',
+	bg_dark: '#0a0403',
 };
 
 export { light, dark };
