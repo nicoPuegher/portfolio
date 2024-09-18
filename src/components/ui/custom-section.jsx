@@ -22,7 +22,10 @@ export default function CustomSection({
 				as={as}
 				size={size}
 				mb={2.5}
-				color={useColorModeValue(light.text_dark_heading, '')}
+				color={useColorModeValue(
+					light.text_dark_heading,
+					dark.text_dark_heading,
+				)}
 			>
 				{title}
 			</Heading>
