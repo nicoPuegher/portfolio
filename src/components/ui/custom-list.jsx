@@ -11,7 +11,10 @@ import CustomFlex from './custom-flex';
 import CustomTag from './custom-tag';
 
 export default function CustomList({ variant = 'text', list, stack = [] }) {
-	const labelColor = useColorModeValue(light.text_dark_content, '');
+	const labelColor = useColorModeValue(
+		light.text_dark_content,
+		dark.text_light_content,
+	);
 
 	const customList = list.map((item) => {
 		if (variant === 'features') {
