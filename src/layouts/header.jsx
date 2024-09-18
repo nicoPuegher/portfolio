@@ -15,7 +15,7 @@ export default function Header() {
 			as="header"
 			pos="sticky"
 			top={0}
-			bg={useColorModeValue(light.bg_dark, dark.bgLight)}
+			bg={useColorModeValue(light.bg_dark, dark.bg_light)}
 			zIndex="sticky"
 		>
 			<Nav>
