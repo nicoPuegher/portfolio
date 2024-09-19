@@ -33,7 +33,7 @@ export default function Menu() {
 				))}
 
 				{menu.links.map((link) => (
-					<Link key={link.name} href={link.url}>
+					<Link key={link.name} href={link.url} isExternal>
 						<CustomButton
 							variant="ghost"
 							text={link.name}
