@@ -8,7 +8,11 @@ export default function CustomTag({ text }) {
 	return (
 		<Tag
 			fontWeight="normal"
-			color={useColorModeValue(light.list, dark.list)}
+			color={useColorModeValue(light.text_dark_list, dark.text_dark_list)}
+			bg={useColorModeValue(
+				light.bg_light_content,
+				dark.bg_light_content,
+			)}
 		>
 			{text}
 		</Tag>

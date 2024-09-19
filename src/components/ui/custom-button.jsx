@@ -1,24 +1,14 @@
 import React from 'react';
-import { useColorModeValue, Button } from '@chakra-ui/react';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { Button } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-import { light, dark } from '@/lib/colors';
-
-export default function CustomButton({ call = null, text, ...props }) {
+export default function CustomButton({ text, ...props }) {
 	return (
-		<Button
-			rightIcon={call ? <ArrowForwardIcon /> : null}
-			fontSize="sm"
-			letterSpacing="inherit"
-			colorScheme={useColorModeValue(light.primary, dark.primary)}
-			{...props}
-		>
+		<Button fontSize="sm" letterSpacing="inherit" {...props}>
 			{text}
 		</Button>
 	);
 }
 CustomButton.propTypes = {
-	call: PropTypes.string,
 	text: PropTypes.string.isRequired,
 };
