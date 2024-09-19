@@ -16,7 +16,7 @@ export default function CustomGridItem({
 	return (
 		<>
 			<CustomImage src={previewImage} alt={name} />
-			<CustomSection customVariant="h3" title={type}>
+			<CustomSection customVariant="h3" title={type} mb={2}>
 				<Text>{description}</Text>
 			</CustomSection>
 			<CustomActiveButton text="View details" onClick={goToPage} />
