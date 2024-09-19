@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import CustomImage from './custom-image';
 import CustomSection from './custom-section';
-import CustomButton from './custom-button';
+import CustomActiveButton from './custom-active-button';
 
 export default function CustomGridItem({
 	name,
@@ -19,11 +19,7 @@ export default function CustomGridItem({
 			<CustomSection customVariant="h3" title={type}>
 				<Text>{description}</Text>
 			</CustomSection>
-			<CustomButton
-				call="action"
-				text="View details"
-				onClick={goToPage}
-			/>
+			<CustomActiveButton text="View details" onClick={goToPage} />
 		</>
 	);
 }

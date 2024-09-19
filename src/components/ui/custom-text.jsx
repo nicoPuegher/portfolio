@@ -6,7 +6,10 @@ import { light, dark } from '@/lib/colors';
 
 export default function CustomText({ children }) {
 	return (
-		<Text as="i" color={useColorModeValue(light.list, dark.list)}>
+		<Text
+			as="i"
+			color={useColorModeValue(light.text_dark_list, dark.text_dark_list)}
+		>
 			{children}
 		</Text>
 	);

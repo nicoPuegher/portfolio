@@ -6,6 +6,7 @@ import Logo from '@components/navbar/logo';
 import CustomFlex from '@/components/ui/custom-flex';
 import ThemeToggle from '@components/navbar/theme-toggle';
 import MenuMobile from '@components/navbar/menu-mobile';
+import Menu from '@/components/navbar/menu';
 import { light, dark } from '@/lib/colors';
 
 export default function Header() {
@@ -14,11 +15,12 @@ export default function Header() {
 			as="header"
 			pos="sticky"
 			top={0}
-			bg={useColorModeValue(light.bgDark, dark.bgLight)}
+			bg={useColorModeValue(light.bg_dark, dark.bg_light)}
 			zIndex="sticky"
 		>
 			<Nav>
 				<Logo />
+				<Menu />
 				<CustomFlex>
 					<ThemeToggle />
 					<MenuMobile />
