@@ -13,7 +13,7 @@ export default function Logo() {
 		<Heading as="h1" display="inline-flex">
 			<CustomButton
 				variant="link"
-				fontSize="xl"
+				fontSize={{ base: 'xl', lg: 'lg' }}
 				text={developer.name}
 				color={useColorModeValue(
 					light.text_light_heading,
