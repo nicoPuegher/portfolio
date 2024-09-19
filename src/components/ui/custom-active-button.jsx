@@ -12,8 +12,11 @@ export default function CustomActiveButton({ text, ...props }) {
 		<CustomButton
 			rightIcon={<ArrowForwardIcon />}
 			text={text}
-			color={useColorModeValue(light.text_light_content, '')}
-			colorScheme={useColorModeValue(light.primary, '')}
+			color={useColorModeValue(
+				light.text_light_content,
+				dark.text_dark_button,
+			)}
+			colorScheme={useColorModeValue(light.primary, dark.primary)}
 			{...props}
 		/>
 	);
