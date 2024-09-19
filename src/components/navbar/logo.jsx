@@ -17,7 +17,7 @@ export default function Logo() {
 				text={developer.name}
 				color={useColorModeValue(
 					light.text_light_heading,
-					dark.textLight,
+					dark.text_light_heading,
 				)}
 				onClick={() => context.handleChangePage('home')}
 			/>
