@@ -14,9 +14,12 @@ export default function Profile() {
 			borderWidth={4}
 			borderColor={useColorModeValue(
 				light.bg_light_content,
-				dark.bgLight,
+				dark.bg_light_content,
 			)}
-			bg={useColorModeValue(light.bg_light_content, dark.bgLight)}
+			bg={useColorModeValue(
+				light.bg_light_content,
+				dark.bg_light_content,
+			)}
 		/>
 	);
 }
