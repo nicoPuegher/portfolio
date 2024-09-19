@@ -11,9 +11,10 @@ export default function CustomSection({
 	title,
 	badge = null,
 	children,
+	...props
 }) {
 	const as = customVariant === 'h2' ? 'h2' : 'h3';
-	const size = customVariant === 'h2' ? 'lg' : 'md';
+	const size = customVariant === 'h2' ? 'md' : 'sm';
 
 	return (
 		<Box as="section" textAlign="center">
@@ -21,11 +22,12 @@ export default function CustomSection({
 			<Heading
 				as={as}
 				size={size}
-				mb={2.5}
+				mb={5}
 				color={useColorModeValue(
 					light.text_dark_heading,
 					dark.text_dark_heading,
 				)}
+				{...props}
 			>
 				{title}
 			</Heading>
