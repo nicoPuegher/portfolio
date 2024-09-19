@@ -18,7 +18,7 @@ export default function Home() {
 			<Message>{developer.welcomeMessage}</Message>
 			<CustomGrid>
 				<Profile />
-				<CustomSection title={developer.name}>
+				<CustomSection title={developer.name} mb={2}>
 					<Text>{developer.role}</Text>
 				</CustomSection>
 				<CustomActiveButton
