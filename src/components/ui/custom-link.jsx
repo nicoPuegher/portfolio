@@ -7,7 +7,7 @@ import { light, dark } from '@/lib/colors';
 
 export default function CustomLink({ url, text }) {
 	return (
-		<Link href={url} isExternal>
+		<Link href={url} w="full" isExternal>
 			{text}{' '}
 			<ExternalLinkIcon
 				color={useColorModeValue(light.link, dark.link)}
