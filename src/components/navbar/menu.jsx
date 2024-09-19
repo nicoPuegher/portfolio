@@ -10,8 +10,11 @@ import { light, dark } from '@/lib/colors';
 export default function Menu() {
 	const context = useContext(Context);
 
-	const buttonColor = useColorModeValue(light.text_light_content, '');
-	const buttonBg = useColorModeValue(light.neutral, '');
+	const buttonColor = useColorModeValue(
+		light.text_light_content,
+		dark.text_dark_content,
+	);
+	const buttonBg = useColorModeValue(light.neutral, dark.neutral);
 
 	return (
 		<ButtonGroup display={{ base: 'none', lg: 'flex' }}>
